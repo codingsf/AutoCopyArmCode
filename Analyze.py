@@ -52,4 +52,5 @@ class Analyze(object):
             asmfile.setSectionSeg()
             asmfile.setDataTag()
             asmfile.setLongTag()
+            asmfile.setIndirectSymbolTag()
             asmfile.serializeToFile()

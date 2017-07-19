@@ -608,7 +608,7 @@ POP.W           {R8,R10,R11}                                                    
 POP             {R4-R7,PC}                                                                          //;0x31a04
 loc_31A06:
 BLX             ___stack_chk_fail                                                                   //;0x31a06
-.data
-.global ___stack_chk_guard_ptr
+.section __DATA,__nl_symbol_ptr,non_lazy_symbol_pointers
+.indirect_symbol ___stack_chk_guard_ptr
 ___stack_chk_guard_ptr:
 .long 0

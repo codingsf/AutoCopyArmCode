@@ -8,12 +8,11 @@ PUSH            {R4-R7,LR}                                                      
 ADD             R7, SP, #0xC                                                                        //;0x3f0b2
 SUB             SP, SP, #0x18                                                                       //;0x3f0b4
 MOV             R4, R0                                                                              //;0x3f0b6
-MOVW            R0, #:lower16:(___stack_chk_guard_ptr - loc_3F0C6)
-MOVT            R0, #:upper16:(___stack_chk_guard_ptr - loc_3F0C6)                                  //;0x3f0b8
+MOVW            R0, #0xf0c6
+MOVT            R0, #0x3                                                                            //;0x3f0b8
 MOV             R5, SP                                                                              //;0x3f0c0
 ADD             R0, PC //; ___stack_chk_guard_ptr                                                   //;0x3f0c2
 LDR             R6, [R0] //; ___stack_chk_guard                                                     //;0x3f0c4
-loc_3F0C6:
 LDR             R0, [R6]                                                                            //;0x3f0c6
 STR             R0, [SP,#0x24-0x10]                                                                 //;0x3f0c8
 LDMIA.W         R4, {R0-R2}                                                                         //;0x3f0ca
@@ -40,7 +39,7 @@ ADD             SP, SP, #0x18                                                   
 POP             {R4-R7,PC}                                                                          //;0x3f100
 loc_3F102:
 BLX             ___stack_chk_fail                                                                   //;0x3f102
-.data
-.global ___stack_chk_guard_ptr
+.section __DATA,__nl_symbol_ptr,non_lazy_symbol_pointers
+.indirect_symbol ___stack_chk_guard_ptr
 ___stack_chk_guard_ptr:
 .long 0

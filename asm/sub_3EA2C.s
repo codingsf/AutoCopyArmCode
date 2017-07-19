@@ -86,4 +86,4 @@ ADD             R0, R1                                                          
 STR             R0, [R4,#4]                                                                         //;0x3eb18
 ADD             SP, SP, #0x18                                                                       //;0x3eb1a
 POP             {R4,R5,R7,PC}                                                                       //;0x3eb1c
-.data
+.section __DATA,__nl_symbol_ptr,non_lazy_symbol_pointers

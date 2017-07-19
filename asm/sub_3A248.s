@@ -17,13 +17,14 @@ MOVW            LR, #0x8E39                                                     
 MOVT            R12, #0x3249                                                                        //;0x3a26c
 MOVT            LR, #0x38E3                                                                         //;0x3a270
 MUL             R2, R2, R12                                                                         //;0x3a274
-MOVW            R5, #:lower16:(off_5C6E0 - 0x3A28E)                                                 //;0x3a278
+MOVW            R5, #:lower16:(off_5C6E0 - loc_3A28E)                                               //;0x3a278
 ADD             R7, SP, #8                                                                          //;0x3a27c
 UMULL           R1, R3, R0, LR                                                                      //;0x3a27e
-MOVT            R5, #:upper16:(off_5C6E0 - 0x3A28E)                                                 //;0x3a282
+MOVT            R5, #:upper16:(off_5C6E0 - loc_3A28E)                                               //;0x3a282
 UMULL           R1, R4, R2, LR                                                                      //;0x3a286
 ADD             R5, PC //; off_5C6E0                                                                //;0x3a28a
 LDR             R1, [R5] //; off_632E0                                                              //;0x3a28c
+loc_3A28E:
 MOVW            R5, #0xCFD                                                                          //;0x3a28e
 LSR.W           R3, R3,#4                                                                           //;0x3a292
 ADD.W           R3, R3, R3,LSL#3                                                                    //;0x3a296
@@ -55,4 +56,7 @@ ORR.W           R1, R9, #2                                                      
 AND.W           R1, R1, #0xE                                                                        //;0x3a2f6
 SUBS            R0, R0, R1                                                                          //;0x3a2fa
 POP             {R4,R5,R7,PC}                                                                       //;0x3a2fc
-.data
+.section __DATA,__nl_symbol_ptr,non_lazy_symbol_pointers
+.indirect_symbol off_5C6E0
+off_5C6E0:
+.long 0

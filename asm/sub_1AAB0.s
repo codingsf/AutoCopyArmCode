@@ -175,4 +175,4 @@ STR             R0, [R1,#4]                                                     
 ADD             SP, SP, #0x20                                                                       //;0x1ac6c
 POP.W           {R8,R10,R11}                                                                        //;0x1ac6e
 POP             {R4-R7,PC}                                                                          //;0x1ac72
-.data
+.section __DATA,__nl_symbol_ptr,non_lazy_symbol_pointers

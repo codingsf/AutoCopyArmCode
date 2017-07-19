@@ -12,7 +12,7 @@ from BfcFilter import BfcFilter
 from ArgFilter import ArgFilter
 from TbhFilter import TbhFilter
 from JmpAddrModify import JmpAddrModify
-from StackCheckGuardModify import StackCheckGuardModify
+from LowerUpper16Modify import LowerUpper16Modify
 from GlobalCollect import GlobalCollect
 import IdaOutput
 
@@ -30,9 +30,16 @@ class AsmFile(object):
         self._datatag = ""
         self._sectiontag = ""
         self._longtag = ""
+        self._indirectsymboltag = ""
 
     def getTag(self):
         return self._tag
+
+    def getIndirectSymbolTag(self):
+        return self._indirectsymboltag
+
+    def setIndirectSymbolTag(self, tag_=".indirect_symbol"):
+        self._indirectsymboltag = tag_
 
     def setTextTag(self, text_ = ""):
         self._texttag = ".text"
@@ -134,7 +141,7 @@ class AsmFile(object):
 
     def modify(self, inst_):
         inst_ = JmpAddrModify().modifySingle(inst_)
-        inst_ = StackCheckGuardModify().modifySingle(inst_)
+        inst_ = LowerUpper16Modify().modifySingle(inst_)
         return inst_
 
     def addrToLabel(self, addr_):
@@ -177,11 +184,10 @@ class AsmFile(object):
                 part2 = "0x%x" % inst.getAddr()
                 fw.write(part0 + part1 + part2 + "\n")
 
-            #posttreatment
             #fw.write(self.getSectionSeg() + "\n")
-            fw.write(self.getDataTag() + "\n")
+            fw.write(self.getSectionSeg() + " __DATA,__nl_symbol_ptr,non_lazy_symbol_pointers\n")
             for variable in globalvariables:
-                fw.write(self.getGlobalTag() + " " + variable + "\n")
+                fw.write(self.getIndirectSymbolTag() + " " + variable + "\n")
             for variable in globalvariables:
                 fw.write(variable + ":\n")
                 fw.write(self.getLongTag() + " 0\n")
