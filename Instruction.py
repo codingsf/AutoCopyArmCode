@@ -1,4 +1,4 @@
-
+import re
 
 class Instruction(object):
     def __init__(self):
@@ -40,3 +40,13 @@ class Instruction(object):
             return True
         else:
             return False
+
+    #MOVW            R1, #(:lower16:(sub_2FD0C+1 - 0x2F270))
+    def filterFuncSig(self):
+        match = re.search(r'.+sub_([0-9A-F]{1,}).*', self._inst)
+        if match:
+             value = "0x%s" % match.group(1)
+             ivalue = int(value, 16)
+             return ivalue
+        else:
+            return 0

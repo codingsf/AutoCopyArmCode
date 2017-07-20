@@ -14,10 +14,14 @@ class VarFilter(object):
         else:
             return (False, inst_)
 
+    #SUB.W R4, R7, #-var_18
     def filterSingle(self, inst_):
         match = re.search(r'(.+)\+var_([0-9A-F]+)(.*)', inst_)
         if match:
             return match.group(1) + "-0x" + match.group(2) + match.group(3)
+        match = re.search(r'(.+)\-var_([0-9A-F]+)(.*)', inst_)
+        if match:
+            return match.group(1) + "+0x" + match.group(2) + match.group(3)
         else:
             return inst_
 

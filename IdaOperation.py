@@ -13,7 +13,9 @@ class IdaOperation(object):
         return self._tag
 
     def getInstructionByAddr(self, addr_):
+        #OpHex(addr_, AP_IDXHEX)
         disasm = GetDisasm(addr_)
+        #OpHex(addr_, AP_IDXHEX | 1)
         mnem = GetMnem(addr_)
 
         inst = Instruction()
@@ -56,6 +58,8 @@ class IdaOperation(object):
                 exception.abort()
             if inst.checkIfCallInst() and (inst.getCallOpnd() not in xrefaddrs):
                 xrefaddrs.append(inst.getCallOpnd())
+            if inst.filterFuncSig() != 0 and (inst.filterFuncSig() not in xrefaddrs):
+                xrefaddrs.append(inst.filterFuncSig())
             funcinsts.append(inst)
 
 

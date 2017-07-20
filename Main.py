@@ -15,15 +15,18 @@ def testFuncXrefs():
 
 def testAnalyze():
     addr = 0x3157A
-    alz = Analyze()
-    alz.analyze(addr)
-    alz.store()
-    funcnameset = []
-    for func in alz.getXrefFuncs():
-        if func.getName() not in funcnameset:
-            funcnameset.append(func.getName())
-
-    IdaOutput.log(funcnameset)
+    addrset = ['0x3157A', '0x3C160', '0x2C728', '0x39BC2', '0x3739E', '0x2F7CA', '0x31A0E', '0x1AC82', '0x16AA0', '0x2CC74', '0x3EB2A', '0x2E61A', '0x2DBA6', '0x24344', '0x30758', '0x3446C', '0x3CA4C', '0x3A3D2', '0x3F10A', '0x1A5FC', '0x18FDC', '0x2381C', '0x2632A', '0x35690', '0x16FFC', '0x16D2E', '0x31274', '0x3BF6E', '0x2699A', '0x18B06', '0x16E98', '0x3A61A', '0x17F0C', '0x30EFC', '0x25D32', '0x3D506', '0x172C0', '0x1AF3A', '0x3B8E4', '0x196B6', '0x367CC', '0x2CF6A', '0x2BB5E', '0x3F3D6', '0x24AC0', '0x31CAC', '0x3307C', '0x3244A', '0x3D142', '0x29DD6', '0x17594', '0x29984', '0x32CD8', '0x16C38', '0x39412', '0x3983A', '0x3503A', '0x36520', '0x2AB06']
+    for addr in addrset:
+        iaddr = int(addr, 16)
+        alz = Analyze()
+        alz.analyze(iaddr)
+        alz.store()
+    # funcnameset = []
+    # for func in alz.getXrefFuncs():
+    #     if func.getName() not in funcnameset:
+    #         funcnameset.append(func.getName())
+    #
+    # IdaOutput.log(funcnameset)
 
 if __name__ == "__main__":
     Init().clean()

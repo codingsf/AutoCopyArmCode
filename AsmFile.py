@@ -14,6 +14,10 @@ from TbhFilter import TbhFilter
 from JmpAddrModify import JmpAddrModify
 from LowerUpper16Modify import LowerUpper16Modify
 from GlobalCollect import GlobalCollect
+from LdrdFilter import LdrdFilter
+from MlsFilter import MlsFilter
+from LdrFilter import LdrFilter
+from StrFilter import StrFilter
 import IdaOutput
 
 class AsmFile(object):
@@ -137,6 +141,10 @@ class AsmFile(object):
         inst_ = BfcFilter().filterSingle(inst_)
         inst_ = ArgFilter().filterSingle(inst_)
         inst_ = TbhFilter().filterSingle(inst_)
+        inst_ = LdrdFilter().filterSingle(inst_)
+        inst_ = MlsFilter().filterSingle(inst_)
+        inst_ = LdrFilter().filterSingle(inst_)
+        inst_ = StrFilter().filterSingle(inst_)
         return inst_
 
     def modify(self, inst_):

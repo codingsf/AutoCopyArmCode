@@ -31,7 +31,7 @@ class MovFilter(object):
         if match:
             return "MOVT  " + match.group(1)
 
-        match = re.search("MOV\s+(R\d).*(0x[0-9A-F]+)", inst_)
+        match = re.search(r'MOV\s+(R\d{1,}).*(0x[0-9A-F]+)', inst_)
         if match:
             highpart = self.highPart(match.group(2))
             lowpart = self.lowPart(match.group(2))
@@ -66,6 +66,15 @@ class MovFilter(object):
         if match:
             firstpart = "MOVW            " + match.group(1) + "#:lower16:" + match.group(2)
             secondpart = "MOVT            " + match.group(1) + "#:upper16:" + match.group(2)
+            return firstpart + "\n" + secondpart
+
+        #MOVS            R1, #0xEFC60000
+        match = re.search(r'MOVS\s+(R\d{1,}).*(0x[0-9A-F]+)', inst_)
+        if match:
+            highpart = self.highPart(match.group(2))
+            lowpart = self.lowPart(match.group(2))
+            firstpart = "MOVS            " + match.group(1) + ", " + lowpart
+            secondpart = "MOVT            " + match.group(1) + ", " + highpart
             return firstpart + "\n" + secondpart
         else:
             return inst_
