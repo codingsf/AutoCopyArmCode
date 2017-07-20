@@ -7,6 +7,7 @@ class Function(object):
         self._name = ""
         self._insts = []
         self._xrefs = []
+        self._frame = {}
 
     def getTag(self):
         return self._tag
@@ -40,6 +41,12 @@ class Function(object):
 
     def setXrefFuncs(self, xrefs_):
         self._xrefs = xrefs_
+
+    def getFrame(self):
+        return self._frame
+
+    def setFrame(self, frame_):
+        self._frame = frame_
 
 
 

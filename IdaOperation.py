@@ -31,6 +31,12 @@ class IdaOperation(object):
             inst.setCallOpnd(xrefaddr)
         return inst
 
+    def operateHex(self, addr_):
+        OpHex(addr_, 1)
+
+    def getDisasm(self, addr_):
+        return GetDisasm(addr_)
+
     def getFunctionByAddr(self, addr_):
         funcstart = idc.GetFunctionAttr(addr_, FUNCATTR_START)
         funcend = idc.GetFunctionAttr(addr_, FUNCATTR_END)

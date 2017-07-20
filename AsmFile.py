@@ -18,6 +18,7 @@ from LdrdFilter import LdrdFilter
 from MlsFilter import MlsFilter
 from LdrFilter import LdrFilter
 from StrFilter import StrFilter
+from Plugin import Plugin
 import IdaOutput
 
 class AsmFile(object):
@@ -165,6 +166,12 @@ class AsmFile(object):
             fw.write(self.getThumbFuncTag() + "\n")
             fw.write(self.getGlobalTag() + " " + self.getFuncName() + "\n")
             fw.write(self.getFuncName() + ":" + "\n")
+
+            #pretrement plugin
+            for inst in self._insts:
+                modifyinst = Plugin().runPlugin(inst)
+                #inst.setInst(modifyinst)
+
 
             #pretreatment
             for inst in self._insts:
