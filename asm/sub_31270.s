@@ -112,8 +112,8 @@ MOV             R1, R6                                                          
 MOV             R2, R10                                                                             //;0x31390
 BLX             R3                                                                                  //;0x31392
 B               loc_31350                                                                           //;0x31394
-BNE             loc_3143a                                                                           //;0x31396
-STRB            R1, [R0,#0x15]                                                                      //;0x31398
+.byte 0x50                                                                                          //;0x31396
+.byte 0x41                                                                                          //;0x31398
 loc_3139A:
 LDRD            R2, R3, [R11]                                                                       //;0x3139a
 LDR             R0, [SP,#0x6C-0x54]                                                                 //;0x3139e

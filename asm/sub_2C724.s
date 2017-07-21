@@ -77,8 +77,8 @@ MOVT            R1, #0x6263                                                     
 STR.W           R2, [R12]                                                                           //;0x2c7f2
 MOV             R12, R4                                                                             //;0x2c7f6
 ITT HI                                                                                              //;0x2c7f8
-MOVHIW          R1, #0x77E5                                                                         //;0x2c7fa
-MOVTHI.W        R1, #0x291D                                                                         //;0x2c7fe
+MOVWHI          R1, #0x77E5                                                                         //;0x2c7fa
+MOVTHI          R1, #0x291D                                                                         //;0x2c7fe
 CMP             R0, #0x3F                                                                           //;0x2c802
 STR             R1, [SP,#0x98-0x38]                                                                 //;0x2c804
 RSB.W           R1, R9, #0                                                                          //;0x2c806
@@ -179,7 +179,7 @@ ADD             R2, R5                                                          
 MOVT            R9, #0xC6BA                                                                         //;0x2c904
 CMP             R2, R3                                                                              //;0x2c908
 MOV.W           R3, #0                                                                              //;0x2c90a
-STRB.W          R4, [SP,#0x98-0x4C]                                                                 //;0x2c90e
+STRB            R4, [SP,#0x98-0x4C]                                                                 //;0x2c90e
 IT CC                                                                                               //;0x2c912
 MOVCC           R3, #1                                                                              //;0x2c914
 CMP             R2, R6                                                                              //;0x2c916
@@ -306,7 +306,7 @@ TBB             [PC,R1] //; switch jump                                         
 .byte 0x65                                                                                          //;0x2ca35
 .byte 0x9B                                                                                          //;0x2ca36
 .byte 5                                                                                             //;0x2ca37
-DCD 0x83A2FDB0                                                                                      //;0x2ca38
+.long 0x83A2FDB0                                                                                    //;0x2ca38
 B               loc_2C81A//; jumptable 0002CA2E case 5                                              //;0x2ca3c
 LDR             R1, [SP,#0x98-0x88]//; jumptable 0002CA2E case 0                                    //;0x2ca3e
 MOVW            R0, #0x8303
@@ -322,7 +322,7 @@ MOVHI           R1, #1                                                          
 LDR             R2, [SP,#0x98-0x28]                                                                 //;0x2ca5c
 STR             R0, [SP,#0x98-0x78]                                                                 //;0x2ca5e
 LDR             R0, [SP,#0x98-0x8C]                                                                 //;0x2ca60
-STRB.W          R1, [SP,#0x98-0x54]                                                                 //;0x2ca62
+STRB            R1, [SP,#0x98-0x54]                                                                 //;0x2ca62
 LDR             R1, [SP,#0x98-0x30]                                                                 //;0x2ca66
 STR             R0, [SP,#0x98-0x74]                                                                 //;0x2ca68
 LDR             R0, [SP,#0x98-0x38]                                                                 //;0x2ca6a
@@ -399,7 +399,7 @@ AND.W           R3, R3, R0,LSL#1                                                
 EOR.W           R0, R0, #0x6F                                                                       //;0x2cb22
 ADD             R0, R3                                                                              //;0x2cb26
 SUBS            R0, #0x41                                                                           //;0x2cb28
-STRB.W          R0, [LR,R2]                                                                         //;0x2cb2a
+STRB            R0, [LR,R2]                                                                         //;0x2cb2a
 ADDS            R0, R1, #1                                                                          //;0x2cb2e
 STR             R0, [SP,#0x98-0x68]                                                                 //;0x2cb30
 ADDS            R0, R2, #1                                                                          //;0x2cb32

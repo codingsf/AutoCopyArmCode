@@ -55,8 +55,8 @@ STR             R5, [R1]                                                        
 MOVW            R1, #0x6315
 MOVT            R1, #0x4da1                                                                         //;0x365b2
 ITT HI                                                                                              //;0x365ba
-MOVHIW          R1, #0x40DD                                                                         //;0x365bc
-MOVTHI.W        R1, #0x1AEA                                                                         //;0x365c0
+MOVWHI          R1, #0x40DD                                                                         //;0x365bc
+MOVTHI          R1, #0x1AEA                                                                         //;0x365c0
 CMP             R2, R12                                                                             //;0x365c4
 STR             R1, [SP,#0x54-0x2C]                                                                 //;0x365c6
 BLS             def_36680//; jumptable 00036680 default case                                        //;0x365c8

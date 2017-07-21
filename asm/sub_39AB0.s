@@ -87,7 +87,7 @@ LDR.W           R1, [R8]                                                        
 SUBS            R0, R1, R0                                                                          //;0x39b86
 BNE             loc_39B92                                                                           //;0x39b88
 ADD             SP, SP, #0x24                                                                       //;0x39b8a
-LDR             R8, [SP+0x10-0x10],#4                                                               //;0x39b8c
+LDR             R8, [SP],#4                                                                         //;0x39b8c
 POP             {R4-R7,PC}                                                                          //;0x39b90
 loc_39B92:
 BLX             ___stack_chk_fail                                                                   //;0x39b92

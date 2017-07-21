@@ -67,8 +67,8 @@ MOVW            R1, #0x7BEF                                                     
 MOVW            R2, #0xF7DE                                                                         //;0x2f882
 STR.W           R3, [R12]                                                                           //;0x2f886
 ITT HI                                                                                              //;0x2f88a
-MOVHIW          R0, #0x4C67                                                                         //;0x2f88c
-MOVTHI.W        R0, #0x3AC0                                                                         //;0x2f890
+MOVWHI          R0, #0x4C67                                                                         //;0x2f88c
+MOVTHI          R0, #0x3AC0                                                                         //;0x2f890
 MOVT            R1, #0x65F7                                                                         //;0x2f894
 MOVT            R2, #0xBEE                                                                          //;0x2f898
 MOVW            R3, #0x8411                                                                         //;0x2f89c

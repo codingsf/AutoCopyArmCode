@@ -276,7 +276,7 @@ TBB             [PC,R0] //; switch jump                                         
 .byte 0x79                                                                                          //;0x2a08e
 .byte 0x4E                                                                                          //;0x2a08f
 .byte 0xD6                                                                                          //;0x2a090
-ALIGN 2                                                                                             //;0x2a091
+.byte 0                                                                                             //;0x2a091
 LDR             R0, [SP,#0x60-0x50]//; jumptable 0002A086 case 0                                    //;0x2a092
 MOVW            R1, #0xD7BF                                                                         //;0x2a094
 MOV             R10, R8                                                                             //;0x2a098
@@ -365,7 +365,7 @@ STR             R6, [R2]                                                        
 STR.W           R9, [SP,#0x60-0x2C]                                                                 //;0x2a16e
 BEQ.W           loc_2A074//; jumptable 00029EDA case 7                                              //;0x2a172
 B               def_2A086//; jumptable 00029EDA default case                                        //;0x2a176
-DCD 0x83A2FDB0                                                                                      //;0x2a178
+.long 0x83A2FDB0                                                                                    //;0x2a178
 MOVW            R0, #0x85fd
 MOVT            R0, #0x4f76                                                                         //;0x2a17c
 STR.W           R0, [R8,#0x14]                                                                      //;0x2a184

@@ -57,8 +57,8 @@ CMP.W           R6, #0x80000000                                                 
 MOV             R0, R1                                                                              //;0x2a856
 STR             R4, [R2]                                                                            //;0x2a858
 ITT HI                                                                                              //;0x2a85a
-MOVHIW          R0, #0xC236                                                                         //;0x2a85c
-MOVTHI.W        R0, #0x5A5D                                                                         //;0x2a860
+MOVWHI          R0, #0xC236                                                                         //;0x2a85c
+MOVTHI          R0, #0x5A5D                                                                         //;0x2a860
 STR             R0, [SP,#0x3C-0x2C]                                                                 //;0x2a864
 B               loc_2A8AE                                                                           //;0x2a866
 loc_2A868:

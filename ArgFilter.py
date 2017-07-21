@@ -9,13 +9,14 @@ class ArgFilter(object):
     def argToValue(self, hex_):
         formatvalue = "0x%s" % hex_
         intvalue = int(formatvalue, 16)
-        return "#0x%x" % (intvalue + 8)
+        return "0x%x" % (intvalue + 8)
 
+    #LDR R0, [SP,#0xC+arg_0]
     #LDR R6, [R7,#arg_0]
     def filterSingle(self, inst_):
-        match = re.search(r'(.+)\#arg\_([0-9A-F]{1,}.*)', inst_)
+        match = re.search(r'(.+)arg\_([0-9A-F]{1,})(.*)', inst_)
         if match:
-            return match.group(1) + "#" + match.group(2)
+            return match.group(1) + self.argToValue(match.group(2)) + match.group(3)
         else:
             return inst_
 

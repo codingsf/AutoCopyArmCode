@@ -50,7 +50,7 @@ MOVWEQ          R1, #0xBB8D                                                     
 MOVTEQ          R1, #0x7DD3                                                                         //;0x18d70
 B               loc_18D94                                                                           //;0x18d74
 loc_18D76:
-MOV.W           R5, R11,ASR#31                                                                      //;0x18d76
+MOV             R5, R11,ASR#31                                                                      //;0x18d76
 LDR             R6, [SP,#0x40-0x24]                                                                 //;0x18d7a
 STR             R5, [SP,#0x40-0x34]                                                                 //;0x18d7c
 LDR             R5, [SP,#0x40-0x2C]                                                                 //;0x18d7e

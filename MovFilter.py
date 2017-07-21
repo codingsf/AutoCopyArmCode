@@ -31,6 +31,16 @@ class MovFilter(object):
         if match:
             return "MOVT  " + match.group(1)
 
+
+        # MOV             LR, #0x469758E9
+        match = re.search(r'MOV\s+(LR).*(0x[0-9A-F]+)', inst_)
+        if match:
+            highpart = self.highPart(match.group(2))
+            lowpart = self.lowPart(match.group(2))
+            firstpart = "MOVW            " + match.group(1) + ", " + lowpart
+            secondpart = "MOVT            " + match.group(1) + ", " + highpart
+            return firstpart + "\n" + secondpart
+
         match = re.search(r'MOV\s+(R\d{1,}).*(0x[0-9A-F]+)', inst_)
         if match:
             highpart = self.highPart(match.group(2))
@@ -76,8 +86,45 @@ class MovFilter(object):
             firstpart = "MOVS            " + match.group(1) + ", " + lowpart
             secondpart = "MOVT            " + match.group(1) + ", " + highpart
             return firstpart + "\n" + secondpart
+
+        #MOVHIW R0, #0x74D6
+        match = re.search(r'MOVHIW(.+)', inst_)
+        if match:
+            return "MOVWHI" + match.group(1)
+
+        #MOVTHI.W R0, #0x7683
+        match = re.search(r'MOVTHI\.W(.+)', inst_)
+        if match:
+            return "MOVTHI  " + match.group(1)
+
+        ##MOV.W R5, R5,ROR#8
+        #MOV.W R5, R11,ASR#31
+        match = re.search(r'MOV\.W(.+)(ASR|ROR)(.+)', inst_)
+        if match:
+            return "MOV  " + match.group(1) + match.group(2) + match.group(3)
+
+        #MOVTGT.W R0, #0x1ECA
+        match = re.search(r'MOVTGT\.W(.+)', inst_)
+        if match:
+            return "MOVTGT  " + match.group(1)
+
+        #MOVGTW R0, #0x3E89
+        match = re.search(r'MOVGTW(.+)', inst_)
+        if match:
+            return "MOVWGT" + match.group(1)
+
+        #MOVCCW R0, #0x3FE8
+        match = re.search(r'MOVCCW(.+)', inst_)
+        if match:
+            return "MOVWCC" + match.group(1)
+
+        #MOVTCC.W R0, #0x670C
+        match = re.search(r'MOVTCC\.W(.+)', inst_)
+        if match:
+            return "MOVTCC  " + match.group(1)
         else:
             return inst_
+
 
     def filterAll(self, insts_):
         newinsts = []

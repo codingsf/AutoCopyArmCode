@@ -19,7 +19,7 @@ class JmpAddrModify(object):
     def modifySingle(self, inst_):
         match = re.search(r'(.+)loc\_([0-9A-F]{1,})\+([0-9A-F]{1,})', inst_)
         if match:
-            IdaOutput.log(match.group(0))
+            #IdaOutput.log(match.group(0))
             return match.group(1) + "loc_" + self.addStrValue(match.group(2), match.group(3))
         else:
             return inst_

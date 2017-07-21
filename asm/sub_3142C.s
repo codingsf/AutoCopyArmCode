@@ -18,11 +18,11 @@ STR             R0, [SP,#0xB8-0x9C]                                             
 MOVW            R0, #:lower16:(___stack_chk_guard_ptr - loc_3145A - 4)                              //;0x31448
 MOVT            R9, #0x93FC                                                                         //;0x3144c
 MOVT            R0, #:upper16:(___stack_chk_guard_ptr - loc_3145A - 4)                              //;0x31450
-LDR             R6, [R7,#0]                                                                         //;0x31454
+LDR             R6, [R7,#0x8]                                                                       //;0x31454
 ADD.W           R11, SP, #0xB8-0x30                                                                 //;0x31456
 loc_3145A:
 ADD             R0, PC //; ___stack_chk_guard_ptr                                                   //;0x3145a
-LDR             R5, [R7,#4]                                                                         //;0x3145c
+LDR             R5, [R7,#0xc]                                                                       //;0x3145c
 MOV             R8, R10                                                                             //;0x3145e
 LDR             R0, [R0] //; ___stack_chk_guard                                                     //;0x31460
 STR             R0, [SP,#0xB8-0xAC]                                                                 //;0x31462
@@ -247,7 +247,7 @@ ADD             R0, SP, #0xB8-0x84                                              
 STR             R0, [SP,#0xB8-0x74]                                                                 //;0x31692
 ADD             R0, SP, #0xB8-0x80                                                                  //;0x31694
 STR             R0, [SP,#0xB8-0x70]                                                                 //;0x31696
-LDR             R0, [R7,#0]                                                                         //;0x31698
+LDR             R0, [R7,#0x8]                                                                       //;0x31698
 LDR             R2, [SP,#0xB8-0x3C]                                                                 //;0x3169a
 LDR             R1, [SP,#0xB8-0x34]                                                                 //;0x3169c
 STR             R0, [SP,#0xB8-0x6C]                                                                 //;0x3169e
@@ -345,7 +345,7 @@ BL              sub_247A4                                                       
 MOV             R1, R0                                                                              //;0x31780
 MOV             R0, R11                                                                             //;0x31782
 BLX             R1                                                                                  //;0x31784
-LDR             R0, [R7,#4]                                                                         //;0x31786
+LDR             R0, [R7,#0xc]                                                                       //;0x31786
 LDR             R1, [SP,#0xB8-0x94]                                                                 //;0x31788
 LDR             R0, [R0]                                                                            //;0x3178a
 EOR.W           R0, R0, R11                                                                         //;0x3178c
@@ -544,7 +544,7 @@ LDR             R0, [SP,#0xB8-0x84]//; jumptable 0003172E case 3                
 MOVW            R1, #0x8ea5
 MOVT            R1, #0xabb0                                                                         //;0x31968
 ADD             R0, R1                                                                              //;0x31970
-LDR             R1, [R7,#4]                                                                         //;0x31972
+LDR             R1, [R7,#0xc]                                                                       //;0x31972
 STR             R0, [R1]                                                                            //;0x31974
 LDR             R0, [SP,#0xB8-0x58]                                                                 //;0x31976
 LDR             R1, [SP,#0xB8-0x3C]                                                                 //;0x31978

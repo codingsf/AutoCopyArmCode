@@ -26,7 +26,7 @@ MOV             R1, R0                                                          
 MOV             R0, R4                                                                              //;0x23cd4
 BLX             R1                                                                                  //;0x23cd6
 MOV             R0, R4                                                                              //;0x23cd8
-STRB.W          R4, [SP,#0x14-0x14]                                                                 //;0x23cda
+STRB            R4, [SP,#0x14-0x14]                                                                 //;0x23cda
 BL              sub_2A918                                                                           //;0x23cde
 LDR             R0, [SP,#0x14-0xC]                                                                  //;0x23ce2
 LDR             R1, [R5]                                                                            //;0x23ce4

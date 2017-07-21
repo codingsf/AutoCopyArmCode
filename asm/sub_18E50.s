@@ -111,8 +111,8 @@ loc_18F5A:
 STR.W           R11, [SP,#0x30-0x1C]//; jumptable 00018F00 case 3                                   //;0x18f5a
 STR.W           R11, [SP,#0x30-0x2C]                                                                //;0x18f5e
 B               loc_18EEA                                                                           //;0x18f62
-LSLS            R7, R1, #0x14                                                                       //;0x18f64
-B               loc_18ab6                                                                           //;0x18f66
+.byte 0xF                                                                                           //;0x18f64
+.byte 0xA6                                                                                          //;0x18f66
 loc_18F68:
 MOVW            R0, #0x5C8C//; jumptable 00018F00 case 4                                            //;0x18f68
 LDR             R3, [SP,#0x30-0x24]                                                                 //;0x18f6c

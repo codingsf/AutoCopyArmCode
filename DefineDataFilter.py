@@ -16,6 +16,9 @@ class DefineDataFilter(object):
         match = re.search(r'DCW(\s+(0x)?[0-9A-F]{1,})', inst_)
         if match:
             return ".short" + match.group(1)
+        match = re.search(r'DCD(\s+(0x)?[0-9A-F]{1,})', inst_)
+        if match:
+            return '.long' + match.group(1)
         else:
             return inst_
 

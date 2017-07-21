@@ -67,22 +67,22 @@ MOV             R0, R5                                                          
 BLX             R1                                                                                  //;0x3f6ea
 MOVS            R0, #0x2e
 MOVT            R0, #0x0                                                                            //;0x3f6ec
-STRB.W          R0, [SP,#0xCC-0xBC]                                                                 //;0x3f6ee
-STRB.W          R0, [SP,#0xCC-0xBB]                                                                 //;0x3f6f2
-STRB.W          R0, [SP,#0xCC-0xBA]                                                                 //;0x3f6f6
-STRB.W          R0, [SP,#0xCC-0xB9]                                                                 //;0x3f6fa
-STRB.W          R0, [SP,#0xCC-0xB8]                                                                 //;0x3f6fe
-STRB.W          R0, [SP,#0xCC-0xB7]                                                                 //;0x3f702
-STRB.W          R0, [SP,#0xCC-0xB6]                                                                 //;0x3f706
-STRB.W          R0, [SP,#0xCC-0xB5]                                                                 //;0x3f70a
-STRB.W          R0, [SP,#0xCC-0xB4]                                                                 //;0x3f70e
-STRB.W          R0, [SP,#0xCC-0xB3]                                                                 //;0x3f712
-STRB.W          R0, [SP,#0xCC-0xB2]                                                                 //;0x3f716
-STRB.W          R0, [SP,#0xCC-0xB1]                                                                 //;0x3f71a
-STRB.W          R0, [SP,#0xCC-0xB0]                                                                 //;0x3f71e
-STRB.W          R0, [SP,#0xCC-0xAF]                                                                 //;0x3f722
-STRB.W          R0, [SP,#0xCC-0xAE]                                                                 //;0x3f726
-STRB.W          R0, [SP,#0xCC-0xAD]                                                                 //;0x3f72a
+STRB            R0, [SP,#0xCC-0xBC]                                                                 //;0x3f6ee
+STRB            R0, [SP,#0xCC-0xBB]                                                                 //;0x3f6f2
+STRB            R0, [SP,#0xCC-0xBA]                                                                 //;0x3f6f6
+STRB            R0, [SP,#0xCC-0xB9]                                                                 //;0x3f6fa
+STRB            R0, [SP,#0xCC-0xB8]                                                                 //;0x3f6fe
+STRB            R0, [SP,#0xCC-0xB7]                                                                 //;0x3f702
+STRB            R0, [SP,#0xCC-0xB6]                                                                 //;0x3f706
+STRB            R0, [SP,#0xCC-0xB5]                                                                 //;0x3f70a
+STRB            R0, [SP,#0xCC-0xB4]                                                                 //;0x3f70e
+STRB            R0, [SP,#0xCC-0xB3]                                                                 //;0x3f712
+STRB            R0, [SP,#0xCC-0xB2]                                                                 //;0x3f716
+STRB            R0, [SP,#0xCC-0xB1]                                                                 //;0x3f71a
+STRB            R0, [SP,#0xCC-0xB0]                                                                 //;0x3f71e
+STRB            R0, [SP,#0xCC-0xAF]                                                                 //;0x3f722
+STRB            R0, [SP,#0xCC-0xAE]                                                                 //;0x3f726
+STRB            R0, [SP,#0xCC-0xAD]                                                                 //;0x3f72a
 LDR             R0, [SP,#0xCC-0xC8]                                                                 //;0x3f72e
 STR             R0, [SP,#0xCC-0x30]                                                                 //;0x3f730
 ADD             R0, SP, #0xCC-0xBC                                                                  //;0x3f732

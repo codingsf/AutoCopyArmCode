@@ -54,8 +54,8 @@ MOVW            R3, #0x96b3
 MOVT            R3, #0x286b                                                                         //;0x263b2
 STR             R4, [R0]                                                                            //;0x263ba
 ITT HI                                                                                              //;0x263bc
-MOVHIW          R3, #0x5660                                                                         //;0x263be
-MOVTHI.W        R3, #0x5767                                                                         //;0x263c2
+MOVWHI          R3, #0x5660                                                                         //;0x263be
+MOVTHI          R3, #0x5767                                                                         //;0x263c2
 CMP             R1, R8                                                                              //;0x263c6
 STR             R3, [SP,#0x88-0x2C]                                                                 //;0x263c8
 BLS.W           def_26652//; jumptable 000263E0 case 6                                              //;0x263ca

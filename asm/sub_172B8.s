@@ -19,7 +19,7 @@ ADD             R3, SP, #0x48C-0x454                                            
 LDR             R1, [R1] //; ___stack_chk_guard                                                     //;0x172d8
 STR             R1, [SP,#0x48C-0x488]                                                               //;0x172da
 LDR             R1, [R1]                                                                            //;0x172dc
-STR.W           R1, [R7,#var_1C]                                                                    //;0x172de
+STR.W           R1, [R7,#0x1C]                                                                      //;0x172de
 MOVW            R1, #0x71F7                                                                         //;0x172e2
 LDR             R6, [R0]                                                                            //;0x172e6
 MOVT            R1, #0x3CCA                                                                         //;0x172e8
@@ -45,14 +45,14 @@ STR             R2, [SP,#0x48C-0x474]                                           
 STR             R3, [SP,#0x48C-0x464]                                                               //;0x17320
 STR             R1, [SP,#0x48C-0x470]                                                               //;0x17322
 LDR             R1, [R4,#4]                                                                         //;0x17324
-STR.W           R1, [R7,#var_2C]                                                                    //;0x17326
-STR.W           R6, [R7,#var_28]                                                                    //;0x1732a
-STR.W           R0, [R7,#var_20]                                                                    //;0x1732e
+STR.W           R1, [R7,#0x2C]                                                                      //;0x17326
+STR.W           R6, [R7,#0x28]                                                                      //;0x1732a
+STR.W           R0, [R7,#0x20]                                                                      //;0x1732e
 ADD             R0, SP, #0x48C-0x46C                                                                //;0x17332
-STR.W           R0, [R7,#var_30]                                                                    //;0x17334
+STR.W           R0, [R7,#0x30]                                                                      //;0x17334
 MOVW            R0, #0x2d9c
 MOVT            R0, #0x374c                                                                         //;0x17338
-STR.W           R4, [R7,#var_24]                                                                    //;0x17340
+STR.W           R4, [R7,#0x24]                                                                      //;0x17340
 BL              sub_3A1B4                                                                           //;0x17344
 SUB.W           R6, R7, #+0x30                                                                      //;0x17348
 MOV             R1, R0                                                                              //;0x1734c
@@ -60,19 +60,19 @@ MOV             R0, R6                                                          
 BLX             R1                                                                                  //;0x17350
 LDR             R0, [R4]                                                                            //;0x17352
 ADD.W           R10, SP, #0x48C-0x478                                                               //;0x17354
-STR.W           R10, [R7,#var_2C]                                                                   //;0x17358
-STR.W           R0, [R7,#var_30]                                                                    //;0x1735c
+STR.W           R10, [R7,#0x2C]                                                                     //;0x17358
+STR.W           R0, [R7,#0x30]                                                                      //;0x1735c
 MOV             R0, R6                                                                              //;0x17360
 BL              sub_33CBC                                                                           //;0x17362
 MOVW            R0, #0x38D1                                                                         //;0x17366
-STR.W           R8, [R7,#var_2C]                                                                    //;0x1736a
+STR.W           R8, [R7,#0x2C]                                                                      //;0x1736a
 MOVT            R0, #0x681                                                                          //;0x1736e
 BL              sub_3A248                                                                           //;0x17372
 MOV             R1, R0                                                                              //;0x17376
 MOV             R0, R6                                                                              //;0x17378
 MOV             R11, R6                                                                             //;0x1737a
 BLX             R1                                                                                  //;0x1737c
-LDR.W           R0, [R7,#var_30]                                                                    //;0x1737e
+LDR.W           R0, [R7,#0x30]                                                                      //;0x1737e
 MOVW            R2, #0xADEA                                                                         //;0x17382
 MOVW            R3, #0x8E09                                                                         //;0x17386
 LDR             R1, [SP,#0x48C-0x454]                                                               //;0x1738a
@@ -101,19 +101,19 @@ IT HI                                                                           
 ADDHI           R3, R1, R2                                                                          //;0x173d2
 STR.W           R3, [R9]                                                                            //;0x173d4
 ITT HI                                                                                              //;0x173d8
-MOVHIW          R0, #0x74D6                                                                         //;0x173da
-MOVTHI.W        R0, #0x7683                                                                         //;0x173de
+MOVWHI          R0, #0x74D6                                                                         //;0x173da
+MOVTHI          R0, #0x7683                                                                         //;0x173de
 STR             R0, [SP,#0x48C-0x454]                                                               //;0x173e2
 B               loc_17424                                                                           //;0x173e4
 loc_173E6:
 LDR             R0, [SP,#0x48C-0x47C]                                                               //;0x173e6
-STR.W           R10, [R7,#var_30]                                                                   //;0x173e8
-STR.W           R10, [R7,#var_2C]                                                                   //;0x173ec
-STR.W           R0, [R7,#var_28]                                                                    //;0x173f0
+STR.W           R10, [R7,#0x30]                                                                     //;0x173e8
+STR.W           R10, [R7,#0x2C]                                                                     //;0x173ec
+STR.W           R0, [R7,#0x28]                                                                      //;0x173f0
 LDR             R0, [SP,#0x48C-0x480]                                                               //;0x173f4
-STR.W           R0, [R7,#var_24]                                                                    //;0x173f6
+STR.W           R0, [R7,#0x24]                                                                      //;0x173f6
 ADD             R0, SP, #0x48C-0x46C                                                                //;0x173fa
-STR.W           R0, [R7,#var_20]                                                                    //;0x173fc
+STR.W           R0, [R7,#0x20]                                                                      //;0x173fc
 MOVW            R0, #0xc69c
 MOVT            R0, #0xbbaf                                                                         //;0x17400
 BL              sub_3A1B4                                                                           //;0x17408
@@ -148,11 +148,11 @@ STR             R0, [SP,#0x48C-0x45C]                                           
 SUBS            R0, #1                                                                              //;0x1744e
 STR             R0, [SP,#0x48C-0x458]                                                               //;0x17450
 LDR             R0, [SP,#0x48C-0x480]                                                               //;0x17452
-STR.W           R0, [R7,#var_28]                                                                    //;0x17454
+STR.W           R0, [R7,#0x28]                                                                      //;0x17454
 LDR             R0, [SP,#0x48C-0x47C]                                                               //;0x17458
-STR.W           R10, [R7,#var_24]                                                                   //;0x1745a
-STR.W           R10, [R7,#var_2C]                                                                   //;0x1745e
-STR.W           R0, [R7,#var_30]                                                                    //;0x17462
+STR.W           R10, [R7,#0x24]                                                                     //;0x1745a
+STR.W           R10, [R7,#0x2C]                                                                     //;0x1745e
+STR.W           R0, [R7,#0x30]                                                                      //;0x17462
 MOVW            R0, #0x191d
 MOVT            R0, #0xa97d                                                                         //;0x17466
 BL              sub_3A1B4                                                                           //;0x1746e
@@ -166,12 +166,12 @@ MOV             R11, R4                                                         
 MOVT            R1, #0x8349                                                                         //;0x17482
 SUBS            R0, R0, R4                                                                          //;0x17486
 ADD             R0, R1                                                                              //;0x17488
-STR.W           R0, [R7,#var_2C]                                                                    //;0x1748a
+STR.W           R0, [R7,#0x2C]                                                                      //;0x1748a
 LDR             R0, [SP,#0x48C-0x484]                                                               //;0x1748e
-STR.W           R0, [R7,#var_30]                                                                    //;0x17490
+STR.W           R0, [R7,#0x30]                                                                      //;0x17490
 MOV             R0, R4                                                                              //;0x17494
 BL              sub_2468C                                                                           //;0x17496
-LDR.W           R0, [R7,#var_28]                                                                    //;0x1749a
+LDR.W           R0, [R7,#0x28]                                                                      //;0x1749a
 ADD             R4, SP, #0x48C-0x448                                                                //;0x1749e
 LDR             R6, [SP,#0x48C-0x454]                                                               //;0x174a0
 LDR             R2, [SP,#0x48C-0x44C]                                                               //;0x174a2
@@ -228,30 +228,30 @@ LDR             R0, [SP,#0x48C-0x48C]                                           
 MOV             R6, R11                                                                             //;0x17518
 LDR             R4, [R0,#0x10]                                                                      //;0x1751a
 ORR.W           R0, R6, #1                                                                          //;0x1751c
-STR.W           R0, [R7,#var_2C]                                                                    //;0x17520
+STR.W           R0, [R7,#0x2C]                                                                      //;0x17520
 ADD             R0, SP, #0x48C-0x46C                                                                //;0x17524
 MOV             R5, R0                                                                              //;0x17526
 MOV             R0, R6                                                                              //;0x17528
-STR.W           R5, [R7,#var_30]                                                                    //;0x1752a
+STR.W           R5, [R7,#0x30]                                                                      //;0x1752a
 BL              sub_18CEC                                                                           //;0x1752e
 LDR             R0, [SP,#0x48C-0x47C]                                                               //;0x17532
-STR.W           R5, [R7,#var_20]                                                                    //;0x17534
-STR.W           R10, [R7,#var_30]                                                                   //;0x17538
-STR.W           R0, [R7,#var_28]                                                                    //;0x1753c
+STR.W           R5, [R7,#0x20]                                                                      //;0x17534
+STR.W           R10, [R7,#0x30]                                                                     //;0x17538
+STR.W           R0, [R7,#0x28]                                                                      //;0x1753c
 LDR             R0, [SP,#0x48C-0x480]                                                               //;0x17540
-STR.W           R0, [R7,#var_24]                                                                    //;0x17542
+STR.W           R0, [R7,#0x24]                                                                      //;0x17542
 MOVW            R0, #0x522c
 MOVT            R0, #0x9963                                                                         //;0x17546
-STR.W           R10, [R7,#var_2C]                                                                   //;0x1754e
+STR.W           R10, [R7,#0x2C]                                                                     //;0x1754e
 BL              sub_3A248                                                                           //;0x17552
 MOV             R1, R0                                                                              //;0x17556
 MOV             R0, R6                                                                              //;0x17558
 BLX             R1                                                                                  //;0x1755a
 MOV             R0, R6                                                                              //;0x1755c
-STR.W           R10, [R7,#var_30]                                                                   //;0x1755e
-STR.W           R4, [R7,#var_2C]                                                                    //;0x17562
+STR.W           R10, [R7,#0x30]                                                                     //;0x1755e
+STR.W           R4, [R7,#0x2C]                                                                      //;0x17562
 BL              sub_33CBC                                                                           //;0x17566
-LDR.W           R0, [R7,#var_1C]                                                                    //;0x1756a
+LDR.W           R0, [R7,#0x1C]                                                                      //;0x1756a
 LDR             R1, [SP,#0x48C-0x488]                                                               //;0x1756e
 LDR             R1, [R1]                                                                            //;0x17570
 SUBS            R0, R1, R0                                                                          //;0x17572

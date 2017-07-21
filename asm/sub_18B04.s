@@ -128,7 +128,7 @@ ADDS            R1, #0x40                                                       
 STRB            R1, [R0]                                                                            //;0x18c48
 MOVS            R1, #0xbe
 MOVT            R1, #0x0                                                                            //;0x18c4a
-UBFX.W          R5, R3, #0x11, #5                                                                   //;0x18c4c
+UBFX            R5, R3, #0x11, #5                                                                   //;0x18c4c
 EOR.W           R1, R1, R3,LSR#16                                                                   //;0x18c50
 ADD.W           R1, R1, R5,LSL#2                                                                    //;0x18c54
 MOVS            R5, #0x6f
@@ -156,7 +156,7 @@ SUBS            R2, #1                                                          
 STRB            R2, [R0,#4]                                                                         //;0x18c88
 MOVS            R2, #0xbf
 MOVT            R2, #0x0                                                                            //;0x18c8a
-UBFX.W          R3, R1, #0x10, #6                                                                   //;0x18c8c
+UBFX            R3, R1, #0x10, #6                                                                   //;0x18c8c
 EOR.W           R2, R2, R1,LSR#16                                                                   //;0x18c90
 ADD.W           R2, R2, R3,LSL#1                                                                    //;0x18c94
 MOVS            R3, #0x6e
@@ -165,7 +165,7 @@ EOR.W           R3, R3, R1,LSR#8                                                
 ADDS            R2, #0x6F                                                                           //;0x18c9e
 STRB            R2, [R0,#5]                                                                         //;0x18ca0
 AND.W           R2, R8, R1,LSR#7                                                                    //;0x18ca2
-RSB.W           R1, R1, R1,LSL#1                                                                    //;0x18ca6
+RSB             R1, R1, R1,LSL#1                                                                    //;0x18ca6
 ADD             R2, R3                                                                              //;0x18caa
 ADDS            R1, #0x2E                                                                           //;0x18cac
 SUBS            R2, #0x40                                                                           //;0x18cae

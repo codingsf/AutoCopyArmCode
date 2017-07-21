@@ -44,7 +44,7 @@ STR             R1, [SP,#0x90-0x8C]                                             
 CMP.W           R1, #0x1000000                                                                      //;0x299e8
 MOV.W           R1, #0                                                                              //;0x299ec
 STR             R3, [SP,#0x90-0x78]                                                                 //;0x299f0
-STRB.W          R3, [SP,#0x90-0x74]                                                                 //;0x299f2
+STRB            R3, [SP,#0x90-0x74]                                                                 //;0x299f2
 IT EQ                                                                                               //;0x299f6
 MOVEQ           R1, #1                                                                              //;0x299f8
 CMP.W           R2, #0x20000000                                                                     //;0x299fa
@@ -204,7 +204,7 @@ ADD.W           R0, R0, #4                                                      
 LDR             R1, [SP,#0x90-0x58]                                                                 //;0x29b80
 IT EQ                                                                                               //;0x29b82
 MOVEQ           R2, #1                                                                              //;0x29b84
-STRB.W          R2, [SP,#0x90-0x50]                                                                 //;0x29b86
+STRB            R2, [SP,#0x90-0x50]                                                                 //;0x29b86
 LDR             R2, [SP,#0x90-0x48]                                                                 //;0x29b8a
 LDR             R3, [SP,#0x90-0x40]                                                                 //;0x29b8c
 CMP             R0, R1                                                                              //;0x29b8e

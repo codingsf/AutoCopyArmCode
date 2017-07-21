@@ -84,7 +84,7 @@ LDR.W           R1, [R8,#8]                                                     
 LDR.W           R1, [R1,R3,LSL#2]                                                                   //;0x2477a
 ADD             R1, LR                                                                              //;0x2477e
 LSR.W           R1, R1, R4                                                                          //;0x24780
-BFI.W           R1, R9, #1, #0x1F                                                                   //;0x24784
+BFI             R1, R9, #1, #0x1F                                                                   //;0x24784
 ADD             R1, R2                                                                              //;0x24788
 STR             R1, [SP,#0x20-0x20]                                                                 //;0x2478a
 LDR             R1, [SP,#0x20-0xC]                                                                  //;0x2478c
@@ -96,6 +96,6 @@ BNE             loc_24776                                                       
 LDR             R1, [SP,#0x20-0x20]                                                                 //;0x24796
 STR             R1, [R0,#8]                                                                         //;0x24798
 ADD             SP, SP, #0x18                                                                       //;0x2479a
-LDR             R8, [SP+8-0x8],#4                                                                   //;0x2479c
+LDR             R8, [SP],#4                                                                         //;0x2479c
 POP             {R4,R7,PC}                                                                          //;0x247a0
 .section __DATA,__nl_symbol_ptr,non_lazy_symbol_pointers

@@ -264,7 +264,7 @@ TBB             [PC,R1] //; switch jump                                         
 .byte 3                                                                                             //;0x396b4
 .byte 0x5C                                                                                          //;0x396b5
 .byte 0xA6                                                                                          //;0x396b6
-ALIGN 2                                                                                             //;0x396b7
+.byte 0                                                                                             //;0x396b7
 LSR.W           R1, R10,#24                                                                         //;0x396b8
 LDR             R0, [SP,#0x5C-0x50]                                                                 //;0x396bc
 MOVS            R3, #0xef
@@ -312,7 +312,7 @@ SUBS            R1, #1                                                          
 STRB            R1, [R0,#8]                                                                         //;0x3971e
 MOVS            R1, #0xbf
 MOVT            R1, #0x0                                                                            //;0x39720
-UBFX.W          R2, R4, #0x10, #6                                                                   //;0x39722
+UBFX            R2, R4, #0x10, #6                                                                   //;0x39722
 EOR.W           R1, R1, R4,LSR#16                                                                   //;0x39726
 ADD.W           R1, R1, R2,LSL#1                                                                    //;0x3972a
 MOVS            R2, #0x6e
@@ -326,7 +326,7 @@ AND.W           R1, R1, R4,LSR#7                                                
 ADD             R1, R2                                                                              //;0x3973e
 SUBS            R1, #0x40                                                                           //;0x39740
 STRB            R1, [R0,#0xA]                                                                       //;0x39742
-RSB.W           R1, R4, R4,LSL#1                                                                    //;0x39744
+RSB             R1, R4, R4,LSL#1                                                                    //;0x39744
 ADDS            R1, #0x2E                                                                           //;0x39748
 STRB            R1, [R0,#0xB]                                                                       //;0x3974a
 LDR             R0, [SP,#0x5C-0x40]                                                                 //;0x3974c

@@ -152,7 +152,7 @@ STR             R5, [SP,#0x5C-0x2C]                                             
 BEQ.W           def_2CE20//; jumptable 0002CD00 default case                                        //;0x2cde8
 B               loc_2CE0E//; jumptable 0002CD00 case 5                                              //;0x2cdec
 MOVS            R0, #1  //; jumptable 0002CD00 case 3                                               //;0x2cdee
-STRB.W          R0, [R12]                                                                           //;0x2cdf0
+STRB            R0, [R12]                                                                           //;0x2cdf0
 MOVW            R0, #0xBC20                                                                         //;0x2cdf4
 LDR             R1, [SP,#0x5C-0x2C]                                                                 //;0x2cdf8
 MOVT            R0, #0xA4D6                                                                         //;0x2cdfa
@@ -180,7 +180,7 @@ TBB             [PC,R1] //; switch jump                                         
 .byte 3                                                                                             //;0x2ce26
 .byte 0x24                                                                                          //;0x2ce27
 .byte 0x8A                                                                                          //;0x2ce28
-ALIGN 2                                                                                             //;0x2ce29
+.byte 0                                                                                             //;0x2ce29
 LDR             R1, [SP,#0x5C-0x48]//; jumptable 0002CE20 case 2                                    //;0x2ce2a
 MOVW            R0, #0x3A8D                                                                         //;0x2ce2c
 LDR             R2, [SP,#0x5C-0x30]                                                                 //;0x2ce30

@@ -139,7 +139,7 @@ LDR             R0, [SP,#0x6C-0x3C]                                             
 CMP             R0, R6                                                                              //;0x3c2b4
 IT EQ                                                                                               //;0x3c2b6
 MOVEQ           R1, #1                                                                              //;0x3c2b8
-STRB.W          R1, [SP,#0x6C-0x34]                                                                 //;0x3c2ba
+STRB            R1, [SP,#0x6C-0x34]                                                                 //;0x3c2ba
 LDR             R1, [SP,#0x6C-0x2C]                                                                 //;0x3c2be
 IT EQ                                                                                               //;0x3c2c0
 MOVEQ           R2, R10                                                                             //;0x3c2c2
@@ -369,7 +369,7 @@ MOV             LR, R5                                                          
 ADD.W           R8, SP, #0x6C-0x20                                                                  //;0x3c4d8
 MOV             R9, R4                                                                              //;0x3c4dc
 B               loc_3C212                                                                           //;0x3c4de
-LDR             R0, loc_3c67c                                                                       //;0x3c4e0
+.byte 0x66                                                                                          //;0x3c4e0
 LDR             R0, [SP,#0x6C-0x44]//; jumptable 0003C22C case 4                                    //;0x3c4e2
 MOVW            R1, #0xfd51
 MOVT            R1, #0x32ab                                                                         //;0x3c4e4

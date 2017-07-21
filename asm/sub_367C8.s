@@ -546,7 +546,7 @@ LDR             R0, [R0]                                                        
 MOVW            R3, #0x6d70
 MOVT            R3, #0x3                                                                            //;0x36d64
 ADD             R3, PC //; off_5C664                                                                //;0x36d6c
-UDIV.W          R2, R1, R0                                                                          //;0x36d6e
+UDIV            R2, R1, R0                                                                          //;0x36d6e
 LDR             R3, [R3] //; unk_63DE0                                                              //;0x36d72
 MLS             R1, R2, R0, R1                                                                      //;0x36d74
 LDR             R2, [R3]                                                                            //;0x36d78
@@ -794,7 +794,7 @@ LDR             R0, [R0]                                                        
 MOVW            R3, #0x7010
 MOVT            R3, #0x3                                                                            //;0x37004
 ADD             R3, PC //; off_5C664                                                                //;0x3700c
-UDIV.W          R2, R1, R0                                                                          //;0x3700e
+UDIV            R2, R1, R0                                                                          //;0x3700e
 LDR             R3, [R3] //; unk_63DE0                                                              //;0x37012
 MLS             R0, R2, R0, R1                                                                      //;0x37014
 LDR             R2, [R3]                                                                            //;0x37018
@@ -858,7 +858,7 @@ LSR.W           R2, R4, R5                                                      
 EOR.W           R1, R1, #0x23                                                                       //;0x370c0
 EOR.W           R3, R1, R2                                                                          //;0x370c4
 UXTB            R1, R1                                                                              //;0x370c8
-STRB.W          R3, [R0,#-1]                                                                        //;0x370ca
+STRB            R3, [R0,#-1]                                                                        //;0x370ca
 UXTB            R2, R2                                                                              //;0x370ce
 ADD.W           R3, R5, #8                                                                          //;0x370d0
 LDR             R0, [SP,#0x1B8-0x14C]                                                               //;0x370d4

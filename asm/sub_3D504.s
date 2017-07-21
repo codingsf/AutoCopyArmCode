@@ -116,8 +116,8 @@ ADD             R1, R3                                                          
 STR             R1, [R2]                                                                            //;0x3d62e
 STR             R0, [SP,#0x4C-0x40]                                                                 //;0x3d630
 B               loc_3D5B8                                                                           //;0x3d632
-BNE             loc_3D6D8                                                                           //;0x3d634
-STRB            R1, [R0,#0x15]                                                                      //;0x3d636
+.byte 0x50                                                                                          //;0x3d634
+.byte 0x41                                                                                          //;0x3d636
 loc_3D638:
 LDR             R0, [R4]                                                                            //;0x3d638
 MOVS            R5, #0xde

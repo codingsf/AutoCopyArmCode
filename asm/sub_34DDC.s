@@ -51,8 +51,8 @@ MOV             R0, R12                                                         
 STR             R2, [R4]                                                                            //;0x34e6a
 MOVW            R2, #0x6E94                                                                         //;0x34e6c
 ITT CC                                                                                              //;0x34e70
-MOVCCW          R0, #0x3FE8                                                                         //;0x34e72
-MOVTCC.W        R0, #0x670C                                                                         //;0x34e76
+MOVWCC          R0, #0x3FE8                                                                         //;0x34e72
+MOVTCC          R0, #0x670C                                                                         //;0x34e76
 MOVT            R9, #0x6D62                                                                         //;0x34e7a
 MOVT            R2, #0xDAC4                                                                         //;0x34e7e
 STR             R0, [SP,#0x1C-0x1C]                                                                 //;0x34e82

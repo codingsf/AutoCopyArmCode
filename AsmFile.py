@@ -9,6 +9,7 @@ from LowerUpper16Filter import LowerUpper16Filter
 from UmullFilter import UmullFilter
 from MlaFilter import MlaFilter
 from BfcFilter import BfcFilter
+from BfiFilter import BfiFilter
 from ArgFilter import ArgFilter
 from TbhFilter import TbhFilter
 from JmpAddrModify import JmpAddrModify
@@ -19,6 +20,15 @@ from MlsFilter import MlsFilter
 from LdrFilter import LdrFilter
 from StrFilter import StrFilter
 from Plugin import Plugin
+from AdcFilter import AdcFilter
+from ExpressionFilter import ExcpressionFilter
+from UbfxFilter import UbfxFilter
+from RsbFilter import RsbFilter
+from UmlalFilter import UmlalFilter
+from OrnFilter import OrnFilter
+from UxtabFilter import UxtabFilter
+from UdivFilter import UdivFilter
+from SbcFilter import SbcFilter
 import IdaOutput
 
 class AsmFile(object):
@@ -140,12 +150,23 @@ class AsmFile(object):
         inst_ = UmullFilter().filterSingle(inst_)
         inst_ = MlaFilter().filterSingle(inst_)
         inst_ = BfcFilter().filterSingle(inst_)
+        inst_ = BfiFilter().filterSingle(inst_)
         inst_ = ArgFilter().filterSingle(inst_)
         inst_ = TbhFilter().filterSingle(inst_)
         inst_ = LdrdFilter().filterSingle(inst_)
         inst_ = MlsFilter().filterSingle(inst_)
         inst_ = LdrFilter().filterSingle(inst_)
         inst_ = StrFilter().filterSingle(inst_)
+        inst_ = AdcFilter().filterSingle(inst_)
+        inst_ = UbfxFilter().filterSingle(inst_)
+        inst_ = RsbFilter().filterSingle(inst_)
+        inst_ = UmlalFilter().filterSingle(inst_)
+        inst_ = OrnFilter().filterSingle(inst_)
+        inst_ = UxtabFilter().filterSingle(inst_)
+        inst_ = UdivFilter().filterSingle(inst_)
+        inst_ = SbcFilter().filterSingle(inst_)
+        #last execute
+        inst_ = ExcpressionFilter().filterSingle(inst_)
         return inst_
 
     def modify(self, inst_):

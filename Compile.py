@@ -4,7 +4,8 @@ import os
 class Compile(object):
     def __init__(self):
         self._tag = "Compile"
-        self._compile32 = "xcrun --sdk iphoneos clang -arch armv7 -dynamiclib"
+        self._compile32 = "xcrun --sdk iphoneos clang -arch armv7s -mthumb -dynamiclib"
+        #self._compile32 = "clang -target armv7 -mthumb -mcpu=generic -mfloat-abi=soft -dynamiclib"
         self._compile64 = "xcrun --sdk iphoneos clang -arch armv64 -dynamiclib"
 
     def getTag(self):

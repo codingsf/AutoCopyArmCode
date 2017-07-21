@@ -9,10 +9,10 @@ ADD             R7, SP, #0xC                                                    
 STR             R8, [SP,#0xC-0x10]                                                                  //;0x16d24
 SUB             SP, SP, #0x60//; rcv_name                                                           //;0x16d28
 MOVW            R6, #:lower16:(___stack_chk_guard_ptr - loc_16D3C - 4)                              //;0x16d2a
-LDR             R5, [R7,#4]                                                                         //;0x16d2e
+LDR             R5, [R7,#0xc]                                                                       //;0x16d2e
 ADD.W           LR, SP, #0x70-0x4C                                                                  //;0x16d30
 MOVT            R6, #:upper16:(___stack_chk_guard_ptr - loc_16D3C - 4)                              //;0x16d34
-LDR.W           R9, [R7,#8]                                                                         //;0x16d38
+LDR.W           R9, [R7,#0x10]                                                                      //;0x16d38
 loc_16D3C:
 ADD             R6, PC //; ___stack_chk_guard_ptr                                                   //;0x16d3c
 LDR.W           R8, [R6] //; ___stack_chk_guard                                                     //;0x16d3e
@@ -31,11 +31,11 @@ MOV.W           R5, #0x1000100                                                  
 STR             R5, [SP,#0x70-0x40]                                                                 //;0x16d68
 LDR             R5, [R6]                                                                            //;0x16d6a
 LDR             R6, [R6,#4]                                                                         //;0x16d6c
-LDR.W           LR, [R7,#0]                                                                         //;0x16d6e
+LDR.W           LR, [R7,#0x8]                                                                       //;0x16d6e
 LDR.W           R4, [R12] //; __imp__voucher_mach_msg_set                                           //;0x16d72
 ADD.W           R12, SP, #0x70-0x34                                                                 //;0x16d76
 STR             R6, [SP,#0x70-0x38]                                                                 //;0x16d7a
-ADD             R6, SP, #0x70+msg                                                                   //;0x16d7c
+ADD             R6, SP, #0xC                                                                        //;0x16d7c
 STR             R5, [SP,#0x70-0x3C]                                                                 //;0x16d7e
 STMIA.W         R12, {R1-R3}                                                                        //;0x16d80
 VLD1.8          {D16-D17}, [LR]                                                                     //;0x16d84
@@ -52,7 +52,7 @@ STR             R0, [SP,#0x18]                                                  
 CMP             R4, #0                                                                              //;0x16daa
 STR             R1, [SP,#0x20]                                                                      //;0x16dac
 BEQ             loc_16DB8                                                                           //;0x16dae
-ADD             R0, SP, #0x70+msg                                                                   //;0x16db0
+ADD             R0, SP, #0xC                                                                        //;0x16db0
 BLX             _voucher_mach_msg_set                                                               //;0x16db2
 LDR             R0, [SP,#0x18]                                                                      //;0x16db6
 loc_16DB8:
@@ -63,7 +63,7 @@ STMEA.W         SP, {R0,R1}                                                     
 ADD             R0, SP, #0xC//; msg                                                                 //;0x16dc0
 MOVS            R3, #0x4c
 MOVT            R3, #0x0                                                                            //;0x16dc2
-STR             R1, [SP,#0x70+notify]//; notify                                                     //;0x16dc4
+STR             R1, [SP,#8]//; notify                                                               //;0x16dc4
 MOVS            R1, #3  //; option                                                                  //;0x16dc6
 BLX             _mach_msg                                                                           //;0x16dc8
 MOV             R4, R0                                                                              //;0x16dcc
@@ -126,11 +126,11 @@ AND.W           R0, R0, #0xFF000000                                             
 CMP.W           R0, #0x1000000                                                                      //;0x16e4e
 BNE             loc_16E72                                                                           //;0x16e52
 ADD.W           R0, R6, #0x30                                                                       //;0x16e54
-LDR             R3, [R7,#C]                                                                         //;0x16e58
+LDR             R3, [R7,#0x14]                                                                      //;0x16e58
 MOVS            R4, #0                                                                              //;0x16e5a
 VLD1.8          {D16-D17}, [R0]                                                                     //;0x16e5c
-LDR             R2, [R7,#10]                                                                        //;0x16e60
-LDR             R1, [R7,#14]                                                                        //;0x16e62
+LDR             R2, [R7,#0x18]                                                                      //;0x16e60
+LDR             R1, [R7,#0x1c]                                                                      //;0x16e62
 VST1.8          {D16-D17}, [R3]                                                                     //;0x16e64
 LDR             R0, [SP,#0x70-0x48]                                                                 //;0x16e68
 STR             R0, [R2]                                                                            //;0x16e6a
@@ -147,7 +147,7 @@ SUBS            R0, R1, R0                                                      
 BNE             loc_16E8E                                                                           //;0x16e82
 MOV             R0, R4                                                                              //;0x16e84
 ADD             SP, SP, #0x60                                                                       //;0x16e86
-LDR             R8, [SP+0x10-0x10],#4                                                               //;0x16e88
+LDR             R8, [SP],#4                                                                         //;0x16e88
 POP             {R4-R7,PC}                                                                          //;0x16e8c
 loc_16E8E:
 BLX             ___stack_chk_fail                                                                   //;0x16e8e

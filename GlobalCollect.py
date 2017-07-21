@@ -34,3 +34,9 @@ class GlobalCollect(object):
             if match:
                 if match.group(2) not in self._globals:
                     self._globals.append(match.group(2))
+
+            #MOVT.W          R0, #(:upper16:(_mach_task_self__ptr - 0x1ECA0))
+            match = re.search(r'.*\#\(\:(lower16|upper16)\:\(([a-z_]{1,})(\s|\+\-).+', inst.getInst())
+            if match:
+                if match.group(2) not in self._globals:
+                    self._globals.append(match.group(2))

@@ -79,22 +79,22 @@ BLX             R1                                                              
 MOVS            R0, #0x2e
 MOVT            R0, #0x0                                                                            //;0x398f0
 STR.W           R8, [SP,#0x108-0x30]                                                                //;0x398f2
-STRB.W          R0, [SP,#0x108-0xBC]                                                                //;0x398f6
-STRB.W          R0, [SP,#0x108-0xBB]                                                                //;0x398fa
-STRB.W          R0, [SP,#0x108-0xBA]                                                                //;0x398fe
-STRB.W          R0, [SP,#0x108-0xB9]                                                                //;0x39902
-STRB.W          R0, [SP,#0x108-0xB8]                                                                //;0x39906
-STRB.W          R0, [SP,#0x108-0xB7]                                                                //;0x3990a
-STRB.W          R0, [SP,#0x108-0xB6]                                                                //;0x3990e
-STRB.W          R0, [SP,#0x108-0xB5]                                                                //;0x39912
-STRB.W          R0, [SP,#0x108-0xB4]                                                                //;0x39916
-STRB.W          R0, [SP,#0x108-0xB3]                                                                //;0x3991a
-STRB.W          R0, [SP,#0x108-0xB2]                                                                //;0x3991e
-STRB.W          R0, [SP,#0x108-0xB1]                                                                //;0x39922
-STRB.W          R0, [SP,#0x108-0xB0]                                                                //;0x39926
-STRB.W          R0, [SP,#0x108-0xAF]                                                                //;0x3992a
-STRB.W          R0, [SP,#0x108-0xAE]                                                                //;0x3992e
-STRB.W          R0, [SP,#0x108-0xAD]                                                                //;0x39932
+STRB            R0, [SP,#0x108-0xBC]                                                                //;0x398f6
+STRB            R0, [SP,#0x108-0xBB]                                                                //;0x398fa
+STRB            R0, [SP,#0x108-0xBA]                                                                //;0x398fe
+STRB            R0, [SP,#0x108-0xB9]                                                                //;0x39902
+STRB            R0, [SP,#0x108-0xB8]                                                                //;0x39906
+STRB            R0, [SP,#0x108-0xB7]                                                                //;0x3990a
+STRB            R0, [SP,#0x108-0xB6]                                                                //;0x3990e
+STRB            R0, [SP,#0x108-0xB5]                                                                //;0x39912
+STRB            R0, [SP,#0x108-0xB4]                                                                //;0x39916
+STRB            R0, [SP,#0x108-0xB3]                                                                //;0x3991a
+STRB            R0, [SP,#0x108-0xB2]                                                                //;0x3991e
+STRB            R0, [SP,#0x108-0xB1]                                                                //;0x39922
+STRB            R0, [SP,#0x108-0xB0]                                                                //;0x39926
+STRB            R0, [SP,#0x108-0xAF]                                                                //;0x3992a
+STRB            R0, [SP,#0x108-0xAE]                                                                //;0x3992e
+STRB            R0, [SP,#0x108-0xAD]                                                                //;0x39932
 EOR.W           R0, R5, #0x10                                                                       //;0x39936
 STR             R0, [SP,#0x108-0x2C]                                                                //;0x3993a
 ADD             R0, SP, #0x108-0xBC                                                                 //;0x3993c
@@ -198,14 +198,14 @@ LDR             R3, [R0,#0x18]                                                  
 ADD             R0, SP, #0x108-0xCC                                                                 //;0x39a42
 LDR.W           R8, [SP,#0x108-0xDC]                                                                //;0x39a44
 LDRB            R3, [R3,R2]                                                                         //;0x39a48
-STRB.W          R3, [SP,#0x108-0xEC]                                                                //;0x39a4a
+STRB            R3, [SP,#0x108-0xEC]                                                                //;0x39a4a
 LDRB            R3, [R0,R2]                                                                         //;0x39a4e
 ADDS            R2, #1                                                                              //;0x39a50
 LDRB.W          R5, [SP,#0x108-0xEC]                                                                //;0x39a52
 STR             R2, [SP,#0x108-0xE4]                                                                //;0x39a56
 LDR             R2, [SP,#0x108-0xE0]                                                                //;0x39a58
 CMP             R5, R3                                                                              //;0x39a5a
-STRB.W          R3, [SP,#0x108-0xE8]                                                                //;0x39a5c
+STRB            R3, [SP,#0x108-0xE8]                                                                //;0x39a5c
 IT EQ                                                                                               //;0x39a60
 MOVEQ           R4, R10                                                                             //;0x39a62
 LDR             R4, [R4]                                                                            //;0x39a64

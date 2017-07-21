@@ -167,7 +167,7 @@ IT CC                                                                           
 MOVCC           R1, #1                                                                              //;0x3a7b0
 LDR             R6, [SP,#0x2C4-0xCC]                                                                //;0x3a7b2
 LDR             R5, [SP,#0x2C4-0x4C]                                                                //;0x3a7b4
-STRB.W          R1, [SP,#0x2C4-0x48]                                                                //;0x3a7b6
+STRB            R1, [SP,#0x2C4-0x48]                                                                //;0x3a7b6
 STR             R6, [SP,#0x2C4-0x160]                                                               //;0x3a7ba
 MOVW            R6, #0xe906
 MOVT            R6, #0x135                                                                          //;0x3a7bc
@@ -440,15 +440,15 @@ CMP             R0, #1                                                          
 IT HI                                                                                               //;0x3aa50
 MOVHI           R2, #1                                                                              //;0x3aa52
 CMP             R0, #1                                                                              //;0x3aa54
-STRB.W          R2, [SP,#0x2C4-0x158]                                                               //;0x3aa56
+STRB            R2, [SP,#0x2C4-0x158]                                                               //;0x3aa56
 LDR.W           R2, [R11,#0xC]                                                                      //;0x3aa5a
 STR             R1, [SP,#0x2C4-0x284]                                                               //;0x3aa5e
 MOVW            R1, #0xcfff
 MOVT            R1, #0x4738                                                                         //;0x3aa60
 STR             R2, [SP,#0x2C4-0x154]                                                               //;0x3aa68
 ITT HI                                                                                              //;0x3aa6a
-MOVHIW          R1, #0xD00B                                                                         //;0x3aa6c
-MOVTHI.W        R1, #0x4738                                                                         //;0x3aa70
+MOVWHI          R1, #0xD00B                                                                         //;0x3aa6c
+MOVTHI          R1, #0x4738                                                                         //;0x3aa70
 LDR             R0, [SP,#0x2C4-0x3C]                                                                //;0x3aa74
 STR             R1, [SP,#0x2C4-0x280]                                                               //;0x3aa76
 LDR             R1, [SP,#0x2C4-0x34]                                                                //;0x3aa78
@@ -710,7 +710,7 @@ STR             R6, [R1]                                                        
 MOVW            R1, #0xea71
 MOVT            R1, #0xdc1a                                                                         //;0x3acaa
 B               loc_3AE7E                                                                           //;0x3acb2
-DCD 0x83A2FDB0                                                                                      //;0x3acb4
+.long 0x83A2FDB0                                                                                    //;0x3acb4
 LDR             R0, [SP,#0x2C4-0x174]//; jumptable 0003A6E6 case 10                                 //;0x3acb8
 ADD             R2, SP, #0x2C4-0x3C                                                                 //;0x3acba
 MOVW            R3, #0xea70
@@ -909,8 +909,8 @@ ADD             R0, R1                                                          
 STR             R0, [R3]                                                                            //;0x3ae80
 STR             R2, [SP,#0x2C4-0x3C]                                                                //;0x3ae82
 B               def_3AF00//; jumptable 0003A6E6 default case                                        //;0x3ae84
-BNE             word_3AF2A                                                                          //;0x3ae86
-STRB            R1, [R0,#0x15]                                                                      //;0x3ae88
+.byte 0x50                                                                                          //;0x3ae86
+.byte 0x41                                                                                          //;0x3ae88
 LDR             R0, [SP,#0x2C4-0x15C]//; jumptable 0003A6E6 case 19                                 //;0x3ae8a
 LDR             R1, [SP,#0x2C4-0x2B8]                                                               //;0x3ae8c
 STR             R0, [R1,#0x14]                                                                      //;0x3ae8e
@@ -1396,7 +1396,7 @@ CMP             R0, #0                                                          
 STR             R2, [SP,#0x2C4-0x3C]                                                                //;0x3b35e
 BNE.W           def_3AF00//; jumptable 0003A6E6 default case                                        //;0x3b360
 B.W             loc_3A6D4                                                                           //;0x3b364
-LDR             R0, loc_3b504                                                                       //;0x3b368
+.byte 0x66                                                                                          //;0x3b368
 LDR             R0, [SP,#0x2C4-0x98]//; jumptable 0003AF00 case 16                                  //;0x3b36a
 MOVW            R1, #0xE29                                                                          //;0x3b36c
 ADD             R2, SP, #0x2C4-0x3C                                                                 //;0x3b370

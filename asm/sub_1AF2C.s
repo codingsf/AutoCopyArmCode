@@ -290,9 +290,9 @@ ADD.W           R6, R5, #0x1220                                                 
 STR             R0, [R4,#8]                                                                         //;0x1b1e6
 ADD             R0, SP, #0x1268-0x112C                                                              //;0x1b1e8
 ADD.W           R5, SP, #0x1268-0x268                                                               //;0x1b1ea
-STR.W           R0, [R4,#-4]                                                                        //;0x1b1ee
+STR             R0, [R4,#-4]                                                                        //;0x1b1ee
 NEGS            R0, R6                                                                              //;0x1b1f2
-STRB.W          R0, [R5,#0x230]                                                                     //;0x1b1f4
+STRB            R0, [R5,#0x230]                                                                     //;0x1b1f4
 MOVW            R0, #0x28ce
 MOVT            R0, #0xa1f                                                                          //;0x1b1f8
 BL              sub_3A1B4                                                                           //;0x1b200
@@ -330,7 +330,7 @@ B.W             def_1FAEC//; jumptable 0001B098 case 156                        
 LDR.W           R0, [R8,#0x37C]//; jumptable 0001B098 case 1                                        //;0x1b25e
 ANDS.W          R0, R0, #0x20                                                                       //;0x1b262
 LSR.W           R0, R0,#5                                                                           //;0x1b266
-STRB.W          R0, [SP,#0x1268-0xFA8]                                                              //;0x1b26a
+STRB            R0, [SP,#0x1268-0xFA8]                                                              //;0x1b26a
 MOVW            R0, #0xed78
 MOVT            R0, #0x2dd3                                                                         //;0x1b26e
 ITT NE                                                                                              //;0x1b276
@@ -397,7 +397,7 @@ LDRD            R2, R3, [R8,#0x380]                                             
 ADD             R1, R5                                                                              //;0x1b33c
 ADD.W           R5, LR, #0x1220                                                                     //;0x1b33e
 ADD.W           R9, SP, #0x1268-0x10E0                                                              //;0x1b342
-STR.W           R4, [R5,#-4]                                                                        //;0x1b346
+STR             R4, [R5,#-4]                                                                        //;0x1b346
 ADD.W           R4, R5, #8                                                                          //;0x1b34a
 STR.W           R9, [R5]                                                                            //;0x1b34e
 STR             R3, [R5,#4]                                                                         //;0x1b352
@@ -563,7 +563,7 @@ ADD.W           LR, SP, #0x1268-0x268                                           
 LDR.W           R2, [R8,#8]                                                                         //;0x1b540
 ORR.W           R6, R4, #1                                                                          //;0x1b544
 LDR.W           R0, [R8,#0x78]                                                                      //;0x1b548
-STRB.W          R6, [LR,#0x248]                                                                     //;0x1b54c
+STRB            R6, [LR,#0x248]                                                                     //;0x1b54c
 ADD.W           LR, SP, #0x1268-0x125C                                                              //;0x1b550
 ADD.W           R6, LR, #0x1220                                                                     //;0x1b554
 LDR.W           R1, [R8,#0xD4]                                                                      //;0x1b558
@@ -576,7 +576,7 @@ STR             R3, [R5,#0x10]                                                  
 MOVW            R3, #0x128a
 MOVT            R3, #0xd22c                                                                         //;0x1b568
 ADD             R2, R3                                                                              //;0x1b570
-STR.W           R2, [R5,#-4]                                                                        //;0x1b572
+STR             R2, [R5,#-4]                                                                        //;0x1b572
 STR             R1, [R5,#8]                                                                         //;0x1b576
 STR             R0, [R5]                                                                            //;0x1b578
 LDR             R0, [SP,#0x1268-0x11EC]                                                             //;0x1b57a
@@ -644,7 +644,7 @@ ADD.W           R0, R4, #0x1220                                                 
 ADD             R4, SP, #0x1268-0x125C                                                              //;0x1b63e
 EOR.W           R2, R1, R0                                                                          //;0x1b640
 ADD.W           R1, R4, #0x1220                                                                     //;0x1b644
-STRD.W          R2, R3, [R1,#-4]                                                                    //;0x1b648
+STRD            R2, R3, [R1,#-4]                                                                    //;0x1b648
 BL              sub_33B44                                                                           //;0x1b64c
 LDR.W           R2, [R8,#0x4C4]                                                                     //;0x1b650
 LDR.W           R1, [R8,#0x4CC]                                                                     //;0x1b654
@@ -697,7 +697,7 @@ STR             R1, [R5,#4]                                                     
 ADD             R1, SP, #0x1268-0x1170                                                              //;0x1b6e8
 STR             R1, [R5,#0xC]                                                                       //;0x1b6ea
 ADD             R1, SP, #0x1268-0x1174                                                              //;0x1b6ec
-STR.W           R1, [R5,#-4]                                                                        //;0x1b6ee
+STR             R1, [R5,#-4]                                                                        //;0x1b6ee
 STR             R0, [R5]                                                                            //;0x1b6f2
 MOVW            R0, #0x78d
 MOVT            R0, #0xeeda                                                                         //;0x1b6f4
@@ -916,7 +916,7 @@ ADD.W           R0, R4, #0x1220                                                 
 ADD             R4, SP, #0x1268-0x125C                                                              //;0x1b996
 EORS            R2, R0                                                                              //;0x1b998
 ADD.W           R3, R4, #0x1220                                                                     //;0x1b99a
-STR.W           R2, [R3,#-4]                                                                        //;0x1b99e
+STR             R2, [R3,#-4]                                                                        //;0x1b99e
 STR             R1, [R3]                                                                            //;0x1b9a2
 BL              sub_33B44                                                                           //;0x1b9a4
 LDR.W           R2, [R8,#0x4C4]                                                                     //;0x1b9a8
@@ -967,7 +967,7 @@ ADD.W           R4, R6, #0x1220                                                 
 LDR.W           R2, [R8,#0x70]                                                                      //;0x1ba4a
 STR             R0, [R5,#4]                                                                         //;0x1ba4e
 EOR.W           R0, R1, R4                                                                          //;0x1ba50
-STR.W           R0, [R5,#-4]                                                                        //;0x1ba54
+STR             R0, [R5,#-4]                                                                        //;0x1ba54
 ORR.W           R0, R4, #1                                                                          //;0x1ba58
 STR             R0, [R5,#0xC]                                                                       //;0x1ba5c
 MOVW            R0, #0x691b
@@ -1111,7 +1111,7 @@ STR             R0, [R5,#0xC]                                                   
 MOVS            R0, #0                                                                              //;0x1bc06
 STR             R0, [R5]                                                                            //;0x1bc08
 ADD             R0, SP, #0x1268-0x1140                                                              //;0x1bc0a
-STR.W           R0, [R5,#-4]                                                                        //;0x1bc0c
+STR             R0, [R5,#-4]                                                                        //;0x1bc0c
 ADD.W           R0, R4, #0x1000000                                                                  //;0x1bc10
 ADDS            R0, #4                                                                              //;0x1bc14
 STR             R0, [R5,#4]                                                                         //;0x1bc16
@@ -1148,7 +1148,7 @@ MOVS            R1, #0                                                          
 ADDS            R2, #1                                                                              //;0x1bc74
 STR.W           R0, [R8,#0x98]                                                                      //;0x1bc76
 ADD             R0, SP, #0x1268-0x11BC                                                              //;0x1bc7a
-STR.W           R0, [R5,#-4]                                                                        //;0x1bc7c
+STR             R0, [R5,#-4]                                                                        //;0x1bc7c
 MOVW            R0, #0x2dcd
 MOVT            R0, #0x9eb8                                                                         //;0x1bc80
 STMIA.W         R5, {R1,R2}                                                                         //;0x1bc88
@@ -1214,7 +1214,7 @@ MOV             R5, R1                                                          
 ADD.W           R4, R6, #0x1220                                                                     //;0x1bd38
 STR             R0, [R5,#0xC]                                                                       //;0x1bd3c
 ADD             R0, SP, #0x1268-0x1140                                                              //;0x1bd3e
-STR.W           R0, [R5,#-4]                                                                        //;0x1bd40
+STR             R0, [R5,#-4]                                                                        //;0x1bd40
 MOVS            R0, #0                                                                              //;0x1bd44
 STR             R0, [R5]                                                                            //;0x1bd46
 ADD.W           R0, R4, #0x1000000                                                                  //;0x1bd48
@@ -1251,7 +1251,7 @@ MOVW            R2, #0xb254
 MOVT            R2, #0x9633                                                                         //;0x1bda8
 ADD             R1, R2                                                                              //;0x1bdb0
 EORS            R1, R4                                                                              //;0x1bdb2
-STR.W           R1, [R5,#-4]                                                                        //;0x1bdb4
+STR             R1, [R5,#-4]                                                                        //;0x1bdb4
 STR             R0, [R5]                                                                            //;0x1bdb8
 MOVW            R0, #0xa473
 MOVT            R0, #0x1cb                                                                          //;0x1bdba
@@ -1563,7 +1563,7 @@ ADD.W           R0, R4, #0x1220                                                 
 ADD             R4, SP, #0x1268-0x125C                                                              //;0x1c176
 EOR.W           R2, R1, R0                                                                          //;0x1c178
 ADD.W           R1, R4, #0x1220                                                                     //;0x1c17c
-STRD.W          R2, R3, [R1,#-4]                                                                    //;0x1c180
+STRD            R2, R3, [R1,#-4]                                                                    //;0x1c180
 BL              sub_33B44                                                                           //;0x1c184
 LDR.W           R2, [R8,#0x4C4]                                                                     //;0x1c188
 MOVW            R3, #0xF630                                                                         //;0x1c18c
@@ -2102,7 +2102,7 @@ LDR.W           R12, [R0,R1]                                                    
 LDR.W           R1, [R8,#0x400]                                                                     //;0x1c812
 STR             R0, [SP,#0x1268-0x11F4]                                                             //;0x1c816
 MOVW            R0, #0x9F61                                                                         //;0x1c818
-UBFX.W          R6, R10, #8, #8                                                                     //;0x1c81c
+UBFX            R6, R10, #8, #8                                                                     //;0x1c81c
 MOVT            R0, #0x531F                                                                         //;0x1c820
 MOVW            R5, #:lower16:(off_5C6B0 - loc_1C836 - 4)                                           //;0x1c824
 EOR.W           R1, R1, R3                                                                          //;0x1c828
@@ -2122,7 +2122,7 @@ AND.W           R6, R6, R1,LSR#15                                               
 MOVW            R5, #0x976E                                                                         //;0x1c848
 STR             R0, [SP,#0x1268-0x11FC]                                                             //;0x1c84c
 MOVT            R5, #0xD35F                                                                         //;0x1c84e
-RSB.W           R6, R6, R1,LSR#16                                                                   //;0x1c852
+RSB             R6, R6, R1,LSR#16                                                                   //;0x1c852
 ADDS            R6, #0x44                                                                           //;0x1c856
 AND.W           R6, R4, R6,LSL#2                                                                    //;0x1c858
 LDR             R6, [R0,R6]                                                                         //;0x1c85c
@@ -2171,12 +2171,12 @@ MOVT            R5, #0xD240                                                     
 EORS            R2, R0                                                                              //;0x1c8ea
 AND.W           R0, R4, R2,LSR#6                                                                    //;0x1c8ec
 STR             R2, [SP,#0x1268-0x1204]                                                             //;0x1c8f0
-UBFX.W          R12, R2, #8, #8                                                                     //;0x1c8f2
+UBFX            R12, R2, #8, #8                                                                     //;0x1c8f2
 EOR.W           R0, R0, #0xBC                                                                       //;0x1c8f6
 EOR.W           R5, R5, R12                                                                         //;0x1c8fa
 LDR             R0, [R6,R0]                                                                         //;0x1c8fe
 AND.W           R2, R5, #0x20                                                                       //;0x1c900
-ORN.W           R5, R5, #0x20                                                                       //;0x1c904
+ORN             R5, R5, #0x20                                                                       //;0x1c904
 TST             R0, R2                                                                              //;0x1c908
 IT NE                                                                                               //;0x1c90a
 NEGNE           R2, R2                                                                              //;0x1c90c
@@ -2196,7 +2196,7 @@ STR             R0, [SP,#0x1268-0x1208]                                         
 ADD.W           R0, R12, R3,LSR#24                                                                  //;0x1c938
 LDR             R2, [R5,R2]                                                                         //;0x1c93c
 EOR.W           R0, R0, R3,LSR#24                                                                   //;0x1c93e
-UBFX.W          R5, R1, #8, #8                                                                      //;0x1c942
+UBFX            R5, R1, #8, #8                                                                      //;0x1c942
 SUBS            R0, R2, R0                                                                          //;0x1c946
 AND.W           R2, R4, LR,LSR#14                                                                   //;0x1c948
 EOR.W           R2, R2, #0x110                                                                      //;0x1c94c
@@ -2239,8 +2239,8 @@ STR             R0, [SP,#0x1268-0x120C]                                         
 ADD.W           R0, R12, R10,LSR#24                                                                 //;0x1c9c2
 EOR.W           R0, R0, R10,LSR#24                                                                  //;0x1c9c6
 SUBS            R0, R5, R0                                                                          //;0x1c9ca
-UBFX.W          R5, R3, #0x10, #8                                                                   //;0x1c9cc
-UBFX.W          R12, LR, #8, #8                                                                     //;0x1c9d0
+UBFX            R5, R3, #0x10, #8                                                                   //;0x1c9cc
+UBFX            R12, LR, #8, #8                                                                     //;0x1c9d0
 LDR             R6, [SP,#0x1268-0x1208]                                                             //;0x1c9d4
 LDR.W           R5, [R2,R5,LSL#2]                                                                   //;0x1c9d6
 LDR             R2, [SP,#0x1268-0x11F4]                                                             //;0x1c9da
@@ -2289,16 +2289,16 @@ STR             R0, [SP,#0x1268-0x120C]                                         
 MOV.W           R0, #0x34                                                                           //;0x1ca5c
 UXTB            R5, R1                                                                              //;0x1ca60
 MLA             R0, R5, R0, R1                                                                      //;0x1ca62
-UXTAB.W         R1, R9, R0                                                                          //;0x1ca66
+UXTAB           R1, R9, R0                                                                          //;0x1ca66
 UXTB            R5, R0                                                                              //;0x1ca6a
 EORS            R1, R5                                                                              //;0x1ca6c
 LDR             R5, [SP,#0x1268-0x11E4]                                                             //;0x1ca6e
 BIC.W           R0, R4, R0,LSL#2                                                                    //;0x1ca70
 LDR             R0, [R5,R0]                                                                         //;0x1ca74
 SUBS            R0, R0, R1                                                                          //;0x1ca76
-UBFX.W          R1, R3, #8, #8                                                                      //;0x1ca78
+UBFX            R1, R3, #8, #8                                                                      //;0x1ca78
 EORS            R0, R1                                                                              //;0x1ca7c
-UBFX.W          R1, R10, #0x10, #8                                                                  //;0x1ca7e
+UBFX            R1, R10, #0x10, #8                                                                  //;0x1ca7e
 LDR             R2, [SP,#0x1268-0x11FC]                                                             //;0x1ca82
 LDR.W           R1, [R2,R1,LSL#2]                                                                   //;0x1ca84
 LDR             R2, [SP,#0x1268-0x120C]                                                             //;0x1ca88
@@ -2341,9 +2341,9 @@ MOV.W           R2, #0x240                                                      
 EOR.W           R0, R2, R0,LSL#2                                                                    //;0x1caf4
 LDR             R0, [R5,R0]                                                                         //;0x1caf8
 SUBS            R0, R0, R1                                                                          //;0x1cafa
-UBFX.W          R1, R6, #8, #8                                                                      //;0x1cafc
+UBFX            R1, R6, #8, #8                                                                      //;0x1cafc
 EORS            R0, R1                                                                              //;0x1cb00
-UBFX.W          R1, R12, #0x10, #8                                                                  //;0x1cb02
+UBFX            R1, R12, #0x10, #8                                                                  //;0x1cb02
 LDR             R2, [SP,#0x1268-0x11FC]                                                             //;0x1cb06
 LDR.W           R9, [SP,#0x1268-0x11F4]                                                             //;0x1cb08
 LDR.W           R1, [R2,R1,LSL#2]                                                                   //;0x1cb0c
@@ -2365,8 +2365,8 @@ MOVT            R0, #0xab70                                                     
 STR             R1, [SP,#0x1268-0x120C]                                                             //;0x1cb3c
 EORS            R0, R1                                                                              //;0x1cb3e
 STR             R0, [SP,#0x1268-0x1204]                                                             //;0x1cb40
-UBFX.W          R0, R0, #0x10, #8                                                                   //;0x1cb42
-UBFX.W          R1, R10, #8, #8                                                                     //;0x1cb46
+UBFX            R0, R0, #0x10, #8                                                                   //;0x1cb42
+UBFX            R1, R10, #8, #8                                                                     //;0x1cb46
 LDR.W           R0, [R2,R0,LSL#2]                                                                   //;0x1cb4a
 EORS            R0, R1                                                                              //;0x1cb4e
 MOVW            R1, #0xA56D                                                                         //;0x1cb50
@@ -2391,7 +2391,7 @@ EOR.W           R3, LR, R2                                                      
 AND.W           R2, R4, R3,LSR#14                                                                   //;0x1cb8c
 EOR.W           R2, R2, #0x110                                                                      //;0x1cb90
 LDR             R2, [R6,R2]                                                                         //;0x1cb94
-UBFX.W          R6, R12, #8, #8                                                                     //;0x1cb96
+UBFX            R6, R12, #8, #8                                                                     //;0x1cb96
 EOR.W           R2, R2, R6                                                                          //;0x1cb9a
 LDR             R6, [SP,#0x1268-0x1200]                                                             //;0x1cb9e
 EORS            R0, R2                                                                              //;0x1cba0
@@ -2448,7 +2448,7 @@ EOR.W           R0, R2, R0,LSL#2                                                
 LDR             R2, [SP,#0x1268-0x11E4]                                                             //;0x1cc3e
 EOR.W           R6, R6, R10                                                                         //;0x1cc40
 LDR             R0, [R2,R0]                                                                         //;0x1cc44
-UBFX.W          R2, R3, #8, #8                                                                      //;0x1cc46
+UBFX            R2, R3, #8, #8                                                                      //;0x1cc46
 EOR.W           R1, R1, R2                                                                          //;0x1cc4a
 SUBS            R0, R0, R6                                                                          //;0x1cc4e
 MOV             R6, R11                                                                             //;0x1cc50
@@ -2496,7 +2496,7 @@ MOVW            R3, #0x46aa
 MOVT            R3, #0x2929                                                                         //;0x1ccce
 EOR.W           R3, R3, R0                                                                          //;0x1ccd6
 AND.W           R0, R4, R3,LSR#6                                                                    //;0x1ccda
-UBFX.W          R2, R3, #8, #8                                                                      //;0x1ccde
+UBFX            R2, R3, #8, #8                                                                      //;0x1ccde
 LDR             R5, [SP,#0x1268-0x1204]                                                             //;0x1cce2
 LDR.W           R11, [SP,#0x1268-0x11E4]                                                            //;0x1cce4
 AND.W           R3, R4, R3,LSR#14                                                                   //;0x1cce8
@@ -2546,9 +2546,9 @@ EOR.W           R1, R5, R1,LSL#2                                                
 LDR             R5, [SP,#0x1268-0x1204]                                                             //;0x1cd80
 LDR.W           R1, [R11,R1]                                                                        //;0x1cd82
 SUBS            R1, R1, R2                                                                          //;0x1cd86
-UBFX.W          R2, R5, #8, #8                                                                      //;0x1cd88
+UBFX            R2, R5, #8, #8                                                                      //;0x1cd88
 EORS            R1, R2                                                                              //;0x1cd8c
-UBFX.W          R2, LR, #0x10, #8                                                                   //;0x1cd8e
+UBFX            R2, LR, #0x10, #8                                                                   //;0x1cd8e
 LDR             R6, [SP,#0x1268-0x11FC]                                                             //;0x1cd92
 LDR.W           R2, [R6,R2,LSL#2]                                                                   //;0x1cd94
 LDR             R3, [R6,R3]                                                                         //;0x1cd98
@@ -2563,7 +2563,7 @@ MOVW            R2, #0x6874
 MOVT            R2, #0xe25d                                                                         //;0x1cdb2
 EOR.W           R10, R1, R2                                                                         //;0x1cdba
 STR.W           R10, [SP,#0x1268-0x1214]                                                            //;0x1cdbe
-UBFX.W          R2, R10, #8, #8                                                                     //;0x1cdc2
+UBFX            R2, R10, #8, #8                                                                     //;0x1cdc2
 LDR             R1, [SP,#0x1268-0x123C]                                                             //;0x1cdc6
 LDR             R5, [SP,#0x1268-0x1208]                                                             //;0x1cdc8
 EORS            R1, R2                                                                              //;0x1cdca
@@ -2577,7 +2577,7 @@ EOR.W           R5, R4, R5,LSL#2                                                
 MOVT            R6, #0xC034                                                                         //;0x1cde4
 LDR.W           R5, [R11,R5]                                                                        //;0x1cde8
 SUBS            R2, R5, R2                                                                          //;0x1cdec
-UBFX.W          R5, LR, #8, #8                                                                      //;0x1cdee
+UBFX            R5, LR, #8, #8                                                                      //;0x1cdee
 EOR.W           R3, R3, R5                                                                          //;0x1cdf2
 EORS            R2, R3                                                                              //;0x1cdf6
 AND.W           R3, R4, LR,LSR#6                                                                    //;0x1cdf8
@@ -2606,7 +2606,7 @@ MOVT            R3, #0xba04                                                     
 EOR.W           R6, R6, #0x210                                                                      //;0x1ce44
 EORS            R3, R2                                                                              //;0x1ce48
 LDR.W           R6, [R9,R6]                                                                         //;0x1ce4a
-UBFX.W          R2, R3, #0x10, #8                                                                   //;0x1ce4e
+UBFX            R2, R3, #0x10, #8                                                                   //;0x1ce4e
 MOV             R9, R12                                                                             //;0x1ce52
 LDR.W           R2, [R1,R2,LSL#2]                                                                   //;0x1ce54
 LDR             R1, [SP,#0x1268-0x1238]                                                             //;0x1ce58
@@ -2641,11 +2641,11 @@ EOR.W           R2, R2, #0x3DC                                                  
 LDR             R2, [R1,R2]                                                                         //;0x1ceb8
 MOV             R1, R9                                                                              //;0x1ceba
 SUB.W           R9, R2, R6                                                                          //;0x1cebc
-UBFX.W          R6, R10, #0x10, #8                                                                  //;0x1cec0
+UBFX            R6, R10, #0x10, #8                                                                  //;0x1cec0
 LDR.W           R12, [SP,#0x1268-0x11FC]                                                            //;0x1cec4
 LDR             R2, [SP,#0x1268-0x1200]                                                             //;0x1cec8
 LDR.W           R6, [R12,R6,LSL#2]                                                                  //;0x1ceca
-UBFX.W          R5, R2, #8, #8                                                                      //;0x1cece
+UBFX            R5, R2, #8, #8                                                                      //;0x1cece
 EOR.W           R6, R6, R5                                                                          //;0x1ced2
 EOR.W           R5, R6, R9                                                                          //;0x1ced6
 AND.W           R6, R4, R2,LSR#6                                                                    //;0x1ceda
@@ -2661,11 +2661,11 @@ MOVW            R6, #0x8545
 MOVT            R6, #0x73a2                                                                         //;0x1cef8
 EOR.W           R9, R2, R6                                                                          //;0x1cf00
 MOV             R6, R12                                                                             //;0x1cf04
-UBFX.W          R2, R9, #0x10, #8                                                                   //;0x1cf06
+UBFX            R2, R9, #0x10, #8                                                                   //;0x1cf06
 LDR.W           LR, [R6,R2,LSL#2]                                                                   //;0x1cf0a
 LDR             R2, [SP,#0x1268-0x1200]                                                             //;0x1cf0e
-UBFX.W          R2, R2, #0x10, #8                                                                   //;0x1cf10
-UBFX.W          R5, R0, #8, #8                                                                      //;0x1cf14
+UBFX            R2, R2, #0x10, #8                                                                   //;0x1cf10
+UBFX            R5, R0, #8, #8                                                                      //;0x1cf14
 LDR.W           R12, [SP,#0x1268-0x11F4]                                                            //;0x1cf18
 LDR.W           R2, [R6,R2,LSL#2]                                                                   //;0x1cf1c
 LSR.W           R6, R10,#24                                                                         //;0x1cf20
@@ -2700,7 +2700,7 @@ MOVW            R5, #0x5ced
 MOVT            R5, #0x6128                                                                         //;0x1cf74
 EORS            R5, R2                                                                              //;0x1cf7c
 AND.W           R6, R4, R5,LSR#6                                                                    //;0x1cf7e
-UBFX.W          R2, R5, #8, #8                                                                      //;0x1cf82
+UBFX            R2, R5, #8, #8                                                                      //;0x1cf82
 LDR             R1, [SP,#0x1268-0x1204]                                                             //;0x1cf86
 EOR.W           R6, R6, #0x210                                                                      //;0x1cf88
 EOR.W           R2, R2, LR                                                                          //;0x1cf8c
@@ -2716,7 +2716,7 @@ STR             R2, [SP,#0x1268-0x1204]                                         
 LSR.W           R2, R3,#8                                                                           //;0x1cfae
 EOR.W           R2, R2, R0,LSR#16                                                                   //;0x1cfb2
 AND.W           R0, R4, R0,LSR#14                                                                   //;0x1cfb6
-UXTAB.W         R6, R6, LR                                                                          //;0x1cfba
+UXTAB           R6, R6, LR                                                                          //;0x1cfba
 MOV.W           R4, #0x3FC                                                                          //;0x1cfbe
 LDR.W           LR, [SP,#0x1268-0x11E4]                                                             //;0x1cfc2
 EOR.W           R0, R0, #0x110                                                                      //;0x1cfc6
@@ -2772,7 +2772,7 @@ EOR.W           R3, R4, R3,LSL#2                                                
 EOR.W           R1, R1, R5,LSR#24                                                                   //;0x1d05a
 LDR             R3, [R6,R3]                                                                         //;0x1d05e
 SUBS            R1, R3, R1                                                                          //;0x1d060
-UBFX.W          R3, R2, #8, #8                                                                      //;0x1d062
+UBFX            R3, R2, #8, #8                                                                      //;0x1d062
 LDR             R6, [SP,#0x1268-0x11F4]                                                             //;0x1d066
 EORS            R1, R3                                                                              //;0x1d068
 MOVW            R3, #0xf60f
@@ -2799,12 +2799,12 @@ MOVW            R3, #0x9cd1
 MOVT            R3, #0x964d                                                                         //;0x1d0aa
 MOV             R11, R6                                                                             //;0x1d0b2
 EOR.W           R10, R1, R3                                                                         //;0x1d0b4
-UBFX.W          R3, R10, #8, #8                                                                     //;0x1d0b8
+UBFX            R3, R10, #8, #8                                                                     //;0x1d0b8
 LDR             R1, [SP,#0x1268-0x1200]                                                             //;0x1d0bc
 EORS            R1, R3                                                                              //;0x1d0be
 LSR.W           R3, R9,#24                                                                          //;0x1d0c0
 STR             R1, [SP,#0x1268-0x1200]                                                             //;0x1d0c4
-UBFX.W          R6, R0, #8, #8                                                                      //;0x1d0c6
+UBFX            R6, R0, #8, #8                                                                      //;0x1d0c6
 EOR.W           R3, R4, R3,LSL#2                                                                    //;0x1d0ca
 LDR             R1, [SP,#0x1268-0x11E4]                                                             //;0x1d0ce
 EOR.W           R2, R2, R6                                                                          //;0x1d0d0
@@ -2814,7 +2814,7 @@ EOR.W           R6, R6, R9,LSR#24                                               
 MOVW            R1, #0xae2d
 MOVT            R1, #0x4eb9                                                                         //;0x1d0de
 SUBS            R3, R3, R6                                                                          //;0x1d0e6
-UBFX.W          R6, R5, #0x10, #8                                                                   //;0x1d0e8
+UBFX            R6, R5, #0x10, #8                                                                   //;0x1d0e8
 LDR.W           R6, [R12,R6,LSL#2]                                                                  //;0x1d0ec
 EOR.W           R6, R6, R1                                                                          //;0x1d0f0
 LDR             R1, [SP,#0x1268-0x1208]                                                             //;0x1d0f4
@@ -2834,7 +2834,7 @@ EORS            R2, R3                                                          
 MOVW            R3, #0xe580
 MOVT            R3, #0x119f                                                                         //;0x1d11e
 EORS            R2, R3                                                                              //;0x1d126
-UBFX.W          R3, R2, #0x10, #8                                                                   //;0x1d128
+UBFX            R3, R2, #0x10, #8                                                                   //;0x1d128
 LDR             R1, [SP,#0x1268-0x1200]                                                             //;0x1d12c
 LDR.W           R3, [R12,R3,LSL#2]                                                                  //;0x1d12e
 EOR.W           R3, R3, R1                                                                          //;0x1d132
@@ -2842,7 +2842,7 @@ MOV             R1, R11                                                         
 LDR             R6, [R1,R6]                                                                         //;0x1d138
 EOR.W           LR, R3, R6                                                                          //;0x1d13a
 AND.W           R6, R4, R9,LSR#6                                                                    //;0x1d13e
-UBFX.W          R3, R9, #8, #8                                                                      //;0x1d142
+UBFX            R3, R9, #8, #8                                                                      //;0x1d142
 MOV.W           R4, #0x3FC                                                                          //;0x1d146
 LDR.W           R11, [SP,#0x1268-0x11E4]                                                            //;0x1d14a
 EOR.W           R6, R6, #0x210                                                                      //;0x1d14e
@@ -2892,7 +2892,7 @@ MOVS            R0, #0x2e
 MOVT            R0, #0x0                                                                            //;0x1d1e4
 STR             R3, [SP,#0x1268-0x1200]                                                             //;0x1d1e6
 AND.W           R0, R0, R3,LSR#7                                                                    //;0x1d1e8
-UBFX.W          R5, R3, #8, #8                                                                      //;0x1d1ec
+UBFX            R5, R3, #8, #8                                                                      //;0x1d1ec
 SUBS            R0, R5, R0                                                                          //;0x1d1f0
 AND.W           R5, R4, R3,LSR#6                                                                    //;0x1d1f2
 ADD             R0, R1                                                                              //;0x1d1f6
@@ -2912,7 +2912,7 @@ ADD.W           R0, R9, R10,LSR#24                                              
 LDR.W           R5, [R11,R5]                                                                        //;0x1d21c
 EOR.W           R0, R0, R10,LSR#24                                                                  //;0x1d220
 SUBS            R0, R5, R0                                                                          //;0x1d224
-UBFX.W          R5, R6, #0x10, #8                                                                   //;0x1d226
+UBFX            R5, R6, #0x10, #8                                                                   //;0x1d226
 LDR.W           R5, [R12,R5,LSL#2]                                                                  //;0x1d22a
 AND.W           R3, R5, #0x80                                                                       //;0x1d22e
 TST             R3, R0                                                                              //;0x1d232
@@ -2921,7 +2921,7 @@ NEGNE           R3, R3                                                          
 ADD.W           R12, R3, R0                                                                         //;0x1d238
 LDR             R0, [SP,#0x1268-0x1204]                                                             //;0x1d23c
 BIC.W           R3, R5, #0x80                                                                       //;0x1d23e
-UBFX.W          R5, R0, #8, #8                                                                      //;0x1d242
+UBFX            R5, R0, #8, #8                                                                      //;0x1d242
 EOR.W           R3, R3, R5                                                                          //;0x1d246
 AND.W           R5, R4, R0,LSR#6                                                                    //;0x1d24a
 EOR.W           R5, R5, #0x210                                                                      //;0x1d24e
@@ -2971,8 +2971,8 @@ EOR.W           R1, R4, R1,LSL#2                                                
 LDR             R1, [R3,R1]                                                                         //;0x1d2e4
 SUBS            R0, R1, R0                                                                          //;0x1d2e6
 LDR             R1, [SP,#0x1268-0x1204]                                                             //;0x1d2e8
-UBFX.W          R1, R1, #0x10, #8                                                                   //;0x1d2ea
-UBFX.W          R3, R2, #8, #8                                                                      //;0x1d2ee
+UBFX            R1, R1, #0x10, #8                                                                   //;0x1d2ea
+UBFX            R3, R2, #8, #8                                                                      //;0x1d2ee
 LDR.W           R1, [LR,R1,LSL#2]                                                                   //;0x1d2f2
 EOR.W           R1, R1, R3                                                                          //;0x1d2f6
 LDR             R3, [SP,#0x1268-0x11F4]                                                             //;0x1d2fa
@@ -3008,7 +3008,7 @@ EOR.W           R2, R4, R2,LSL#2                                                
 MOVT            R3, #0x531F                                                                         //;0x1d35c
 LDR             R2, [R0,R2]                                                                         //;0x1d360
 SUBS            R1, R2, R1                                                                          //;0x1d362
-UBFX.W          R2, R10, #0x10, #8                                                                  //;0x1d364
+UBFX            R2, R10, #0x10, #8                                                                  //;0x1d364
 LDR.W           R2, [LR,R2,LSL#2]                                                                   //;0x1d368
 EOR.W           R2, R2, R3                                                                          //;0x1d36c
 MOVW            R3, #0x6298
@@ -3026,7 +3026,7 @@ NEGNE           R3, R3                                                          
 ADD.W           R9, R3, R1                                                                          //;0x1d396
 AND.W           R3, R4, R6,LSR#6                                                                    //;0x1d39a
 LDR             R1, [SP,#0x1268-0x11F4]                                                             //;0x1d39e
-UBFX.W          R6, R6, #8, #8                                                                      //;0x1d3a0
+UBFX            R6, R6, #8, #8                                                                      //;0x1d3a0
 LDR             R0, [SP,#0x1268-0x1204]                                                             //;0x1d3a4
 EOR.W           R3, R3, #0x210                                                                      //;0x1d3a6
 LDR.W           R10, [SP,#0x1268-0x11F8]                                                            //;0x1d3aa
@@ -3069,7 +3069,7 @@ AND.W           R3, R4, R5,LSR#6                                                
 LDR             R6, [SP,#0x1268-0x11F4]                                                             //;0x1d42e
 EOR.W           R3, R3, #0x210                                                                      //;0x1d430
 LDR             R3, [R6,R3]                                                                         //;0x1d434
-UBFX.W          R6, R5, #8, #8                                                                      //;0x1d436
+UBFX            R6, R5, #8, #8                                                                      //;0x1d436
 LDR             R0, [SP,#0x1268-0x1200]                                                             //;0x1d43a
 EOR.W           R3, R3, R6                                                                          //;0x1d43c
 ADD.W           R6, R1, R0,LSR#24                                                                   //;0x1d440
@@ -3080,7 +3080,7 @@ LDR.W           R1, [R12,R1]                                                    
 MOV             R12, R10                                                                            //;0x1d454
 SUBS            R1, R1, R6                                                                          //;0x1d456
 EORS            R1, R3                                                                              //;0x1d458
-UBFX.W          R3, R2, #0x10, #8                                                                   //;0x1d45a
+UBFX            R3, R2, #0x10, #8                                                                   //;0x1d45a
 LDR             R6, [SP,#0x1268-0x11FC]                                                             //;0x1d45e
 LDR             R0, [SP,#0x1268-0x1210]                                                             //;0x1d460
 LDR.W           R3, [R6,R3,LSL#2]                                                                   //;0x1d462
@@ -3100,7 +3100,7 @@ LDR             R3, [SP,#0x1268-0x11F4]                                         
 AND.W           R1, R4, R10,LSR#6                                                                   //;0x1d492
 EOR.W           R1, R1, #0x210                                                                      //;0x1d496
 LDR             R1, [R3,R1]                                                                         //;0x1d49a
-UBFX.W          R3, R10, #8, #8                                                                     //;0x1d49c
+UBFX            R3, R10, #8, #8                                                                     //;0x1d49c
 EORS            R1, R3                                                                              //;0x1d4a0
 ADD.W           R3, R9, R11,LSR#24                                                                  //;0x1d4a2
 EOR.W           R0, R1, LR                                                                          //;0x1d4a6
@@ -3111,10 +3111,10 @@ EOR.W           R3, R3, R11,LSR#24                                              
 LDR             R0, [SP,#0x1268-0x11E4]                                                             //;0x1d4b8
 LDR             R1, [R0,R1]                                                                         //;0x1d4ba
 SUBS            R1, R1, R3                                                                          //;0x1d4bc
-UBFX.W          R3, R2, #8, #8                                                                      //;0x1d4be
+UBFX            R3, R2, #8, #8                                                                      //;0x1d4be
 LDR             R0, [SP,#0x1268-0x1200]                                                             //;0x1d4c2
 EORS            R1, R3                                                                              //;0x1d4c4
-UBFX.W          R3, R0, #0x10, #8                                                                   //;0x1d4c6
+UBFX            R3, R0, #0x10, #8                                                                   //;0x1d4c6
 LDR             R0, [SP,#0x1268-0x11F4]                                                             //;0x1d4ca
 LDR.W           R3, [R6,R3,LSL#2]                                                                   //;0x1d4cc
 EORS            R1, R3                                                                              //;0x1d4d0
@@ -3132,7 +3132,7 @@ MOVW            R3, #0x2c6c
 MOVT            R3, #0x8007                                                                         //;0x1d4f2
 EOR.W           LR, R1, R3                                                                          //;0x1d4fa
 MOVW            R3, #0x5C5A                                                                         //;0x1d4fe
-UBFX.W          R1, LR, #0x10, #8                                                                   //;0x1d502
+UBFX            R1, LR, #0x10, #8                                                                   //;0x1d502
 MOVT            R3, #0x9D73                                                                         //;0x1d506
 LDR             R0, [SP,#0x1268-0x1204]                                                             //;0x1d50a
 LDR.W           R1, [R6,R1,LSL#2]                                                                   //;0x1d50c
@@ -3153,9 +3153,9 @@ EOR.W           R2, R4, R2,LSL#2                                                
 MOV.W           R4, #0x3FC                                                                          //;0x1d53e
 LDR             R2, [R0,R2]                                                                         //;0x1d542
 SUBS            R2, R2, R3                                                                          //;0x1d544
-UBFX.W          R3, R11, #8, #8                                                                     //;0x1d546
+UBFX            R3, R11, #8, #8                                                                     //;0x1d546
 EORS            R2, R3                                                                              //;0x1d54a
-UBFX.W          R3, R5, #0x10, #8                                                                   //;0x1d54c
+UBFX            R3, R5, #0x10, #8                                                                   //;0x1d54c
 MOV.W           R5, #0x3FC                                                                          //;0x1d550
 LDR.W           R3, [R6,R3,LSL#2]                                                                   //;0x1d554
 AND.W           R0, R5, R11,LSR#6                                                                   //;0x1d558
@@ -3208,11 +3208,11 @@ SUBS            R1, R2, R1                                                      
 MOVW            R2, #0xe34b
 MOVT            R2, #0x225a                                                                         //;0x1d5ec
 EOR.W           R2, R2, R0                                                                          //;0x1d5f4
-UBFX.W          R0, R2, #0x10, #8                                                                   //;0x1d5f8
+UBFX            R0, R2, #0x10, #8                                                                   //;0x1d5f8
 LDR             R3, [SP,#0x1268-0x11FC]                                                             //;0x1d5fc
 LDR.W           R0, [R3,R0,LSL#2]                                                                   //;0x1d5fe
 LDR             R3, [SP,#0x1268-0x120C]                                                             //;0x1d602
-UBFX.W          R5, R3, #8, #8                                                                      //;0x1d604
+UBFX            R5, R3, #8, #8                                                                      //;0x1d604
 EOR.W           R0, R0, R5                                                                          //;0x1d608
 MOV             R5, R11                                                                             //;0x1d60c
 EORS            R0, R1                                                                              //;0x1d60e
@@ -3231,7 +3231,7 @@ MOVT            R0, #0x45ec                                                     
 STR             R1, [SP,#0x1268-0x1200]                                                             //;0x1d634
 EOR.W           R6, R4, R6,LSL#2                                                                    //;0x1d636
 EOR.W           R11, R1, R0                                                                         //;0x1d63a
-UBFX.W          R0, R11, #8, #8                                                                     //;0x1d63e
+UBFX            R0, R11, #8, #8                                                                     //;0x1d63e
 LDR             R1, [SP,#0x1268-0x1208]                                                             //;0x1d642
 EOR.W           R0, R0, R12                                                                         //;0x1d644
 STR             R0, [SP,#0x1268-0x120C]                                                             //;0x1d648
@@ -3254,9 +3254,9 @@ LDR             R6, [R1,R6]                                                     
 MOV             R9, R3                                                                              //;0x1d680
 EOR.W           R5, R5, LR,LSR#24                                                                   //;0x1d682
 SUBS            R5, R6, R5                                                                          //;0x1d686
-UBFX.W          R6, R2, #8, #8                                                                      //;0x1d688
+UBFX            R6, R2, #8, #8                                                                      //;0x1d688
 EORS            R5, R6                                                                              //;0x1d68c
-UBFX.W          R6, R10, #0x10, #8                                                                  //;0x1d68e
+UBFX            R6, R10, #0x10, #8                                                                  //;0x1d68e
 LDR             R1, [SP,#0x1268-0x11FC]                                                             //;0x1d692
 LDR.W           R6, [R1,R6,LSL#2]                                                                   //;0x1d694
 EORS            R5, R6                                                                              //;0x1d698
@@ -3268,13 +3268,13 @@ EORS            R0, R5                                                          
 MOVW            R5, #0x9ba6
 MOVT            R5, #0xe7f5                                                                         //;0x1d6a8
 EORS            R0, R5                                                                              //;0x1d6b0
-UBFX.W          R5, R0, #0x10, #8                                                                   //;0x1d6b2
+UBFX            R5, R0, #0x10, #8                                                                   //;0x1d6b2
 LDR             R6, [SP,#0x1268-0x120C]                                                             //;0x1d6b6
 LDR.W           R5, [R1,R5,LSL#2]                                                                   //;0x1d6b8
 EOR.W           R5, R5, R6                                                                          //;0x1d6bc
 MOVS            R6, #8                                                                              //;0x1d6c0
 AND.W           R6, R6, R11,LSR#7                                                                   //;0x1d6c2
-RSB.W           R6, R6, R11,LSR#8                                                                   //;0x1d6c6
+RSB             R6, R6, R11,LSR#8                                                                   //;0x1d6c6
 ADDS            R6, #0x84                                                                           //;0x1d6ca
 AND.W           R6, R4, R6,LSL#2                                                                    //;0x1d6cc
 LDR             R6, [R3,R6]                                                                         //;0x1d6d0
@@ -3294,7 +3294,7 @@ LDR             R2, [R5,R2]                                                     
 MOVS            R5, #0x80
 MOVT            R5, #0x0                                                                            //;0x1d6fe
 SUBS            R2, R2, R6                                                                          //;0x1d700
-UBFX.W          R6, LR, #8, #8                                                                      //;0x1d702
+UBFX            R6, LR, #8, #8                                                                      //;0x1d702
 LDR.W           R12, [SP,#0x1268-0x11F8]                                                            //;0x1d706
 EORS            R2, R6                                                                              //;0x1d70a
 MOVS            R6, #0xea
@@ -3355,7 +3355,7 @@ LDR             R5, [R6,R5]                                                     
 MOVW            R6, #0xe301
 MOVT            R6, #0x1eb                                                                          //;0x1d7c4
 SUBS            R2, R5, R2                                                                          //;0x1d7cc
-UBFX.W          R5, R3, #8, #8                                                                      //;0x1d7ce
+UBFX            R5, R3, #8, #8                                                                      //;0x1d7ce
 EORS            R2, R5                                                                              //;0x1d7d2
 AND.W           R5, R4, R11,LSR#14                                                                  //;0x1d7d4
 EOR.W           R5, R5, #0x110                                                                      //;0x1d7d8
@@ -3374,7 +3374,7 @@ MOVT            R2, #0x1                                                        
 ADD             R2, PC //; off_5C658                                                                //;0x1d802
 LDR             R6, [R2]                                                                            //;0x1d804
 STR             R6, [SP,#0x1268-0x1214]                                                             //;0x1d806
-UBFX.W          R2, R5, #0x10, #8                                                                   //;0x1d808
+UBFX            R2, R5, #0x10, #8                                                                   //;0x1d808
 LDR.W           R2, [R6,R2,LSL#2]                                                                   //;0x1d80c
 MOVW            R6, #0xe461
 MOVT            R6, #0x30f7                                                                         //;0x1d810
@@ -3385,9 +3385,9 @@ EOR.W           R5, R5, R12                                                     
 MOV.W           R12, #0x3FC                                                                         //;0x1d826
 EOR.W           LR, R5, R2,ROR#30                                                                   //;0x1d82a
 LDR             R2, [SP,#0x1268-0x1204]                                                             //;0x1d82e
-UBFX.W          R5, R2, #0x10, #8                                                                   //;0x1d830
+UBFX            R5, R2, #0x10, #8                                                                   //;0x1d830
 LSR.W           R2, R3,#24                                                                          //;0x1d834
-UBFX.W          R6, R0, #8, #8                                                                      //;0x1d838
+UBFX            R6, R0, #8, #8                                                                      //;0x1d838
 LDR             R4, [SP,#0x1268-0x11E4]                                                             //;0x1d83c
 EOR.W           R2, R12, R2,LSL#2                                                                   //;0x1d83e
 LDR.W           R5, [R1,R5,LSL#2]                                                                   //;0x1d842
@@ -3433,7 +3433,7 @@ LDR             R5, [SP,#0x1268-0x11E4]                                         
 LDR             R2, [R4,R2]                                                                         //;0x1d8c6
 STR             R4, [SP,#0x1268-0x1200]                                                             //;0x1d8c8
 MOV.W           R4, #0x3FC                                                                          //;0x1d8ca
-UBFX.W          R3, R3, #0x10, #8                                                                   //;0x1d8ce
+UBFX            R3, R3, #0x10, #8                                                                   //;0x1d8ce
 EOR.W           R1, R4, R1,LSL#2                                                                    //;0x1d8d2
 AND.W           R0, R4, R0,LSL#2                                                                    //;0x1d8d6
 LDR.W           R3, [R10,R3,LSL#2]                                                                  //;0x1d8da
@@ -3441,7 +3441,7 @@ EOR.W           R2, R2, LR                                                      
 LDR             R1, [R5,R1]                                                                         //;0x1d8e2
 LDR             R5, [SP,#0x1268-0x1204]                                                             //;0x1d8e4
 SUBS            R1, R1, R6                                                                          //;0x1d8e6
-UBFX.W          R6, R5, #8, #8                                                                      //;0x1d8e8
+UBFX            R6, R5, #8, #8                                                                      //;0x1d8e8
 EOR.W           R3, R3, R6                                                                          //;0x1d8ec
 MOVW            R6, #0xB3E5                                                                         //;0x1d8f0
 EORS            R1, R3                                                                              //;0x1d8f4
@@ -3465,7 +3465,7 @@ MOVT            R0, #0x1                                                        
 ADD             R0, PC //; off_5C618                                                                //;0x1d92e
 LDR             R3, [R0] //; unk_4FF62                                                              //;0x1d930
 STR             R3, [SP,#0x1268-0x11F4]                                                             //;0x1d932
-UBFX.W          R0, R1, #8, #8                                                                      //;0x1d934
+UBFX            R0, R1, #8, #8                                                                      //;0x1d934
 LDR.W           R0, [R3,R0,LSL#2]                                                                   //;0x1d938
 MOVW            R3, #0x39e8
 MOVT            R3, #0x33b1                                                                         //;0x1d93c
@@ -3515,7 +3515,7 @@ EOR.W           R2, R2, #0x1F8                                                  
 LDR.W           R2, [R10,R2]                                                                        //;0x1d9c8
 AND.W           R3, R2, R11                                                                         //;0x1d9cc
 EORS            R0, R3                                                                              //;0x1d9d0
-UBFX.W          R3, R12, #8, #8                                                                     //;0x1d9d2
+UBFX            R3, R12, #8, #8                                                                     //;0x1d9d2
 LDR             R4, [SP,#0x1268-0x11F4]                                                             //;0x1d9d6
 LDR.W           R3, [R4,R3,LSL#2]                                                                   //;0x1d9d8
 MOV.W           R4, #0x3FC                                                                          //;0x1d9dc
@@ -3557,7 +3557,7 @@ EOR.W           R3, R3, #0x14                                                   
 LDR.W           R3, [LR,R3]                                                                         //;0x1da4c
 MOV.W           LR, #0x3FC                                                                          //;0x1da50
 EOR.W           R3, R3, R6                                                                          //;0x1da54
-UBFX.W          R6, R12, #0x10, #8                                                                  //;0x1da58
+UBFX            R6, R12, #0x10, #8                                                                  //;0x1da58
 LDR             R4, [SP,#0x1268-0x1200]                                                             //;0x1da5c
 LDR.W           R6, [R10,R6,LSL#2]                                                                  //;0x1da5e
 AND.W           R5, R6, R11                                                                         //;0x1da62
@@ -3572,7 +3572,7 @@ MOVS            R6, #0x1a
 MOVT            R6, #0x0                                                                            //;0x1da7e
 AND.W           R6, R6, R5,LSR#7                                                                    //;0x1da80
 MOV             R12, R5                                                                             //;0x1da84
-RSB.W           R6, R6, R5,LSR#8                                                                    //;0x1da86
+RSB             R6, R6, R5,LSR#8                                                                    //;0x1da86
 LDR             R5, [SP,#0x1268-0x11F4]                                                             //;0x1da8a
 ADDS            R6, #0x8D                                                                           //;0x1da8c
 AND.W           R6, LR, R6,LSL#2                                                                    //;0x1da8e
@@ -3586,7 +3586,7 @@ EOR.W           R3, R3, R6,LSR#3                                                
 MOVW            R6, #0x52cd
 MOVT            R6, #0x37aa                                                                         //;0x1daa8
 EOR.W           LR, R3, R6                                                                          //;0x1dab0
-UBFX.W          R6, LR, #8, #8                                                                      //;0x1dab4
+UBFX            R6, LR, #8, #8                                                                      //;0x1dab4
 EOR.W           R5, R6, #0xFB                                                                       //;0x1dab8
 MOVW            R6, #0xdac8
 MOVT            R6, #0x1                                                                            //;0x1dabc
@@ -3613,8 +3613,8 @@ EOR.W           R5, R5, R3,LSR#24                                               
 MOVS            R3, #0x29
 MOVT            R3, #0x0                                                                            //;0x1dafa
 EOR.W           R5, R5, #0x4D                                                                       //;0x1dafc
-STRB.W          R5, [R6,R9]                                                                         //;0x1db00
-UBFX.W          R2, R2, #0x10, #8                                                                   //;0x1db04
+STRB            R5, [R6,R9]                                                                         //;0x1db00
+UBFX            R2, R2, #0x10, #8                                                                   //;0x1db04
 EOR.W           R5, R2, #0x8B                                                                       //;0x1db08
 MOVW            R2, #0xdb1c
 MOVT            R2, #0x1                                                                            //;0x1db0c
@@ -3628,9 +3628,9 @@ LDR             R3, [SP,#0x1268-0x1210]                                         
 EOR.W           R5, R5, R6                                                                          //;0x1db28
 LDR.W           R6, [R8,#0x1FC]                                                                     //;0x1db2c
 EOR.W           R5, R5, #0x8D                                                                       //;0x1db30
-STRB.W          R5, [R6,R10]                                                                        //;0x1db34
+STRB            R5, [R6,R10]                                                                        //;0x1db34
 LSR.W           R5, R12,#24                                                                         //;0x1db38
-UBFX.W          R1, R1, #0x10, #8                                                                   //;0x1db3c
+UBFX            R1, R1, #0x10, #8                                                                   //;0x1db3c
 LDR.W           R5, [R3,R5,LSL#2]                                                                   //;0x1db40
 ADDW            R10, SP, #0x1268-0xCFC                                                              //;0x1db44
 LDR             R3, [SP,#0x1268-0x1214]                                                             //;0x1db48
@@ -3673,7 +3673,7 @@ LDRB            R5, [R0,R5]                                                     
 EOR.W           R5, R5, R1,LSR#24                                                                   //;0x1dbc4
 EOR.W           R5, R5, #0xC0                                                                       //;0x1dbc8
 STRB            R5, [R6,R4]                                                                         //;0x1dbcc
-UBFX.W          R4, LR, #0x10, #8                                                                   //;0x1dbce
+UBFX            R4, LR, #0x10, #8                                                                   //;0x1dbce
 LDR.W           R6, [R8,#0x3FC]                                                                     //;0x1dbd2
 EOR.W           R4, R4, #0x8B                                                                       //;0x1dbd6
 LDRB            R4, [R2,R4]                                                                         //;0x1dbda
@@ -3693,7 +3693,7 @@ EOR.W           R4, R4, R3,LSR#24                                               
 EOR.W           R4, R4, #0xC0                                                                       //;0x1dc08
 STRB            R4, [R6,R5]                                                                         //;0x1dc0c
 LDR             R4, [SP,#0x1268-0x11F8]                                                             //;0x1dc0e
-UBFX.W          R4, R4, #8, #8                                                                      //;0x1dc10
+UBFX            R4, R4, #8, #8                                                                      //;0x1dc10
 LDR             R5, [SP,#0x1268-0x11E4]                                                             //;0x1dc14
 LDR             R6, [SP,#0x1268-0x121C]                                                             //;0x1dc16
 EOR.W           R4, R4, #0xFB                                                                       //;0x1dc18
@@ -3721,7 +3721,7 @@ EOR.W           R0, R0, #0x8B                                                   
 ORR.W           R6, R6, #4                                                                          //;0x1dc54
 STRB            R0, [R5,R6]                                                                         //;0x1dc58
 LDR             R0, [SP,#0x1268-0x11F8]                                                             //;0x1dc5a
-UBFX.W          R0, R0, #0x10, #8                                                                   //;0x1dc5c
+UBFX            R0, R0, #0x10, #8                                                                   //;0x1dc5c
 LDR.W           R5, [R8,#0x1FC]                                                                     //;0x1dc60
 EOR.W           R0, R0, #0x8B                                                                       //;0x1dc64
 LDRB            R0, [R2,R0]                                                                         //;0x1dc68
@@ -3732,7 +3732,7 @@ EOR.W           R0, R0, #0x8D                                                   
 ADD             R6, R4                                                                              //;0x1dc78
 ORR.W           R4, R6, #1                                                                          //;0x1dc7a
 STRB            R0, [R5,R4]                                                                         //;0x1dc7e
-UBFX.W          R0, R1, #0x10, #8                                                                   //;0x1dc80
+UBFX            R0, R1, #0x10, #8                                                                   //;0x1dc80
 LDR.W           R5, [R8,#0x3FC]                                                                     //;0x1dc84
 EOR.W           R0, R0, #0x8B                                                                       //;0x1dc88
 LDRB            R0, [R2,R0]                                                                         //;0x1dc8c
@@ -3743,7 +3743,7 @@ ORR.W           R2, R6, #0xD                                                    
 LDR.W           R6, [R8,#0x1FC]                                                                     //;0x1dc9c
 EOR.W           R0, R0, #0x8D                                                                       //;0x1dca0
 STRB            R0, [R6,R2]                                                                         //;0x1dca4
-UBFX.W          R0, R1, #8, #8                                                                      //;0x1dca6
+UBFX            R0, R1, #8, #8                                                                      //;0x1dca6
 LDR             R2, [SP,#0x1268-0x11E4]                                                             //;0x1dcaa
 EOR.W           R0, R0, #0xFB                                                                       //;0x1dcac
 LDR.W           R6, [R8,#0x1FC]                                                                     //;0x1dcb0
@@ -3755,7 +3755,7 @@ EOR.W           R0, R0, #0x65                                                   
 STRB            R0, [R6,R2]                                                                         //;0x1dcc4
 UXTB.W          R0, LR                                                                              //;0x1dcc6
 EOR.W           R0, R0, #0x82                                                                       //;0x1dcca
-UBFX.W          R3, R3, #8, #8                                                                      //;0x1dcce
+UBFX            R3, R3, #8, #8                                                                      //;0x1dcce
 LDR             R6, [SP,#0x1268-0x11E4]                                                             //;0x1dcd2
 LDRB            R0, [R4,R0]                                                                         //;0x1dcd4
 LDR             R5, [SP,#0x1268-0x1218]                                                             //;0x1dcd6
@@ -4215,8 +4215,8 @@ STR             R6, [R1]                                                        
 MOVW            R1, #0x872d
 MOVT            R1, #0xebba                                                                         //;0x1e2aa
 B.W             loc_21138                                                                           //;0x1e2b2
-LDR             R1, [SP,#0x1268-0x1028]                                                             //;0x1e2b6
-CBNZ            R7, loc_1e2f0                                                                       //;0x1e2b8
+.byte 0x90                                                                                          //;0x1e2b6
+.byte 0xD7                                                                                          //;0x1e2b8
 MOVW            R0, #0x1D9//; jumptable 0001B098 case 67                                            //;0x1e2ba
 LDR.W           R4, [R8,#0x7C]                                                                      //;0x1e2be
 MOVT            R0, #0xEA47                                                                         //;0x1e2c2
@@ -4350,7 +4350,7 @@ ADD             R4, SP, #0x1268-0x125C                                          
 ORR.W           R1, R5, #2                                                                          //;0x1e452
 ADD.W           R6, R4, #0x1220                                                                     //;0x1e456
 STR             R1, [R6,#4]                                                                         //;0x1e45a
-STR.W           R0, [R6,#-4]                                                                        //;0x1e45c
+STR             R0, [R6,#-4]                                                                        //;0x1e45c
 MOV             R0, R5                                                                              //;0x1e460
 BL              sub_18E50                                                                           //;0x1e462
 MOVW            R0, #0xe476
@@ -4360,7 +4360,7 @@ ADD             R0, PC //; off_5C6D8                                            
 LDR             R0, [R0]//; "Ã‹v¾)@&¸"                                                              //;0x1e474
 STR             R0, [R6]                                                                            //;0x1e476
 EOR.W           R0, R5, #0x11                                                                       //;0x1e478
-STR.W           R1, [R6,#-4]                                                                        //;0x1e47c
+STR             R1, [R6,#-4]                                                                        //;0x1e47c
 STR             R0, [R6,#8]                                                                         //;0x1e480
 MOVW            R0, #0x1047
 MOVT            R0, #0xdab0                                                                         //;0x1e482
@@ -4373,7 +4373,7 @@ EOR.W           R4, R5, #0x14                                                   
 LDR.W           R0, [R8,#0x220]                                                                     //;0x1e49c
 STR             R4, [R6,#8]                                                                         //;0x1e4a0
 ADDS            R1, #0x1D                                                                           //;0x1e4a2
-STRD.W          R0, R1, [R6,#-4]                                                                    //;0x1e4a4
+STRD            R0, R1, [R6,#-4]                                                                    //;0x1e4a4
 MOVW            R0, #0x5007
 MOVT            R0, #0xe504                                                                         //;0x1e4a8
 BL              sub_33AA0                                                                           //;0x1e4b0
@@ -4384,7 +4384,7 @@ LDR.W           R1, [R8,#0x40]                                                  
 LDR.W           R0, [R8,#0x220]                                                                     //;0x1e4be
 STR             R4, [R6,#8]                                                                         //;0x1e4c2
 ADDS            R1, #0x1D                                                                           //;0x1e4c4
-STRD.W          R0, R1, [R6,#-4]                                                                    //;0x1e4c6
+STRD            R0, R1, [R6,#-4]                                                                    //;0x1e4c6
 MOVW            R0, #0x89af
 MOVT            R0, #0x1fa                                                                          //;0x1e4ca
 BL              sub_247A4                                                                           //;0x1e4d2
@@ -4399,7 +4399,7 @@ loc_1E4EA:
 ADD             R0, PC //; off_5C6CC                                                                //;0x1e4ea
 LDR             R1, [R0] //; unk_53554                                                              //;0x1e4ec
 LDR.W           R0, [R8,#0x220]                                                                     //;0x1e4ee
-STRD.W          R0, R1, [R6,#-4]                                                                    //;0x1e4f2
+STRD            R0, R1, [R6,#-4]                                                                    //;0x1e4f2
 MOVW            R0, #0xc447
 MOVT            R0, #0x85e0                                                                         //;0x1e4f6
 BL              sub_3A1B4                                                                           //;0x1e4fe
@@ -4407,7 +4407,7 @@ MOV             R1, R0                                                          
 MOV             R0, R5                                                                              //;0x1e504
 BLX             R1                                                                                  //;0x1e506
 LDRD            R0, R1, [R8,#0x220]                                                                 //;0x1e508
-STRD.W          R0, R1, [R6,#-4]                                                                    //;0x1e50c
+STRD            R0, R1, [R6,#-4]                                                                    //;0x1e50c
 MOVW            R0, #0xd27
 MOVT            R0, #0x647b                                                                         //;0x1e510
 BL              sub_3A1B4                                                                           //;0x1e518
@@ -4449,8 +4449,8 @@ MOVS            R0, #2                                                          
 STR.W           R0, [R8,#0x200]                                                                     //;0x1e58a
 LDR.W           R0, [R8,#0x4C8]                                                                     //;0x1e58e
 B.W             loc_1F886                                                                           //;0x1e592
-ADR             R6, (loc_1e674                                                                      //;0x1e596
-LSLS            R1, R3, #6                                                                          //;0x1e598
+.byte 0x37                                                                                          //;0x1e596
+.byte 0x99                                                                                          //;0x1e598
 LDR.W           R0, [R8,#0x34]//; jumptable 0001B098 case 74                                        //;0x1e59a
 MOVW            R3, #0xF613                                                                         //;0x1e59e
 LDR.W           R1, [R8,#0x2E8]                                                                     //;0x1e5a2
@@ -4572,7 +4572,7 @@ ADD             R1, R4                                                          
 MOV             R5, R6                                                                              //;0x1e720
 ADD             R1, R2                                                                              //;0x1e722
 EORS            R0, R4                                                                              //;0x1e724
-STR.W           R1, [R5,#-4]                                                                        //;0x1e726
+STR             R1, [R5,#-4]                                                                        //;0x1e726
 ADD             R2, SP, #0x1268-0x113C                                                              //;0x1e72a
 ADD             R3, SP, #0x1268-0x1124                                                              //;0x1e72c
 LDR             R1, [SP,#0x1268-0x11E8]                                                             //;0x1e72e
@@ -4626,7 +4626,7 @@ LDR.W           R0, [R8,#0x4C8]                                                 
 STR             R6, [R1]                                                                            //;0x1e7c8
 SUB.W           R1, R2, #0x46                                                                       //;0x1e7ca
 B.W             loc_2113A                                                                           //;0x1e7ce
-ADR             R0, (loc_1e80c                                                                      //;0x1e7d2
+.short 0xA00E                                                                                       //;0x1e7d2
 LDR.W           R0, [R8,#8]//; jumptable 0001B098 case 81                                           //;0x1e7d4
 MOVW            R6, #0x1289                                                                         //;0x1e7d8
 MOVW            R9, #0xF612                                                                         //;0x1e7dc
@@ -4670,7 +4670,7 @@ SUBS            R1, R5, R0                                                      
 MOVW            R5, #0x7bc5
 MOVT            R5, #0xad44                                                                         //;0x1e84e
 ADD             R1, R5                                                                              //;0x1e856
-STR.W           R1, [R4,#-4]                                                                        //;0x1e858
+STR             R1, [R4,#-4]                                                                        //;0x1e858
 ADDS            R1, R2, #4                                                                          //;0x1e85c
 MOVW            R2, #0x128A                                                                         //;0x1e85e
 STR             R6, [R4,#0x14]                                                                      //;0x1e862
@@ -4818,11 +4818,11 @@ MOVW            R6, #0x128a
 MOVT            R6, #0xd22c                                                                         //;0x1ea0e
 ADD             R1, R6                                                                              //;0x1ea16
 ADD.W           R6, SP, #0x1268-0x268                                                               //;0x1ea18
-STR.W           R1, [R5,#-4]                                                                        //;0x1ea1c
+STR             R1, [R5,#-4]                                                                        //;0x1ea1c
 SUBS            R1, R3, R4                                                                          //;0x1ea20
 STR             R1, [R5]                                                                            //;0x1ea22
 ORR.W           R1, R4, #1                                                                          //;0x1ea24
-STRB.W          R1, [R6,#0x248]                                                                     //;0x1ea28
+STRB            R1, [R6,#0x248]                                                                     //;0x1ea28
 LDR             R1, [SP,#0x1268-0x11EC]                                                             //;0x1ea2c
 STR             R1, [R5,#0x18]                                                                      //;0x1ea2e
 STR             R2, [R5,#8]                                                                         //;0x1ea30
@@ -4960,9 +4960,9 @@ ADD.W           LR, SP, #0x1268-0x268                                           
 IT NE                                                                                               //;0x1ebcc
 MOVNE           R1, #1                                                                              //;0x1ebce
 SUBS            R0, R1, R4                                                                          //;0x1ebd0
-STRB.W          R0, [LR,#0x230]                                                                     //;0x1ebd2
+STRB            R0, [LR,#0x230]                                                                     //;0x1ebd2
 ADD             R0, SP, #0x1268-0x112C                                                              //;0x1ebd6
-STR.W           R0, [R6,#-4]                                                                        //;0x1ebd8
+STR             R0, [R6,#-4]                                                                        //;0x1ebd8
 MOVW            R0, #0xd556
 MOVT            R0, #0x233e                                                                         //;0x1ebdc
 BL              sub_247A4                                                                           //;0x1ebe4
@@ -4997,7 +4997,7 @@ ADD.W           R0, R4, #0x1220                                                 
 ADD             R4, SP, #0x1268-0x125C                                                              //;0x1ec44
 EORS            R2, R0                                                                              //;0x1ec46
 ADD.W           R3, R4, #0x1220                                                                     //;0x1ec48
-STR.W           R2, [R3,#-4]                                                                        //;0x1ec4c
+STR             R2, [R3,#-4]                                                                        //;0x1ec4c
 STR             R1, [R3]                                                                            //;0x1ec50
 BL              sub_33B44                                                                           //;0x1ec52
 LDR.W           R1, [R8,#0x130]                                                                     //;0x1ec56
@@ -5226,7 +5226,7 @@ IT CC                                                                           
 ADDCC           R3, R5, R1                                                                          //;0x1ef20
 STR             R3, [R2]                                                                            //;0x1ef22
 B.W             loc_20FB0                                                                           //;0x1ef24
-DCD 0xF5D5808D                                                                                      //;0x1ef28
+.long 0xF5D5808D                                                                                    //;0x1ef28
 LDR.W           R0, [R8,#0x31C]//; jumptable 0001B098 case 100                                      //;0x1ef2c
 MOVW            R1, #:lower16:(off_5C69C - loc_1EF44 - 4)                                           //;0x1ef30
 MOVW            R3, #0x9108                                                                         //;0x1ef34
@@ -5338,7 +5338,7 @@ LDR             R0, [R0]                                                        
 MOVW            R3, #0xf08e
 MOVT            R3, #0x1                                                                            //;0x1f082
 ADD             R3, PC //; off_5C664                                                                //;0x1f08a
-UDIV.W          R2, R1, R0                                                                          //;0x1f08c
+UDIV            R2, R1, R0                                                                          //;0x1f08c
 LDR             R3, [R3] //; unk_63DE0                                                              //;0x1f090
 LDR             R3, [R3]                                                                            //;0x1f092
 MLS             R0, R2, R0, R1                                                                      //;0x1f094
@@ -5679,7 +5679,7 @@ B.W             loc_21138                                                       
 LDR.W           R0, [R8,#0x34]//; jumptable 0001B098 case 109                                       //;0x1f4ac
 LDR.W           R1, [R8,#0x348]                                                                     //;0x1f4b0
 SUBS            R0, #0x40                                                                           //;0x1f4b4
-STRD.W          R0, R1, [R8,#0x34]                                                                  //;0x1f4b6
+STRD            R0, R1, [R8,#0x34]                                                                  //;0x1f4b6
 LDR.W           R0, [R8,#0xE8]                                                                      //;0x1f4ba
 CMP             R0, #0                                                                              //;0x1f4be
 BEQ.W           loc_232B4//; jumptable 0001B098 case 139                                            //;0x1f4c0
@@ -5727,13 +5727,13 @@ ADDS            R3, R2, R4                                                      
 LDR.W           R6, [R8,#0x4CC]                                                                     //;0x1f544
 MOV             R4, R3                                                                              //;0x1f548
 LDR.W           R9, [R8,#0x4C8]                                                                     //;0x1f54a
-STRB.W          R0, [SP,#0x1268-0xD44]                                                              //;0x1f54e
+STRB            R0, [SP,#0x1268-0xD44]                                                              //;0x1f54e
 LDR.W           R0, [R8,#0x488]                                                                     //;0x1f552
 ADD             R0, R1                                                                              //;0x1f556
 LDRB.W          R1, [SP,#0x1268-0xD44]                                                              //;0x1f558
 LDRB.W          R0, [R0,#0x20]                                                                      //;0x1f55c
 CMP             R1, R0                                                                              //;0x1f560
-STRB.W          R0, [SP,#0x1268-0xD40]                                                              //;0x1f562
+STRB            R0, [SP,#0x1268-0xD40]                                                              //;0x1f562
 IT EQ                                                                                               //;0x1f566
 MOVEQ           R5, R10                                                                             //;0x1f568
 LDR             R5, [R5]                                                                            //;0x1f56a
@@ -6775,7 +6775,7 @@ SUBS            R0, R0, R4                                                      
 STR             R0, [R5,#0x10]                                                                      //;0x20134
 SUBS            R0, R2, R4                                                                          //;0x20136
 STR             R3, [R5]                                                                            //;0x20138
-STR.W           R0, [R5,#-4]                                                                        //;0x2013a
+STR             R0, [R5,#-4]                                                                        //;0x2013a
 ADD.W           R0, SP, #0x1268-0xCC8                                                               //;0x2013e
 STR             R0, [R5,#0x14]                                                                      //;0x20142
 MOVW            R0, #0x7b8e
@@ -6889,8 +6889,8 @@ STR             R2, [R3]                                                        
 STR.W           R5, [R8,#0x4C4]                                                                     //;0x2028c
 BNE.W           def_1FAEC//; jumptable 0001B098 case 156                                            //;0x20290
 B.W             def_1B098//; jumptable 0001B098 default case                                        //;0x20294
-BLE             loc_202a6                                                                           //;0x20298
-ADR             R7, loc_20504                                                                       //;0x2029a
+.byte 5                                                                                             //;0x20298
+.byte 0x9A                                                                                          //;0x2029a
 MOVW            R0, #0x2ac
 MOVT            R0, #0x2                                                                            //;0x2029c
 LDR.W           R1, [R8,#0x338]                                                                     //;0x202a4
@@ -6949,7 +6949,7 @@ MOVW            R3, #0x35a
 MOVT            R3, #0x2                                                                            //;0x2034a
 LDR.W           R9, [R8,#0xFC]                                                                      //;0x20352
 ADD             R3, PC //; off_5C664                                                                //;0x20356
-UDIV.W          R2, R1, R0                                                                          //;0x20358
+UDIV            R2, R1, R0                                                                          //;0x20358
 LDR             R3, [R3] //; unk_63DE0                                                              //;0x2035c
 MLS             R0, R2, R0, R1                                                                      //;0x2035e
 MOVW            R2, #0xFFFC                                                                         //;0x20362
@@ -7019,7 +7019,7 @@ EORS            R1, R2                                                          
 MOVW            R4, #0x90F2                                                                         //;0x2042c
 EOR.W           R1, R1, #0x65                                                                       //;0x20430
 MOVT            R4, #0x9BFA                                                                         //;0x20434
-STRB.W          R1, [R9,R12]                                                                        //;0x20438
+STRB            R1, [R9,R12]                                                                        //;0x20438
 MOVW            R9, #0x9E5                                                                          //;0x2043c
 LDR.W           R2, [R8,#0xE4]                                                                      //;0x20440
 MOVT            R9, #0xB040                                                                         //;0x20444
@@ -7085,7 +7085,6 @@ MOV.W           R5, #0x6B                                                       
 MUL             R6, R5, R6                                                                          //;0x204fa
 LDRB            R3, [R3,#5]                                                                         //;0x204fe
 LDR.W           R5, [R8,#0x4A4]                                                                     //;0x20500
-loc_20504:
 EOR.W           R1, R1, R3                                                                          //;0x20504
 MOVW            R3, #0xffce
 MOVT            R3, #0xffff                                                                         //;0x20508
@@ -7177,13 +7176,13 @@ LDR.W           R3, [R8,#0x4C8]                                                 
 STR.W           R1, [R8,#0x1DC]                                                                     //;0x20610
 ADD             R5, R2                                                                              //;0x20614
 LDRB            R0, [R0]                                                                            //;0x20616
-STRB.W          R0, [SP,#0x1268-0xD14]                                                              //;0x20618
+STRB            R0, [SP,#0x1268-0xD14]                                                              //;0x20618
 LDR.W           R0, [R8,#0x1D8]                                                                     //;0x2061c
 ADDS            R1, R0, #1                                                                          //;0x20620
 STR.W           R1, [R8,#0x1D8]                                                                     //;0x20622
 LDRB            R0, [R0]                                                                            //;0x20626
 LDRB.W          R1, [SP,#0x1268-0xD14]                                                              //;0x20628
-STRB.W          R0, [SP,#0x1268-0xD10]                                                              //;0x2062c
+STRB            R0, [SP,#0x1268-0xD10]                                                              //;0x2062c
 SUBS            R0, R1, R0                                                                          //;0x20630
 MOV             R1, R11                                                                             //;0x20632
 ADDS            R0, #0xE                                                                            //;0x20634
@@ -7237,7 +7236,7 @@ STRH.W          R0, [R5,#0x230]                                                 
 ADD             R5, SP, #0x1268-0x125C                                                              //;0x206be
 ADD             R0, SP, #0x1268-0x1184                                                              //;0x206c0
 ADD.W           R1, R5, #0x1220                                                                     //;0x206c2
-STR.W           R0, [R1,#-4]                                                                        //;0x206c6
+STR             R0, [R1,#-4]                                                                        //;0x206c6
 MOVW            R0, #0xc032
 MOVT            R0, #0x79da                                                                         //;0x206ca
 BL              sub_3A248                                                                           //;0x206d2
@@ -7280,7 +7279,7 @@ MOVW            R1, #0xED77                                                     
 MOVW            R6, #0x9F6                                                                          //;0x2074c
 MOVT            R1, #0x2DD3                                                                         //;0x20750
 MOVT            R6, #0xB040                                                                         //;0x20754
-UBFX.W          R0, R0, #1, #1                                                                      //;0x20758
+UBFX            R0, R0, #1, #1                                                                      //;0x20758
 LDR.W           R2, [R8,#0x4C4]                                                                     //;0x2075c
 LDR.W           R3, [R8,#0x4D4]                                                                     //;0x20760
 ADD             R0, R1                                                                              //;0x20764
@@ -7540,7 +7539,7 @@ ADD             R2, SP, #0x1268-0x1140                                          
 STR             R0, [R5,#4]                                                                         //;0x20a96
 MOVW            R0, #0xa15
 MOVT            R0, #0x1184                                                                         //;0x20a98
-STR.W           R2, [R5,#-4]                                                                        //;0x20aa0
+STR             R2, [R5,#-4]                                                                        //;0x20aa0
 BL              sub_33AA0                                                                           //;0x20aa4
 MOV             R1, R0                                                                              //;0x20aa8
 MOV             R0, R4                                                                              //;0x20aaa
@@ -7990,7 +7989,7 @@ ADD.W           R3, R1, #0x14                                                   
 ADDS            R1, #4                                                                              //;0x2100a
 STR             R3, [R4,#8]                                                                         //;0x2100c
 STR             R1, [R4,#0x14]                                                                      //;0x2100e
-STR.W           R2, [R4,#-4]                                                                        //;0x21010
+STR             R2, [R4,#-4]                                                                        //;0x21010
 BL              sub_16F74                                                                           //;0x21014
 LDR.W           R2, [R8,#0x4C4]                                                                     //;0x21018
 MOVW            R6, #0x9F1                                                                          //;0x2101c
@@ -8090,8 +8089,8 @@ loc_2113A:
 STR             R1, [R0]                                                                            //;0x2113a
 STR.W           R3, [R8,#0x4C4]                                                                     //;0x2113c
 B.W             def_1FAEC//; jumptable 0001B098 case 156                                            //;0x21140
-BCS             loc_2121A                                                                           //;0x21144
-ADR             R1, dword_21518                                                                     //;0x21146
+.byte 0x69                                                                                          //;0x21144
+.byte 0xF4                                                                                          //;0x21146
 LDR.W           R2, [R8,#0x1AC]//; jumptable 0001FAEC case 121                                      //;0x21148
 LDR.W           R0, [R8,#0x1B0]                                                                     //;0x2114c
 LDR.W           R1, [R8,#0x1B4]                                                                     //;0x21150
@@ -8161,7 +8160,6 @@ LDR.W           R3, [R8,#0x4CC]                                                 
 MOVT            R0, #0x6405                                                                         //;0x2120e
 MOVT            R6, #0xB040                                                                         //;0x21212
 LDR.W           R2, [R8,#0x4C8]                                                                     //;0x21216
-loc_2121A:
 STR.W           R0, [R8,#0x4C4]                                                                     //;0x2121a
 MOVW            R0, #0x6ED2                                                                         //;0x2121e
 LDR.W           R1, [R8,#0x4C4]                                                                     //;0x21222
@@ -8209,7 +8207,7 @@ STR             R6, [R3]                                                        
 MOVW            R3, #0x997
 MOVT            R3, #0xb040                                                                         //;0x212a6
 B               loc_2123A                                                                           //;0x212ae
-LDRB            R7, [R7,#F]                                                                         //;0x212b0
+LDRB            R7, [R7,#0x17]                                                                      //;0x212b0
 STRH            R7, [R5,R6]                                                                         //;0x212b2
 loc_212B4:
 MOVW            R0, #0x6F29//; jumptable 0001FAEC case 135                                          //;0x212b4
@@ -8323,7 +8321,7 @@ SUB.W           R6, R1, #0x39                                                   
 STR             R6, [R3]                                                                            //;0x21424
 MOVW            R3, #0x90DA                                                                         //;0x21426
 B               loc_21236                                                                           //;0x2142a
-DCD 0x1C4ADEDE                                                                                      //;0x2142c
+.long 0x1C4ADEDE                                                                                    //;0x2142c
 loc_21430:
 MOVW            R0, #0x6F2C//; jumptable 0001FAEC case 138                                          //;0x21430
 MOVW            R6, #0x9C6                                                                          //;0x21434
@@ -8393,7 +8391,7 @@ ADD             R6, R1                                                          
 STR             R6, [R3]                                                                            //;0x21510
 MOVW            R3, #0x90D1                                                                         //;0x21512
 B               loc_21236                                                                           //;0x21516
-DCD 0xF596A118                                                                                      //;0x21518
+.long 0xF596A118                                                                                    //;0x21518
 loc_2151C:
 MOVW            R0, #0x6F38//; jumptable 0001FAEC case 150                                          //;0x2151c
 MOVW            R6, #0x983                                                                          //;0x21520
@@ -8547,53 +8545,53 @@ LDR.W           R2, [R8,#0x4C4]                                                 
 LDR.W           R1, [R8,#0x4CC]                                                                     //;0x21710
 SUBS            R0, #0x2E                                                                           //;0x21714
 LDR.W           R3, [R8,#0x4D4]                                                                     //;0x21716
-STRB.W          R0, [SP,#0x1268-0xCC9]                                                              //;0x2171a
+STRB            R0, [SP,#0x1268-0xCC9]                                                              //;0x2171a
 ADDS            R6, R2, #1                                                                          //;0x2171e
 LDRB.W          R0, [SP,#0x1268-0xCDA]                                                              //;0x21720
 SUBS            R0, #0x2E                                                                           //;0x21724
-STRB.W          R0, [SP,#0x1268-0xCCA]                                                              //;0x21726
+STRB            R0, [SP,#0x1268-0xCCA]                                                              //;0x21726
 LDRB.W          R0, [SP,#0x1268-0xCDB]                                                              //;0x2172a
 SUBS            R0, #0x2E                                                                           //;0x2172e
-STRB.W          R0, [SP,#0x1268-0xCCB]                                                              //;0x21730
+STRB            R0, [SP,#0x1268-0xCCB]                                                              //;0x21730
 LDRB.W          R0, [SP,#0x1268-0xCDC]                                                              //;0x21734
 SUBS            R0, #0x2E                                                                           //;0x21738
-STRB.W          R0, [SP,#0x1268-0xCCC]                                                              //;0x2173a
+STRB            R0, [SP,#0x1268-0xCCC]                                                              //;0x2173a
 LDRB.W          R0, [SP,#0x1268-0xCDD]                                                              //;0x2173e
 SUBS            R0, #0x2E                                                                           //;0x21742
-STRB.W          R0, [SP,#0x1268-0xCCD]                                                              //;0x21744
+STRB            R0, [SP,#0x1268-0xCCD]                                                              //;0x21744
 LDRB.W          R0, [SP,#0x1268-0xCDE]                                                              //;0x21748
 SUBS            R0, #0x2E                                                                           //;0x2174c
-STRB.W          R0, [SP,#0x1268-0xCCE]                                                              //;0x2174e
+STRB            R0, [SP,#0x1268-0xCCE]                                                              //;0x2174e
 LDRB.W          R0, [SP,#0x1268-0xCDF]                                                              //;0x21752
 SUBS            R0, #0x2E                                                                           //;0x21756
-STRB.W          R0, [SP,#0x1268-0xCCF]                                                              //;0x21758
+STRB            R0, [SP,#0x1268-0xCCF]                                                              //;0x21758
 LDRB.W          R0, [SP,#0x1268-0xCE0]                                                              //;0x2175c
 SUBS            R0, #0x2E                                                                           //;0x21760
-STRB.W          R0, [SP,#0x1268-0xCD0]                                                              //;0x21762
+STRB            R0, [SP,#0x1268-0xCD0]                                                              //;0x21762
 LDRB.W          R0, [SP,#0x1268-0xCE1]                                                              //;0x21766
 SUBS            R0, #0x2E                                                                           //;0x2176a
-STRB.W          R0, [SP,#0x1268-0xCD1]                                                              //;0x2176c
+STRB            R0, [SP,#0x1268-0xCD1]                                                              //;0x2176c
 LDRB.W          R0, [SP,#0x1268-0xCE2]                                                              //;0x21770
 SUBS            R0, #0x2E                                                                           //;0x21774
-STRB.W          R0, [SP,#0x1268-0xCD2]                                                              //;0x21776
+STRB            R0, [SP,#0x1268-0xCD2]                                                              //;0x21776
 LDRB.W          R0, [SP,#0x1268-0xCE3]                                                              //;0x2177a
 SUBS            R0, #0x2E                                                                           //;0x2177e
-STRB.W          R0, [SP,#0x1268-0xCD3]                                                              //;0x21780
+STRB            R0, [SP,#0x1268-0xCD3]                                                              //;0x21780
 LDRB.W          R0, [SP,#0x1268-0xCE4]                                                              //;0x21784
 SUBS            R0, #0x2E                                                                           //;0x21788
-STRB.W          R0, [SP,#0x1268-0xCD4]                                                              //;0x2178a
+STRB            R0, [SP,#0x1268-0xCD4]                                                              //;0x2178a
 LDRB.W          R0, [SP,#0x1268-0xCE5]                                                              //;0x2178e
 SUBS            R0, #0x2E                                                                           //;0x21792
-STRB.W          R0, [SP,#0x1268-0xCD5]                                                              //;0x21794
+STRB            R0, [SP,#0x1268-0xCD5]                                                              //;0x21794
 LDRB.W          R0, [SP,#0x1268-0xCE6]                                                              //;0x21798
 SUBS            R0, #0x2E                                                                           //;0x2179c
-STRB.W          R0, [SP,#0x1268-0xCD6]                                                              //;0x2179e
+STRB            R0, [SP,#0x1268-0xCD6]                                                              //;0x2179e
 LDRB.W          R0, [SP,#0x1268-0xCE7]                                                              //;0x217a2
 SUBS            R0, #0x2E                                                                           //;0x217a6
-STRB.W          R0, [SP,#0x1268-0xCD7]                                                              //;0x217a8
+STRB            R0, [SP,#0x1268-0xCD7]                                                              //;0x217a8
 LDRB.W          R0, [SP,#0x1268-0xCE8]                                                              //;0x217ac
 SUBS            R0, #0x2E                                                                           //;0x217b0
-STRB.W          R0, [SP,#0x1268-0xCD8]                                                              //;0x217b2
+STRB            R0, [SP,#0x1268-0xCD8]                                                              //;0x217b2
 LDR.W           R0, [R8,#0x4C8]                                                                     //;0x217b6
 STR             R6, [R1]                                                                            //;0x217ba
 MOVW            R1, #0x9F4                                                                          //;0x217bc
@@ -8838,7 +8836,7 @@ ADD.W           R0, R4, #0x1000000                                              
 ADDS            R0, #3                                                                              //;0x21ace
 STR             R0, [R5,#4]                                                                         //;0x21ad0
 ADD             R0, SP, #0x1268-0x11BC                                                              //;0x21ad2
-STR.W           R0, [R5,#-4]                                                                        //;0x21ad4
+STR             R0, [R5,#-4]                                                                        //;0x21ad4
 MOVS            R0, #0                                                                              //;0x21ad8
 STR             R0, [R5]                                                                            //;0x21ada
 MOVW            R0, #0xd815
@@ -8893,7 +8891,7 @@ STR             R0, [R1]                                                        
 STR.W           R3, [R8,#0x4C4]                                                                     //;0x21b6e
 B.W             def_1B098//; jumptable 0001B098 default case                                        //;0x21b72
 LDMIA           R6!, {R1-R3,R5,R7}                                                                  //;0x21b76
-LDR             R4, [R7,#28]                                                                        //;0x21b78
+LDR             R4, [R7,#0x30]                                                                      //;0x21b78
 ADD             R6, SP, #0x1268-0x1260//; jumptable 0001FAEC case 29                                //;0x21b7a
 ADD.W           R4, R6, #0x1220                                                                     //;0x21b7c
 ADD             R6, SP, #0x1268-0x125C                                                              //;0x21b80
@@ -8903,7 +8901,7 @@ ADDS            R0, #3                                                          
 MOV             R5, R1                                                                              //;0x21b8c
 STR             R0, [R5,#4]                                                                         //;0x21b8e
 ADD             R0, SP, #0x1268-0x11BC                                                              //;0x21b90
-STR.W           R0, [R5,#-4]                                                                        //;0x21b92
+STR             R0, [R5,#-4]                                                                        //;0x21b92
 ADD             R0, SP, #0x1268-0x11A4                                                              //;0x21b96
 STR             R0, [R5,#0xC]                                                                       //;0x21b98
 MOVS            R0, #0                                                                              //;0x21b9a
@@ -8968,13 +8966,13 @@ LDR.W           R6, [R8,#0x4CC]                                                 
 LDR.W           R3, [R8,#0x4C8]                                                                     //;0x21c4e
 ADD             R1, R0                                                                              //;0x21c52
 LDRB.W          R1, [R1,#0x5B4]                                                                     //;0x21c54
-STRB.W          R1, [SP,#0x1268-0xE10]                                                              //;0x21c58
+STRB            R1, [SP,#0x1268-0xE10]                                                              //;0x21c58
 LDR.W           R1, [R8,#0x3BC]                                                                     //;0x21c5c
 LDRB.W          R2, [SP,#0x1268-0xE10]                                                              //;0x21c60
 LDRB            R1, [R1,R0]                                                                         //;0x21c64
 ADDS            R0, #1                                                                              //;0x21c66
 STR.W           R0, [R8,#0x3C8]                                                                     //;0x21c68
-STRB.W          R1, [SP,#0x1268-0xE0C]                                                              //;0x21c6c
+STRB            R1, [SP,#0x1268-0xE0C]                                                              //;0x21c6c
 SUBS            R1, R2, R1                                                                          //;0x21c70
 MOV             R2, R11                                                                             //;0x21c72
 LDR.W           R0, [R8,#0x4C4]                                                                     //;0x21c74
@@ -9012,7 +9010,7 @@ MOVW            R0, #0xb254
 MOVT            R0, #0x9633                                                                         //;0x21cca
 ADD             R0, R2                                                                              //;0x21cd2
 EORS            R0, R4                                                                              //;0x21cd4
-STR.W           R0, [R5,#-4]                                                                        //;0x21cd6
+STR             R0, [R5,#-4]                                                                        //;0x21cd6
 ORR.W           R0, R4, #1                                                                          //;0x21cda
 STR             R0, [R5,#0xC]                                                                       //;0x21cde
 MOVW            R0, #0xbbe3
@@ -9122,7 +9120,7 @@ ADD.W           R1, R1, #0x1E0                                                  
 LDR.W           R0, [R8,#0xB8]                                                                      //;0x21e2e
 ADD.W           R4, LR, #0x1220                                                                     //;0x21e32
 MOVS            R3, #0                                                                              //;0x21e36
-STR.W           R1, [R4,#-4]                                                                        //;0x21e38
+STR             R1, [R4,#-4]                                                                        //;0x21e38
 ADDS            R1, R4, #4                                                                          //;0x21e3c
 ADD.W           R9, SP, #0x1268-0x11AC                                                              //;0x21e3e
 STR             R6, [R4]                                                                            //;0x21e42
@@ -9307,7 +9305,7 @@ EOR.W           R5, R5, #0x61                                                   
 LDRB.W          R5, [R9,R5]                                                                         //;0x22070
 SUBS            R5, #0x67                                                                           //;0x22074
 LSL.W           R5, R5,#24                                                                          //;0x22076
-BFI.W           R5, R6, #0x10, #8                                                                   //;0x2207a
+BFI             R5, R6, #0x10, #8                                                                   //;0x2207a
 MOVW            R6, #0x208c
 MOVT            R6, #0x2                                                                            //;0x2207e
 ORRS            R2, R5                                                                              //;0x22086
@@ -9434,7 +9432,7 @@ AND.W           R2, R2, #8                                                      
 ORR.W           R2, R2, #0x42                                                                       //;0x221fa
 EORS            R5, R2                                                                              //;0x221fe
 EOR.W           R2, R5, R5,LSR#1                                                                    //;0x22200
-UBFX.W          R4, R2, #1, #8                                                                      //;0x22204
+UBFX            R4, R2, #1, #8                                                                      //;0x22204
 LDR             R2, [SP,#0x1268-0x11D8]                                                             //;0x22208
 LDR             R3, [SP,#0x1268-0x11E4]                                                             //;0x2220a
 EORS            R5, R4                                                                              //;0x2220c
@@ -9690,7 +9688,7 @@ STR             R1, [R5,#8]                                                     
 MOVS            R1, #0                                                                              //;0x2254a
 STR             R2, [R5,#0x18]                                                                      //;0x2254c
 STR             R1, [R5,#4]                                                                         //;0x2254e
-STR.W           R0, [R5,#-4]                                                                        //;0x22550
+STR             R0, [R5,#-4]                                                                        //;0x22550
 STR.W           R0, [R8,#0x244]                                                                     //;0x22554
 ADD             R0, SP, #0x1268-0x107C                                                              //;0x22558
 STR             R1, [R5,#0xC]                                                                       //;0x2255a
@@ -9753,7 +9751,7 @@ ADD.W           R6, R4, #0x1220                                                 
 ADDS            R0, #0x80                                                                           //;0x2260e
 STR             R1, [R6,#4]                                                                         //;0x22610
 STR.W           R0, [R8,#0x220]                                                                     //;0x22612
-STR.W           R0, [R6,#-4]                                                                        //;0x22616
+STR             R0, [R6,#-4]                                                                        //;0x22616
 MOV             R0, R5                                                                              //;0x2261a
 BL              sub_18E50                                                                           //;0x2261c
 MOVW            R0, #0x2630
@@ -9765,7 +9763,7 @@ EOR.W           R0, R5, #0x11                                                   
 STR             R0, [R6,#8]                                                                         //;0x22634
 MOVW            R0, #0x6a37
 MOVT            R0, #0x8a9                                                                          //;0x22636
-STRD.W          R2, R3, [R6,#-4]                                                                    //;0x2263e
+STRD            R2, R3, [R6,#-4]                                                                    //;0x2263e
 BL              sub_3A248                                                                           //;0x22642
 MOV             R1, R0                                                                              //;0x22646
 MOV             R0, R5                                                                              //;0x22648
@@ -9774,7 +9772,7 @@ LDR.W           R0, [R8,#0x220]                                                 
 EOR.W           R4, R5, #0x14                                                                       //;0x22650
 LDR.W           R1, [R8,#0x124]                                                                     //;0x22654
 STR             R4, [R6,#8]                                                                         //;0x22658
-STR.W           R0, [R6,#-4]                                                                        //;0x2265a
+STR             R0, [R6,#-4]                                                                        //;0x2265a
 ADD.W           R0, R1, #9                                                                          //;0x2265e
 STR             R0, [R6]                                                                            //;0x22662
 MOVW            R0, #0x94e7
@@ -9789,7 +9787,7 @@ ADDS            R0, #9                                                          
 STR             R0, [R6]                                                                            //;0x22680
 MOVW            R0, #0xdb5f
 MOVT            R0, #0xe494                                                                         //;0x22682
-STR.W           R1, [R6,#-4]                                                                        //;0x2268a
+STR             R1, [R6,#-4]                                                                        //;0x2268a
 STR             R4, [R6,#8]                                                                         //;0x2268e
 BL              sub_3A300                                                                           //;0x22690
 MOV             R1, R0                                                                              //;0x22694
@@ -9803,7 +9801,7 @@ loc_226A8:
 ADD             R0, PC //; off_5C6CC                                                                //;0x226a8
 LDR             R1, [R0] //; unk_53554                                                              //;0x226aa
 LDR.W           R0, [R8,#0x220]                                                                     //;0x226ac
-STRD.W          R0, R1, [R6,#-4]                                                                    //;0x226b0
+STRD            R0, R1, [R6,#-4]                                                                    //;0x226b0
 MOVS            R0, #0x4f
 MOVT            R0, #0x2690                                                                         //;0x226b4
 BL              sub_3A1B4                                                                           //;0x226ba
@@ -9813,7 +9811,7 @@ BLX             R1                                                              
 LDR.W           R1, [R8,#0x80]                                                                      //;0x226c4
 LDR.W           R0, [R8,#0x220]                                                                     //;0x226c8
 STR.W           R1, [R8,#0x224]                                                                     //;0x226cc
-STRD.W          R0, R1, [R6,#-4]                                                                    //;0x226d0
+STRD            R0, R1, [R6,#-4]                                                                    //;0x226d0
 MOVW            R0, #0x7357
 MOVT            R0, #0x6488                                                                         //;0x226d4
 BL              sub_3A1B4                                                                           //;0x226dc
@@ -9852,7 +9850,7 @@ LDR.W           R0, [R8,#0x220]                                                 
 ADD.W           R6, R4, #0x1220                                                                     //;0x22740
 ADD             R4, SP, #0x1268-0x1260                                                              //;0x22744
 ADD.W           R5, R4, #0x1220                                                                     //;0x22746
-STR.W           R0, [R6,#-4]                                                                        //;0x2274a
+STR             R0, [R6,#-4]                                                                        //;0x2274a
 ORR.W           R0, R5, #2                                                                          //;0x2274e
 STR             R0, [R6,#4]                                                                         //;0x22752
 MOV             R0, R5                                                                              //;0x22754
@@ -9865,7 +9863,7 @@ loc_22768:
 ADD             R0, PC //; off_5C6D8                                                                //;0x22768
 LDR             R1, [R0]//; "Ã‹v¾)@&¸"                                                              //;0x2276a
 LDR.W           R0, [R8,#0x220]                                                                     //;0x2276c
-STRD.W          R0, R1, [R6,#-4]                                                                    //;0x22770
+STRD            R0, R1, [R6,#-4]                                                                    //;0x22770
 MOVW            R0, #0x4197
 MOVT            R0, #0x668b                                                                         //;0x22774
 BL              sub_3A1B4                                                                           //;0x2277c
@@ -9877,7 +9875,7 @@ EOR.W           R4, R5, #0x14                                                   
 LDR.W           R0, [R8,#0x220]                                                                     //;0x2278e
 STR             R4, [R6,#8]                                                                         //;0x22792
 ADDS            R1, #0x31                                                                           //;0x22794
-STRD.W          R0, R1, [R6,#-4]                                                                    //;0x22796
+STRD            R0, R1, [R6,#-4]                                                                    //;0x22796
 MOVW            R0, #0xaa47
 MOVT            R0, #0xdc02                                                                         //;0x2279a
 BL              sub_3A248                                                                           //;0x227a2
@@ -9890,7 +9888,7 @@ STR             R4, [R6,#8]                                                     
 ADD.W           R3, R0, #0x31                                                                       //;0x227b6
 MOVW            R0, #0x28ef
 MOVT            R0, #0x5277                                                                         //;0x227ba
-STRD.W          R2, R3, [R6,#-4]                                                                    //;0x227c2
+STRD            R2, R3, [R6,#-4]                                                                    //;0x227c2
 BL              sub_3A1B4                                                                           //;0x227c6
 MOV             R1, R0                                                                              //;0x227ca
 MOV             R0, R5                                                                              //;0x227cc
@@ -9904,13 +9902,13 @@ EOR.W           R0, R5, #0xE                                                    
 STR             R0, [R6,#8]                                                                         //;0x227e4
 MOVW            R0, #0x2277
 MOVT            R0, #0x211a                                                                         //;0x227e6
-STRD.W          R2, R3, [R6,#-4]                                                                    //;0x227ee
+STRD            R2, R3, [R6,#-4]                                                                    //;0x227ee
 BL              sub_33AA0                                                                           //;0x227f2
 MOV             R1, R0                                                                              //;0x227f6
 MOV             R0, R5                                                                              //;0x227f8
 BLX             R1                                                                                  //;0x227fa
 LDRD            R0, R1, [R8,#0x220]                                                                 //;0x227fc
-STRD.W          R0, R1, [R6,#-4]                                                                    //;0x22800
+STRD            R0, R1, [R6,#-4]                                                                    //;0x22800
 MOVW            R0, #0xfc97
 MOVT            R0, #0x4565                                                                         //;0x22804
 BL              sub_3A248                                                                           //;0x2280c
@@ -10072,7 +10070,7 @@ SUBS            R4, R5, R0                                                      
 ADD.W           R5, LR, #0x1220                                                                     //;0x22a00
 LDR.W           R2, [R8,#0xDC]                                                                      //;0x22a04
 STR             R4, [R5,#8]                                                                         //;0x22a08
-STR.W           R3, [R5,#-4]                                                                        //;0x22a0a
+STR             R3, [R5,#-4]                                                                        //;0x22a0a
 MOVW            R3, #0x7bc5
 MOVT            R3, #0xad44                                                                         //;0x22a0e
 LDR             R6, [R1,#0x34]                                                                      //;0x22a16
@@ -10606,7 +10604,7 @@ LDR.W           R6, [R8,#0x4CC]                                                 
 LDR.W           R3, [R8,#0x4C8]                                                                     //;0x23074
 ADD             R1, R0                                                                              //;0x23078
 LDRB.W          R1, [R1,#0x430]                                                                     //;0x2307a
-STRB.W          R1, [SP,#0x1268-0xD38]                                                              //;0x2307e
+STRB            R1, [SP,#0x1268-0xD38]                                                              //;0x2307e
 LDR.W           R1, [R8,#0x484]                                                                     //;0x23082
 LDRB.W          R2, [SP,#0x1268-0xD38]                                                              //;0x23086
 ADD             R1, R0                                                                              //;0x2308a
@@ -10614,7 +10612,7 @@ ADDS            R0, #1                                                          
 LDRB.W          R1, [R1,#0x444]                                                                     //;0x2308e
 STR.W           R0, [R8,#0x4A0]                                                                     //;0x23092
 LDR.W           R0, [R8,#0x4C4]                                                                     //;0x23096
-STRB.W          R1, [SP,#0x1268-0xD34]                                                              //;0x2309a
+STRB            R1, [SP,#0x1268-0xD34]                                                              //;0x2309a
 SUBS            R1, R2, R1                                                                          //;0x2309e
 MOV             R2, R11                                                                             //;0x230a0
 SUBS            R1, #0x71                                                                           //;0x230a2
@@ -10648,7 +10646,7 @@ LDR.W           R3, [R0,#0x55C]                                                 
 ADD.W           R0, R0, #0x458                                                                      //;0x230f4
 STR             R4, [R5,#8]                                                                         //;0x230f8
 ADD.W           R4, LR, #0x1220                                                                     //;0x230fa
-STR.W           R1, [R5,#-4]                                                                        //;0x230fe
+STR             R1, [R5,#-4]                                                                        //;0x230fe
 STR             R0, [R5,#4]                                                                         //;0x23102
 SUBS            R0, R2, R4                                                                          //;0x23104
 STR             R0, [R5]                                                                            //;0x23106
@@ -11160,7 +11158,7 @@ ADD             R0, R1                                                          
 STR.W           R0, [R8,#0x2F8]                                                                     //;0x237d4
 LDR.W           R0, [R8,#0x4D4]                                                                     //;0x237d8
 B.W             loc_1B064                                                                           //;0x237dc
-DCD 0x18FAFAC7                                                                                      //;0x237e0
+.long 0x18FAFAC7                                                                                    //;0x237e0
 LDR.W           R0, [R8,#0x2F8]//; jumptable 0001B098 case 94                                       //;0x237e4
 ADD.W           LR, SP, #0x1268-0x125C                                                              //;0x237e8
 LDR             R1, [SP,#0x1268-0x11DC]                                                             //;0x237ec
@@ -11194,6 +11192,7 @@ BLX             ___stack_chk_fail                                               
 .indirect_symbol off_5C630
 .indirect_symbol off_5C6BC
 .indirect_symbol off_5C6CC
+.indirect_symbol _mach_task_self__ptr
 .indirect_symbol off_5C69C
 .indirect_symbol off_5C670
 .indirect_symbol off_5C638
@@ -11238,6 +11237,8 @@ off_5C630:
 off_5C6BC:
 .long 0
 off_5C6CC:
+.long 0
+_mach_task_self__ptr:
 .long 0
 off_5C69C:
 .long 0

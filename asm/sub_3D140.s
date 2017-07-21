@@ -48,8 +48,8 @@ MOVW            R3, #0xa64d
 MOVT            R3, #0x1fb7                                                                         //;0x3d1be
 STR             R5, [R0]                                                                            //;0x3d1c6
 ITT HI                                                                                              //;0x3d1c8
-MOVHIW          R3, #0xA653                                                                         //;0x3d1ca
-MOVTHI.W        R3, #0x1FB7                                                                         //;0x3d1ce
+MOVWHI          R3, #0xA653                                                                         //;0x3d1ca
+MOVTHI          R3, #0x1FB7                                                                         //;0x3d1ce
 STR             R3, [SP,#0x78-0x2C]                                                                 //;0x3d1d2
 B               def_3D3C6//; jumptable 0003D3C6 default case                                        //;0x3d1d4
 MOV             R6, R7                                                                              //;0x3d1d6
@@ -299,7 +299,7 @@ BLS             def_3D202//; jumptable 0003D202 default case                    
 B               def_3D3C6//; jumptable 0003D3C6 default case                                        //;0x3d43a
 LDR             R0, [SP,#0x78-0x30]//; jumptable 0003D202 case 5                                    //;0x3d43c
 B               loc_3D1DA                                                                           //;0x3d43e
-DCD 0x83A2FDB0                                                                                      //;0x3d440
+.long 0x83A2FDB0                                                                                    //;0x3d440
 LDR             R0, [SP,#0x78-0x58]//; jumptable 0003D3C6 case 0                                    //;0x3d444
 MOV             R2, R10                                                                             //;0x3d446
 MOVW            R1, #0x72CA                                                                         //;0x3d448

@@ -142,7 +142,7 @@ STR             R2, [R1]                                                        
 STR             R6, [SP,#0x40-0x3C]                                                                 //;0x3c0d2
 BGE             loc_3C076                                                                           //;0x3c0d4
 B               loc_3BFF8                                                                           //;0x3c0d6
-DCD 0x83A2FDB0                                                                                      //;0x3c0d8
+.long 0x83A2FDB0                                                                                    //;0x3c0d8
 loc_3C0DC:
 MOVW            R1, #0xa319
 MOVT            R1, #0x6c60                                                                         //;0x3c0dc

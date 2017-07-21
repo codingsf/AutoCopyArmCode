@@ -574,7 +574,7 @@ SUBS            R3, R3, R6                                                      
 ADD             R3, R12                                                                             //;0x2c18a
 EOR.W           R6, R2, R3,ROR#31                                                                   //;0x2c18c
 MOVW            R2, #0xE6F6                                                                         //;0x2c190
-MOV.W           R3, R3,ROR#31                                                                       //;0x2c194
+MOV             R3, R3,ROR#31                                                                       //;0x2c194
 MOVT            R2, #0xED9E                                                                         //;0x2c198
 AND.W           R3, R2, R3,LSL#1                                                                    //;0x2c19c
 MOVW            R2, #0x4230

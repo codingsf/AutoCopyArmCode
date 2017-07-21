@@ -148,7 +148,7 @@ STR             R6, [R1]                                                        
 STR             R3, [SP,#0x7C-0x2C]                                                                 //;0x3107e
 BNE             loc_30FEA                                                                           //;0x31080
 B               def_31160//; jumptable 00031000 default case                                        //;0x31082
-DCD 0x83A2FDB0                                                                                      //;0x31084
+.long 0x83A2FDB0                                                                                    //;0x31084
 LDR             R0, [SP,#0x7C-0x4C]//; jumptable 00031000 case 1                                    //;0x31088
 MOVW            R4, #0x509F                                                                         //;0x3108a
 MOVW            R1, #0xE8FB                                                                         //;0x3108e

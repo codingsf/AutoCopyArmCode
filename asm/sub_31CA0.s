@@ -181,7 +181,7 @@ MOVCC           R6, #1                                                          
 LDR             R2, [SP,#0x1CC-0x164]                                                               //;0x31e7e
 ORR.W           R0, R0, R1                                                                          //;0x31e80
 MOVW            R1, #0x632A                                                                         //;0x31e84
-STRB.W          R6, [SP,#0x1CC-0x160]                                                               //;0x31e88
+STRB            R6, [SP,#0x1CC-0x160]                                                               //;0x31e88
 MOVT            R1, #0x759C                                                                         //;0x31e8c
 STR             R0, [SP,#0x1CC-0x1A8]                                                               //;0x31e90
 MOVW            R3, #0xDD3F                                                                         //;0x31e92
@@ -562,7 +562,7 @@ loc_3222A:
 STR             R1, [R3]                                                                            //;0x3222a
 STR             R0, [SP,#0x1CC-0x154]                                                               //;0x3222c
 B               loc_32092//; jumptable 00031D54 case 12                                             //;0x3222e
-DCD 0x83A2FDB0                                                                                      //;0x32230
+.long 0x83A2FDB0                                                                                    //;0x32230
 MOVW            R0, #0x1524//; jumptable 000320A4 case 0                                            //;0x32234
 CMP.W           R11, #0x10                                                                          //;0x32238
 MOVT            R0, #0x43FB                                                                         //;0x3223c
@@ -737,8 +737,8 @@ STR             R0, [SP,#0x1CC-0x170]                                           
 LDR             R0, [SP,#0x1CC-0x144]                                                               //;0x323f2
 STR             R0, [SP,#0x1CC-0x154]                                                               //;0x323f4
 B               def_320A4//; jumptable 00031D54 default case                                        //;0x323f6
-BNE             loc_3249c                                                                           //;0x323f8
-STRB            R1, [R0,#0x15]                                                                      //;0x323fa
+.byte 0x50                                                                                          //;0x323f8
+.byte 0x41                                                                                          //;0x323fa
 loc_323FC:
 CMP.W           R11, #0x14                                                                          //;0x323fc
 BNE             loc_3242E//; jumptable 000320A4 case 9                                              //;0x32400

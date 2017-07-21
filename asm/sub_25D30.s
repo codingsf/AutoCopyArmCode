@@ -588,7 +588,7 @@ MOVT            R5, #0xB33F                                                     
 ADD             R0, R5                                                                              //;0x2630e
 STR             R0, [R3]                                                                            //;0x26310
 B               loc_26282                                                                           //;0x26312
-DCD 0x83A2FDB0                                                                                      //;0x26314
+.long 0x83A2FDB0                                                                                    //;0x26314
 LDR             R0, [SP,#0x74-0x50]//; jumptable 00025DF4 case 9                                    //;0x26318
 LDR             R1, [SP,#0x74-0x68]                                                                 //;0x2631a
 STR             R0, [R1,#0x10]                                                                      //;0x2631c

@@ -61,8 +61,8 @@ STR             R6, [R2]                                                        
 MOVW            R6, #0xab32
 MOVT            R6, #0x589b                                                                         //;0x3a46e
 ITT HI                                                                                              //;0x3a476
-MOVHIW          R6, #0xAB30                                                                         //;0x3a478
-MOVTHI.W        R6, #0x589B                                                                         //;0x3a47c
+MOVWHI          R6, #0xAB30                                                                         //;0x3a478
+MOVTHI          R6, #0x589B                                                                         //;0x3a47c
 STR             R6, [SP,#0x4C-0x2C]                                                                 //;0x3a480
 MOVW            R6, #0x6b72
 MOVT            R6, #0x5151                                                                         //;0x3a482

@@ -23,7 +23,7 @@ MOVT            R9, #0x1105                                                     
 MOVT            R12, #0xDDF5                                                                        //;0x3246c
 STR             R1, [SP,#0x4B8-0x4B8]                                                               //;0x32470
 LDR             R1, [R1]                                                                            //;0x32472
-STR.W           R1, [R7,#var_1C]                                                                    //;0x32474
+STR.W           R1, [R7,#0x1C]                                                                      //;0x32474
 ADD             R1, SP, #0x4B8-0x450                                                                //;0x32478
 LDR.W           R11, [R0,#8]                                                                        //;0x3247a
 LDR             R3, [R0,#0xC]                                                                       //;0x3247e
@@ -80,8 +80,8 @@ MOVW            R1, #0xd54b
 MOVT            R1, #0x2f39                                                                         //;0x32514
 STR             R3, [R4]                                                                            //;0x3251c
 ITT HI                                                                                              //;0x3251e
-MOVHIW          R1, #0x90A5                                                                         //;0x32520
-MOVTHI.W        R1, #0x36CA                                                                         //;0x32524
+MOVWHI          R1, #0x90A5                                                                         //;0x32520
+MOVTHI          R1, #0x36CA                                                                         //;0x32524
 STR             R1, [SP,#0x4B8-0x450]                                                               //;0x32528
 ADD.W           R1, R6, R9                                                                          //;0x3252a
 CMP             R1, #0                                                                              //;0x3252e
@@ -172,16 +172,16 @@ B               loc_32152                                                       
 LDR             R0, [SP,#0x4B8-0x47C]//; jumptable 0003255C case 3                                  //;0x32604
 STR             R0, [SP,#0x4B8-0x458]                                                               //;0x32606
 ADD             R0, SP, #0x4B8-0x4A4                                                                //;0x32608
-STR.W           R0, [R7,#var_24]                                                                    //;0x3260a
+STR.W           R0, [R7,#0x24]                                                                      //;0x3260a
 ADD             R0, SP, #0x4B8-0x498                                                                //;0x3260e
-STR.W           R0, [R7,#var_2C]                                                                    //;0x32610
+STR.W           R0, [R7,#0x2C]                                                                      //;0x32610
 MOVW            R0, #0x6372
 MOVT            R0, #0x8224                                                                         //;0x32614
 BL              sub_3A300                                                                           //;0x3261c
 MOV             R1, R0                                                                              //;0x32620
 SUB.W           R0, R7, #+0x2C                                                                      //;0x32622
 BLX             R1                                                                                  //;0x32626
-LDR.W           R0, [R7,#var_28]                                                                    //;0x32628
+LDR.W           R0, [R7,#0x28]                                                                      //;0x32628
 MOVW            R3, #0x22C2                                                                         //;0x3262c
 MOVW            R5, #0x44A8                                                                         //;0x32630
 MOVT            R3, #0x45CE                                                                         //;0x32634
@@ -208,8 +208,8 @@ STR             R3, [SP,#0x4B8-0x450]                                           
 BGE.W           def_328F0//; jumptable 0003255C default case                                        //;0x32666
 B               loc_328DE                                                                           //;0x3266a
 ADD             R0, SP, #0x4B8-0x498//; jumptable 0003255C case 4                                   //;0x3266c
-STR.W           R11, [R7,#var_2C]                                                                   //;0x3266e
-STR.W           R0, [R7,#var_24]                                                                    //;0x32672
+STR.W           R11, [R7,#0x2C]                                                                     //;0x3266e
+STR.W           R0, [R7,#0x24]                                                                      //;0x32672
 MOVW            R0, #0x4d32
 MOVT            R0, #0x2c1e                                                                         //;0x32676
 LDR             R4, [SP,#0x4B8-0x478]                                                               //;0x3267e
@@ -217,7 +217,7 @@ BL              sub_33AA0                                                       
 MOV             R1, R0                                                                              //;0x32684
 SUB.W           R0, R7, #+0x2C                                                                      //;0x32686
 BLX             R1                                                                                  //;0x3268a
-LDR.W           R0, [R7,#var_28]                                                                    //;0x3268c
+LDR.W           R0, [R7,#0x28]                                                                      //;0x3268c
 MOVW            R1, #0x22C2                                                                         //;0x32690
 ADD             R3, SP, #0x4B8-0x450                                                                //;0x32694
 MOVT            R1, #0x45CE                                                                         //;0x32696
@@ -353,8 +353,8 @@ STR             R1, [SP,#0x4B8-0x450]                                           
 BNE.W           def_328F0//; jumptable 0003255C default case                                        //;0x327f2
 B               loc_328DE                                                                           //;0x327f6
 ADD             R0, SP, #0x4B8-0x4A4//; jumptable 0003255C case 5                                   //;0x327f8
-STR.W           R11, [R7,#var_2C]                                                                   //;0x327fa
-STR.W           R0, [R7,#var_24]                                                                    //;0x327fe
+STR.W           R11, [R7,#0x2C]                                                                     //;0x327fa
+STR.W           R0, [R7,#0x24]                                                                      //;0x327fe
 MOVW            R0, #0xf76a
 MOVT            R0, #0x61b6                                                                         //;0x32802
 LDR             R4, [SP,#0x4B8-0x470]                                                               //;0x3280a
@@ -362,7 +362,7 @@ BL              sub_33AA0                                                       
 MOV             R1, R0                                                                              //;0x32810
 SUB.W           R0, R7, #+0x2C                                                                      //;0x32812
 BLX             R1                                                                                  //;0x32816
-LDR.W           R0, [R7,#var_28]                                                                    //;0x32818
+LDR.W           R0, [R7,#0x28]                                                                      //;0x32818
 MOVW            R6, #0x22C2                                                                         //;0x3281c
 MOVW            R1, #0x44A5                                                                         //;0x32820
 MOVT            R6, #0x45CE                                                                         //;0x32824
@@ -392,16 +392,16 @@ loc_3285C:
 STR             R6, [SP,#0x4B8-0x450]                                                               //;0x3285c
 BLT.W           def_328F0//; jumptable 0003255C default case                                        //;0x3285e
 B               loc_328DE                                                                           //;0x32862
-LDR             R0, loc_32a00                                                                       //;0x32864
+.byte 0x66                                                                                          //;0x32864
 LDR             R1, [SP,#0x4B8-0x4A8]//; jumptable 0003255C case 2                                  //;0x32866
 SUB.W           R0, R7, #+0x2C                                                                      //;0x32868
 MOVW            R2, #0x1400
 MOVT            R2, #0x20aa                                                                         //;0x3286c
 ADD.W           R1, R0, R1,LSL#5                                                                    //;0x32874
 ADD             R1, R2                                                                              //;0x32878
-STR.W           R1, [R7,#var_2C]                                                                    //;0x3287a
+STR.W           R1, [R7,#0x2C]                                                                      //;0x3287a
 ADD             R1, SP, #0x4B8-0x4A4                                                                //;0x3287e
-STR.W           R1, [R7,#var_28]                                                                    //;0x32880
+STR.W           R1, [R7,#0x28]                                                                      //;0x32880
 BL              sub_2E2E4                                                                           //;0x32884
 LDR             R0, [SP,#0x4B8-0x4AC]                                                               //;0x32888
 MOVW            R6, #0x50A0                                                                         //;0x3288a
@@ -469,7 +469,7 @@ MOV.W           R0, #0                                                          
 IT LT                                                                                               //;0x32928
 MOVLT           R0, #1                                                                              //;0x3292a
 LDR             R1, [SP,#0x4B8-0x450]                                                               //;0x3292c
-STRB.W          R0, [SP,#0x4B8-0x45C]                                                               //;0x3292e
+STRB            R0, [SP,#0x4B8-0x45C]                                                               //;0x3292e
 MOVW            R0, #0x50a0
 MOVT            R0, #0x1105                                                                         //;0x32932
 STR             R2, [SP,#0x4B8-0x480]                                                               //;0x3293a
@@ -516,9 +516,9 @@ MOVW            R1, #0xef77
 MOVT            R1, #0x6fff                                                                         //;0x329a6
 EOR.W           R1, R1, R11                                                                         //;0x329ae
 SUBS            R1, R1, R5                                                                          //;0x329b2
-STR.W           R0, [R7,#var_2C]                                                                    //;0x329b4
+STR.W           R0, [R7,#0x2C]                                                                      //;0x329b4
 ADD             R0, SP, #0x4B8-0x4A4                                                                //;0x329b8
-STR.W           R0, [R7,#var_28]                                                                    //;0x329ba
+STR.W           R0, [R7,#0x28]                                                                      //;0x329ba
 MOVW            R0, #0xdeee
 MOVT            R0, #0xdfff                                                                         //;0x329be
 AND.W           R0, R0, R11,LSL#1                                                                   //;0x329c6
@@ -526,10 +526,10 @@ ADD             R0, R1                                                          
 MOVW            R1, #0xbfe9
 MOVT            R1, #0xfefa                                                                         //;0x329cc
 ADD             R0, R1                                                                              //;0x329d4
-STR.W           R0, [R7,#var_24]                                                                    //;0x329d6
+STR.W           R0, [R7,#0x24]                                                                      //;0x329d6
 MOVW            R0, #0xdc3c
 MOVT            R0, #0x33e8                                                                         //;0x329da
-STR.W           R10, [R7,#var_20]                                                                   //;0x329e2
+STR.W           R10, [R7,#0x20]                                                                     //;0x329e2
 BL              sub_3A248                                                                           //;0x329e6
 MOV             R1, R0                                                                              //;0x329ea
 MOV             R0, R5                                                                              //;0x329ec
@@ -581,9 +581,9 @@ STR             R2, [SP,#0x4B8-0x450]                                           
 BNE.W           loc_328DE                                                                           //;0x32a64
 B               def_328F0//; jumptable 0003255C default case                                        //;0x32a68
 ADD             R0, SP, #0x4B8-0x498//; jumptable 000328F0 case 4                                   //;0x32a6a
-STR.W           R0, [R7,#var_28]                                                                    //;0x32a6c
+STR.W           R0, [R7,#0x28]                                                                      //;0x32a6c
 ADD             R0, SP, #0x4B8-0x4A4                                                                //;0x32a70
-STR.W           R0, [R7,#var_2C]                                                                    //;0x32a72
+STR.W           R0, [R7,#0x2C]                                                                      //;0x32a72
 MOVW            R0, #0xa6eb
 MOVT            R0, #0xa012                                                                         //;0x32a76
 BL              sub_3A300                                                                           //;0x32a7e
@@ -639,7 +639,7 @@ STR             R1, [SP,#0x4B8-0x484]                                           
 ADD             R1, R6                                                                              //;0x32b00
 CMP             R1, R3                                                                              //;0x32b02
 MOV.W           R3, #0                                                                              //;0x32b04
-STRB.W          R2, [SP,#0x4B8-0x464]                                                               //;0x32b08
+STRB            R2, [SP,#0x4B8-0x464]                                                               //;0x32b08
 LDR.W           R9, [SP,#0x4B8-0x44C]                                                               //;0x32b0c
 LDR             R6, [SP,#0x4B8-0x448]                                                               //;0x32b10
 IT LT                                                                                               //;0x32b12
@@ -673,20 +673,20 @@ STR.W           R2, [R9]                                                        
 B               loc_327F0                                                                           //;0x32b56
 ADD             R0, SP, #0x4B8-0x498//; jumptable 000328F0 case 3                                   //;0x32b58
 SUB.W           R5, R7, #+0x2C                                                                      //;0x32b5a
-STR.W           R0, [R7,#var_28]                                                                    //;0x32b5e
+STR.W           R0, [R7,#0x28]                                                                      //;0x32b5e
 MOV             R0, R5                                                                              //;0x32b62
-STR.W           R11, [R7,#var_2C]                                                                   //;0x32b64
+STR.W           R11, [R7,#0x2C]                                                                     //;0x32b64
 BL              sub_33CBC                                                                           //;0x32b68
 ADD             R0, SP, #0x4B8-0x4A4                                                                //;0x32b6c
-STR.W           R11, [R7,#var_2C]                                                                   //;0x32b6e
-STR.W           R0, [R7,#var_24]                                                                    //;0x32b72
+STR.W           R11, [R7,#0x2C]                                                                     //;0x32b6e
+STR.W           R0, [R7,#0x24]                                                                      //;0x32b72
 MOVW            R0, #0xe2f2
 MOVT            R0, #0x8611                                                                         //;0x32b76
 BL              sub_247A4                                                                           //;0x32b7e
 MOV             R1, R0                                                                              //;0x32b82
 MOV             R0, R5                                                                              //;0x32b84
 BLX             R1                                                                                  //;0x32b86
-LDR.W           R0, [R7,#var_28]                                                                    //;0x32b88
+LDR.W           R0, [R7,#0x28]                                                                      //;0x32b88
 MOVW            R6, #0x22C2                                                                         //;0x32b8c
 MOVS            R1, #1                                                                              //;0x32b90
 MOVT            R6, #0x45CE                                                                         //;0x32b92
@@ -724,10 +724,10 @@ STR             R0, [SP,#0x4B8-0x450]                                           
 B               loc_328DE                                                                           //;0x32bde
 LDR             R4, [SP,#0x4B8-0x474]//; jumptable 000328F0 case 5                                  //;0x32be0
 ADD             R0, SP, #0x4B8-0x498                                                                //;0x32be2
-STR.W           R0, [R7,#var_2C]                                                                    //;0x32be4
+STR.W           R0, [R7,#0x2C]                                                                      //;0x32be4
 SUB.W           R0, R7, #+0x2C                                                                      //;0x32be8
 ADDS            R1, R4, R0                                                                          //;0x32bec
-STR.W           R1, [R7,#var_28]                                                                    //;0x32bee
+STR.W           R1, [R7,#0x28]                                                                      //;0x32bee
 BL              sub_195B0                                                                           //;0x32bf2
 STR             R4, [SP,#0x4B8-0x470]                                                               //;0x32bf6
 ADD             R2, SP, #0x4B8-0x450                                                                //;0x32bf8
@@ -801,11 +801,11 @@ B               def_328F0//; jumptable 0003255C default case                    
 LDR             R0, [SP,#0x4B8-0x4B4]//; jumptable 000328F0 case 9                                  //;0x32ca2
 ADD             R1, SP, #0x4B8-0x4A4                                                                //;0x32ca4
 LDR             R0, [R0,#4]                                                                         //;0x32ca6
-STR.W           R1, [R7,#var_2C]                                                                    //;0x32ca8
-STR.W           R0, [R7,#var_28]                                                                    //;0x32cac
+STR.W           R1, [R7,#0x2C]                                                                      //;0x32ca8
+STR.W           R0, [R7,#0x28]                                                                      //;0x32cac
 SUB.W           R0, R7, #+0x2C                                                                      //;0x32cb0
 BL              sub_33CBC                                                                           //;0x32cb4
-LDR.W           R0, [R7,#var_1C]                                                                    //;0x32cb8
+LDR.W           R0, [R7,#0x1C]                                                                      //;0x32cb8
 LDR             R1, [SP,#0x4B8-0x4B8]                                                               //;0x32cbc
 LDR             R1, [R1]                                                                            //;0x32cbe
 SUBS            R0, R1, R0                                                                          //;0x32cc0

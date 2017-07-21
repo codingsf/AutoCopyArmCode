@@ -24,7 +24,7 @@ STR             R0, [SP,#0x18]                                                  
 CMP             R4, #0                                                                              //;0x16ec2
 STR             R1, [SP,#0x20]                                                                      //;0x16ec4
 BEQ             loc_16ED0                                                                           //;0x16ec6
-ADD             R0, SP, #0x58+msg                                                                   //;0x16ec8
+ADD             R0, SP, #0xC                                                                        //;0x16ec8
 BLX             _voucher_mach_msg_set                                                               //;0x16eca
 LDR             R0, [SP,#0x18]                                                                      //;0x16ece
 loc_16ED0:
@@ -35,7 +35,7 @@ STMEA.W         SP, {R0,R1}                                                     
 ADD             R0, SP, #0xC//; msg                                                                 //;0x16ed8
 MOVS            R3, #0x3c
 MOVT            R3, #0x0                                                                            //;0x16eda
-STR             R1, [SP,#0x58+notify]//; notify                                                     //;0x16edc
+STR             R1, [SP,#8]//; notify                                                               //;0x16edc
 MOVS            R1, #3  //; option                                                                  //;0x16ede
 BLX             _mach_msg                                                                           //;0x16ee0
 MOV             R4, R0                                                                              //;0x16ee4
@@ -75,7 +75,7 @@ LDR             R4, [SP,#0x58-0x2C]                                             
 CBNZ            R4, loc_16F68                                                                       //;0x16f30
 LDR             R1, [SP,#0x58-0x28]                                                                 //;0x16f32
 MOVS            R4, #0                                                                              //;0x16f34
-LDR             R0, [R7,#0]                                                                         //;0x16f36
+LDR             R0, [R7,#0x8]                                                                       //;0x16f36
 STR             R1, [R6]                                                                            //;0x16f38
 LDR             R1, [SP,#0x58-0x24]                                                                 //;0x16f3a
 STR             R1, [R5]                                                                            //;0x16f3c
@@ -103,6 +103,6 @@ MOVT            R4, #0xffff                                                     
 loc_16F68:
 MOV             R0, R4                                                                              //;0x16f68
 ADD             SP, SP, #0x48                                                                       //;0x16f6a
-LDR             R8, [SP+0x10-0x10],#4                                                               //;0x16f6c
+LDR             R8, [SP],#4                                                                         //;0x16f6c
 POP             {R4-R7,PC}                                                                          //;0x16f70
 .section __DATA,__nl_symbol_ptr,non_lazy_symbol_pointers

@@ -171,7 +171,7 @@ LDR             R4, [SP,#0x2B8-0x28C]                                           
 ADD             R2, R5                                                                              //;0x3584c
 LDR             R0, [SP,#0x2B8-0x29C]                                                               //;0x3584e
 ADD             R1, R5                                                                              //;0x35850
-UMLAL.W         R3, R6, R1, R2                                                                      //;0x35852
+UMLAL           R3, R6, R1, R2                                                                      //;0x35852
 MOVW            R1, #0x72E0                                                                         //;0x35856
 ADD.W           R0, R0, R4,LSL#2                                                                    //;0x3585a
 MOVT            R1, #0xA76E                                                                         //;0x3585e
@@ -192,7 +192,7 @@ ADD.W           R3, R9, #1                                                      
 STR             R2, [R0,R1]                                                                         //;0x35890
 ADD.W           R0, R4, #1                                                                          //;0x35892
 STR             R0, [SP,#0x2B8-0x254]                                                               //;0x35896
-ADC.W           R1, R6, #0                                                                          //;0x35898
+ADC             R1, R6, #0                                                                          //;0x35898
 MOVS            R0, #0                                                                              //;0x3589c
 LDR             R6, [SP,#0x2B8-0x254]                                                               //;0x3589e
 STR             R0, [SP,#0x2B8-0x24C]                                                               //;0x358a0
@@ -446,7 +446,7 @@ LDR             R1, [SP,#0x2B8-0x240]                                           
 STR             R0, [SP,#0x2B8-0x294]                                                               //;0x35b28
 MOVW            R0, #0x50a0
 MOVT            R0, #0x1105                                                                         //;0x35b2a
-STRB.W          R2, [SP,#0x2B8-0x268]                                                               //;0x35b32
+STRB            R2, [SP,#0x2B8-0x268]                                                               //;0x35b32
 MOV             R2, R10                                                                             //;0x35b36
 ADD             R0, R11                                                                             //;0x35b38
 ADDS            R4, R1, #5                                                                          //;0x35b3a
@@ -563,7 +563,7 @@ TBB             [PC,R0] //; switch jump                                         
 .byte 5                                                                                             //;0x35c4c
 .byte 0x8A                                                                                          //;0x35c4d
 .byte 0xB0                                                                                          //;0x35c4e
-ALIGN 2                                                                                             //;0x35c4f
+.byte 0                                                                                             //;0x35c4f
 B               loc_35BC2//; jumptable 00035C42 case 6                                              //;0x35c50
 B               loc_35B72//; jumptable 00035C42 case 3                                              //;0x35c52
 B               loc_35B02//; jumptable 00035C42 case 2                                              //;0x35c54
@@ -615,7 +615,7 @@ MOV.W           R0, #0                                                          
 IT LT                                                                                               //;0x35cd2
 MOVLT           R0, #1                                                                              //;0x35cd4
 LDR             R1, [SP,#0x2B8-0x240]                                                               //;0x35cd6
-STRB.W          R0, [SP,#0x2B8-0x258]                                                               //;0x35cd8
+STRB            R0, [SP,#0x2B8-0x258]                                                               //;0x35cd8
 LDR             R0, [SP,#0x2B8-0x264]                                                               //;0x35cdc
 STR             R2, [SP,#0x2B8-0x284]                                                               //;0x35cde
 ADDS            R4, R1, #2                                                                          //;0x35ce0
@@ -666,8 +666,8 @@ ADD             R0, R1                                                          
 STR             R0, [R3]                                                                            //;0x35d50
 STR             R2, [SP,#0x2B8-0x240]                                                               //;0x35d52
 B               def_35C42//; jumptable 00035C42 default case                                        //;0x35d54
-BNE             loc_35DFA                                                                           //;0x35d56
-STRB            R1, [R0,#0x15]                                                                      //;0x35d58
+.byte 0x50                                                                                          //;0x35d56
+.byte 0x41                                                                                          //;0x35d58
 LDR             R0, [SP,#0x2B8-0x278]//; jumptable 00035C42 case 7                                  //;0x35d5a
 MOV             R5, R10                                                                             //;0x35d5c
 LDR             R1, [SP,#0x2B8-0x29C]                                                               //;0x35d5e

@@ -10,7 +10,7 @@ PUSH.W          {R8,R10,R11}                                                    
 SUB             SP, SP, #0xE8//; rcv_name                                                           //;0x16aa4
 MOV             R4, R2                                                                              //;0x16aa6
 MOVW            R2, #:lower16:(___stack_chk_guard_ptr - loc_16AB2 - 4)                              //;0x16aa8
-LDR             R6, [R7,#0]                                                                         //;0x16aac
+LDR             R6, [R7,#0x8]                                                                       //;0x16aac
 MOVT            R2, #:upper16:(___stack_chk_guard_ptr - loc_16AB2 - 4)                              //;0x16aae
 loc_16AB2:
 ADD             R2, PC //; ___stack_chk_guard_ptr                                                   //;0x16ab2
@@ -59,7 +59,7 @@ STMEA.W         SP, {R0,R1}                                                     
 MOV             R0, R8  //; msg                                                                     //;0x16b22
 MOVS            R2, #0x3c
 MOVT            R2, #0x0                                                                            //;0x16b24
-STR             R1, [SP,#0x100+notify]//; notify                                                    //;0x16b26
+STR             R1, [SP,#8]//; notify                                                               //;0x16b26
 MOVS            R1, #3  //; option                                                                  //;0x16b28
 MOVS            R3, #0xd8
 MOVT            R3, #0x0                                                                            //;0x16b2a
@@ -141,7 +141,7 @@ STR             R1, [R4]                                                        
 ADD.W           R1, R8, #0x40//; void *                                                             //;0x16be2
 BLX             _memcpy                                                                             //;0x16be6
 LDR             R0, [SP,#0x100-0xD8]                                                                //;0x16bea
-LDR             R1, [R7,#14]                                                                        //;0x16bec
+LDR             R1, [R7,#0x1c]                                                                      //;0x16bec
 STR             R0, [R5]                                                                            //;0x16bee
 MOVS            R5, #0                                                                              //;0x16bf0
 LDR             R0, [SP,#0x100-0x34]                                                                //;0x16bf2
@@ -151,10 +151,10 @@ STR.W           R0, [R11]                                                       
 LDR             R0, [SP,#0x100-0x2C]                                                                //;0x16bfc
 STR             R0, [R1]                                                                            //;0x16bfe
 LDR             R0, [SP,#0x100-0x28]                                                                //;0x16c00
-LDR             R1, [R7,#18]                                                                        //;0x16c02
+LDR             R1, [R7,#0x20]                                                                      //;0x16c02
 STR             R0, [R1]                                                                            //;0x16c04
 LDR             R0, [SP,#0x100-0xCC]                                                                //;0x16c06
-LDR             R1, [R7,#1C]                                                                        //;0x16c08
+LDR             R1, [R7,#0x24]                                                                      //;0x16c08
 STR             R0, [R1]                                                                            //;0x16c0a
 B               loc_16C16                                                                           //;0x16c0c
 loc_16C0E:

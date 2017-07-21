@@ -101,7 +101,7 @@ LDRB.W          R0, [R1,#0x20]                                                  
 EORS            R1, R4                                                                              //;0x31b0a
 STR             R2, [SP,#0x74-0x38]                                                                 //;0x31b0c
 EORS            R0, R1                                                                              //;0x31b0e
-STRB.W          R0, [SP,#0x74-0x28]                                                                 //;0x31b10
+STRB            R0, [SP,#0x74-0x28]                                                                 //;0x31b10
 LDR             R0, [SP,#0x74-0x68]                                                                 //;0x31b14
 STR             R0, [SP,#0x74-0x34]                                                                 //;0x31b16
 LDR             R0, [SP,#0x74-0x6C]                                                                 //;0x31b18

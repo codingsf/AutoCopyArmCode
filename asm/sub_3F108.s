@@ -57,8 +57,8 @@ STR             R4, [R1]                                                        
 MOVW            R1, #0x527e
 MOVT            R1, #0x47ee                                                                         //;0x3f1a4
 ITT HI                                                                                              //;0x3f1ac
-MOVHIW          R1, #0x949D                                                                         //;0x3f1ae
-MOVTHI.W        R1, #0x3443                                                                         //;0x3f1b2
+MOVWHI          R1, #0x949D                                                                         //;0x3f1ae
+MOVTHI          R1, #0x3443                                                                         //;0x3f1b2
 CMP             R2, R12                                                                             //;0x3f1b6
 STR             R1, [SP,#0x54-0x2C]                                                                 //;0x3f1b8
 BLS             loc_3F246//; jumptable 0003F1CC case 3                                              //;0x3f1ba
@@ -208,7 +208,7 @@ EOR.W           R5, R5, #0xEF                                                   
 SUBS            R2, #1                                                                              //;0x3f31a
 ADD             R4, R5                                                                              //;0x3f31c
 ADD.W           R4, R4, #0x3F                                                                       //;0x3f31e
-STRB.W          R4, [LR,R2]                                                                         //;0x3f322
+STRB            R4, [LR,R2]                                                                         //;0x3f322
 STR             R1, [SP,#0x54-0x48]                                                                 //;0x3f326
 MOV.W           R1, #0                                                                              //;0x3f328
 STR             R6, [SP,#0x54-0x50]                                                                 //;0x3f32c
@@ -235,7 +235,7 @@ MOVEQ           R1, R6                                                          
 STR             R1, [R4]                                                                            //;0x3f35a
 STR             R3, [SP,#0x54-0x2C]                                                                 //;0x3f35c
 B               def_3F1CC//; jumptable 0003F1CC default case                                        //;0x3f35e
-DCD 0x83A2FDB0                                                                                      //;0x3f360
+.long 0x83A2FDB0                                                                                    //;0x3f360
 LDR             R1, [SP,#0x54-0x38]//; jumptable 0003F1CC case 2                                    //;0x3f364
 STR             R1, [R0,#4]                                                                         //;0x3f366
 ADD             SP, SP, #0x3C                                                                       //;0x3f368

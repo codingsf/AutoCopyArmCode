@@ -34,6 +34,9 @@ class IdaOperation(object):
     def operateHex(self, addr_):
         OpHex(addr_, 1)
 
+    def makeByte(self, addr_):
+        MakeByte(addr_)
+
     def getDisasm(self, addr_):
         return GetDisasm(addr_)
 

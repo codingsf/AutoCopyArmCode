@@ -42,7 +42,7 @@ LDR             R1, [R6]                                                        
 SUBS            R0, R1, R0                                                                          //;0x33068
 BNE             loc_33074                                                                           //;0x3306a
 ADD             SP, SP, #0x1C                                                                       //;0x3306c
-LDR             R8, [SP+0x10-0x10],#4                                                               //;0x3306e
+LDR             R8, [SP],#4                                                                         //;0x3306e
 POP             {R4-R7,PC}                                                                          //;0x33072
 loc_33074:
 BLX             ___stack_chk_fail                                                                   //;0x33074

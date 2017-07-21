@@ -48,8 +48,8 @@ MOVW            R3, #0x16f7
 MOVT            R3, #0x563                                                                          //;0x39c36
 STR             R5, [R0]                                                                            //;0x39c3e
 ITT HI                                                                                              //;0x39c40
-MOVHIW          R3, #0x16FD                                                                         //;0x39c42
-MOVTHI.W        R3, #0x563                                                                          //;0x39c46
+MOVWHI          R3, #0x16FD                                                                         //;0x39c42
+MOVTHI          R3, #0x563                                                                          //;0x39c46
 STR             R3, [SP,#0x78-0x2C]                                                                 //;0x39c4a
 B               loc_39C58                                                                           //;0x39c4c
 loc_39C4E:
@@ -248,7 +248,7 @@ TBB             [PC,R6] //; switch jump                                         
 .byte 0x21                                                                                          //;0x39e3a
 .byte 0x8A                                                                                          //;0x39e3b
 .byte 4                                                                                             //;0x39e3c
-ALIGN 2                                                                                             //;0x39e3d
+.byte 0                                                                                             //;0x39e3d
 B               loc_39C58//; jumptable 00039E32 case 6                                              //;0x39e3e
 LDR             R0, [SP,#0x78-0x50]//; jumptable 00039E32 case 3                                    //;0x39e40
 MOVW            R2, #0x509F                                                                         //;0x39e42
@@ -295,7 +295,7 @@ STR             R3, [R2]                                                        
 STR             R5, [SP,#0x78-0x2C]                                                                 //;0x39ea6
 BLS             def_39E32//; jumptable 00039C74 default case                                        //;0x39ea8
 B               loc_39C58                                                                           //;0x39eaa
-DCD 0x83A2FDB0                                                                                      //;0x39eac
+.long 0x83A2FDB0                                                                                    //;0x39eac
 LDR             R0, [SP,#0x78-0x58]//; jumptable 00039E32 case 0                                    //;0x39eb0
 MOV             R2, R10                                                                             //;0x39eb2
 MOVW            R1, #0x9760                                                                         //;0x39eb4

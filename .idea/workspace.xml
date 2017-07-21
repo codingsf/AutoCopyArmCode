@@ -2,16 +2,99 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3ff3876-9edf-40de-8e8e-7bec42df007b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Plugin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugin/MsgVariablePlugin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AdcFilter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BfiFilter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ExpressionFilter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OrnFilter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RsbFilter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SbcFilter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UbfxFilter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UdivFilter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UmlalFilter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UxtabFilter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugin/AlignPlugin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugin/NotifyVariablePlugin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugin/VariablePlugin.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/asm/sub_2A918.s" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ArgFilter.py" afterPath="$PROJECT_DIR$/ArgFilter.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AsmFile.py" afterPath="$PROJECT_DIR$/AsmFile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compile.py" afterPath="$PROJECT_DIR$/Compile.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DefineDataFilter.py" afterPath="$PROJECT_DIR$/DefineDataFilter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Function.py" afterPath="$PROJECT_DIR$/Function.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GlobalCollect.py" afterPath="$PROJECT_DIR$/GlobalCollect.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IdaOperation.py" afterPath="$PROJECT_DIR$/IdaOperation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Init.py" afterPath="$PROJECT_DIR$/Init.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JmpAddrModify.py" afterPath="$PROJECT_DIR$/JmpAddrModify.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main.py" afterPath="$PROJECT_DIR$/Main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MovFilter.py" afterPath="$PROJECT_DIR$/MovFilter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StrFilter.py" afterPath="$PROJECT_DIR$/StrFilter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VarFilter.py" afterPath="$PROJECT_DIR$/VarFilter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_16A9C.s" afterPath="$PROJECT_DIR$/asm/sub_16A9C.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_16C30.s" afterPath="$PROJECT_DIR$/asm/sub_16C30.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_16D20.s" afterPath="$PROJECT_DIR$/asm/sub_16D20.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_16E94.s" afterPath="$PROJECT_DIR$/asm/sub_16E94.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_16F74.s" afterPath="$PROJECT_DIR$/asm/sub_16F74.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_172B8.s" afterPath="$PROJECT_DIR$/asm/sub_172B8.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_17588.s" afterPath="$PROJECT_DIR$/asm/sub_17588.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_17F08.s" afterPath="$PROJECT_DIR$/asm/sub_17F08.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_18B04.s" afterPath="$PROJECT_DIR$/asm/sub_18B04.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_18CEC.s" afterPath="$PROJECT_DIR$/asm/sub_18CEC.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_18FD0.s" afterPath="$PROJECT_DIR$/asm/sub_18FD0.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_195B0.s" afterPath="$PROJECT_DIR$/asm/sub_195B0.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_196A8.s" afterPath="$PROJECT_DIR$/asm/sub_196A8.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_1A5F8.s" afterPath="$PROJECT_DIR$/asm/sub_1A5F8.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_1AF2C.s" afterPath="$PROJECT_DIR$/asm/sub_1AF2C.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_23CA0.s" afterPath="$PROJECT_DIR$/asm/sub_23CA0.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_24340.s" afterPath="$PROJECT_DIR$/asm/sub_24340.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_2468C.s" afterPath="$PROJECT_DIR$/asm/sub_2468C.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_24ABC.s" afterPath="$PROJECT_DIR$/asm/sub_24ABC.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_25C90.s" afterPath="$PROJECT_DIR$/asm/sub_25C90.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_25D30.s" afterPath="$PROJECT_DIR$/asm/sub_25D30.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_26328.s" afterPath="$PROJECT_DIR$/asm/sub_26328.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_26998.s" afterPath="$PROJECT_DIR$/asm/sub_26998.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_29978.s" afterPath="$PROJECT_DIR$/asm/sub_29978.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_29DCC.s" afterPath="$PROJECT_DIR$/asm/sub_29DCC.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_2A7B4.s" afterPath="$PROJECT_DIR$/asm/sub_2A7B4.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_2AAF8.s" afterPath="$PROJECT_DIR$/asm/sub_2AAF8.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_2BB5C.s" afterPath="$PROJECT_DIR$/asm/sub_2BB5C.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_2C724.s" afterPath="$PROJECT_DIR$/asm/sub_2C724.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_2CC68.s" afterPath="$PROJECT_DIR$/asm/sub_2CC68.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_2CF60.s" afterPath="$PROJECT_DIR$/asm/sub_2CF60.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_2DB98.s" afterPath="$PROJECT_DIR$/asm/sub_2DB98.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_2E2E4.s" afterPath="$PROJECT_DIR$/asm/sub_2E2E4.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_2E618.s" afterPath="$PROJECT_DIR$/asm/sub_2E618.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_2F7C0.s" afterPath="$PROJECT_DIR$/asm/sub_2F7C0.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_30EF0.s" afterPath="$PROJECT_DIR$/asm/sub_30EF0.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_31270.s" afterPath="$PROJECT_DIR$/asm/sub_31270.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_3142C.s" afterPath="$PROJECT_DIR$/asm/sub_3142C.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_31A0C.s" afterPath="$PROJECT_DIR$/asm/sub_31A0C.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_31CA0.s" afterPath="$PROJECT_DIR$/asm/sub_31CA0.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_3243C.s" afterPath="$PROJECT_DIR$/asm/sub_3243C.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_3300C.s" afterPath="$PROJECT_DIR$/asm/sub_3300C.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_33078.s" afterPath="$PROJECT_DIR$/asm/sub_33078.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_33CBC.s" afterPath="$PROJECT_DIR$/asm/sub_33CBC.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_34468.s" afterPath="$PROJECT_DIR$/asm/sub_34468.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_34DDC.s" afterPath="$PROJECT_DIR$/asm/sub_34DDC.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_35038.s" afterPath="$PROJECT_DIR$/asm/sub_35038.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_35688.s" afterPath="$PROJECT_DIR$/asm/sub_35688.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_3651C.s" afterPath="$PROJECT_DIR$/asm/sub_3651C.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_367C8.s" afterPath="$PROJECT_DIR$/asm/sub_367C8.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_3739C.s" afterPath="$PROJECT_DIR$/asm/sub_3739C.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_39410.s" afterPath="$PROJECT_DIR$/asm/sub_39410.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_39830.s" afterPath="$PROJECT_DIR$/asm/sub_39830.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_39AB0.s" afterPath="$PROJECT_DIR$/asm/sub_39AB0.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_39BB8.s" afterPath="$PROJECT_DIR$/asm/sub_39BB8.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_3A3C8.s" afterPath="$PROJECT_DIR$/asm/sub_3A3C8.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_3A60C.s" afterPath="$PROJECT_DIR$/asm/sub_3A60C.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_3BF64.s" afterPath="$PROJECT_DIR$/asm/sub_3BF64.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_3C154.s" afterPath="$PROJECT_DIR$/asm/sub_3C154.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_3CA44.s" afterPath="$PROJECT_DIR$/asm/sub_3CA44.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_3D140.s" afterPath="$PROJECT_DIR$/asm/sub_3D140.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_3D504.s" afterPath="$PROJECT_DIR$/asm/sub_3D504.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_3F108.s" afterPath="$PROJECT_DIR$/asm/sub_3F108.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_3F3D4.s" afterPath="$PROJECT_DIR$/asm/sub_3F3D4.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/sub_3F648.s" afterPath="$PROJECT_DIR$/asm/sub_3F648.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/outlog.txt" afterPath="$PROJECT_DIR$/log/outlog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin/MsgVariablePlugin.py" afterPath="$PROJECT_DIR$/plugin/MsgVariablePlugin.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +109,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Analyze.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Analyze.py">
+      <file leaf-file-name="MsgVariablePlugin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugin/MsgVariablePlugin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="55" column="35" lean-forward="false" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="35" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Init.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Init.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovFilter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MovFilter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="123" column="28" lean-forward="false" selection-start-line="123" selection-start-column="28" selection-end-line="123" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StrFilter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StrFilter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="792">
+              <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sub_3F3D4.s" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/asm/sub_3F3D4.s">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-36">
+              <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -39,18 +174,30 @@
       <file leaf-file-name="ArgFilter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ArgFilter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+            <state relative-caret-position="396">
+              <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="outlog.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/log/outlog.txt">
+      <file leaf-file-name="VariablePlugin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugin/VariablePlugin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="360">
+              <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SbcFilter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SbcFilter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -59,75 +206,11 @@
       <file leaf-file-name="AsmFile.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AsmFile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="171" column="47" lean-forward="false" selection-start-line="171" selection-start-column="38" selection-end-line="171" selection-end-column="47" />
+            <state relative-caret-position="360">
+              <caret line="166" column="47" lean-forward="false" selection-start-line="166" selection-start-column="47" selection-end-line="166" selection-end-column="47" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MsgVariablePlugin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugin/MsgVariablePlugin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IdaOperation.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/IdaOperation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Instruction.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Instruction.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Plugin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Plugin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="796">
-              <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JmpAddrModify.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JmpAddrModify.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -143,37 +226,40 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>loc_318a8</find>
-      <find>LDR R0, loc</find>
-      <find>31526</find>
-      <find>I</find>
-      <find>IDA</find>
-      <find>IDAoUT</find>
-      <find>IDAoU</find>
-      <find>IDAo</find>
-      <find>ID</find>
-      <find>Ida</find>
-      <find>IdaO</find>
-      <find>IdaOutpu</find>
-      <find>IdaOutput</find>
-      <find>IdaOutput.</find>
-      <find>IdaOutput.l</find>
-      <find>IdaOutput.lo</find>
-      <find>IdaOutput.log</find>
-      <find>lower16:(sub_2FD0C+1 - 0x2F270)</find>
-      <find>MOVW            R1, #(:lower16:(sub_2FD0C+1 - 0x2F270))</find>
-      <find>MLS.W</find>
-      <find>LDR.W</find>
-      <find>LDR</find>
-      <find>#-4</find>
-      <find>MOVS</find>
-      <find>#-var_18</find>
-      <find>(___stack_chk_guard_ptr - loc_2FD30)</find>
-      <find>loc_2FD30</find>
-      <find>loc_2fbd8</find>
-      <find>loc_31090</find>
       <find>[SP,#0x58+msg]</find>
+      <find>[R7,#1C]</find>
+      <find>16BEC</find>
+      <find>[SP+0x10-0x10]</find>
+      <find>[R7,-0x1C]</find>
+      <find>MOVTHI.W</find>
+      <find>dcd</find>
+      <find>loc_17eb4</find>
+      <find>ADC.W</find>
+      <find>R1, R1, R1,LSL#1</find>
+      <find>R11,ASR#31</find>
+      <find>umlal</find>
+      <find>MOVTGT</find>
+      <find>STR.W</find>
+      <find>loc_1A714</find>
+      <find>(loc_1e674</find>
+      <find>BFI.W</find>
+      <find>bf</find>
+      <find>R2, R1, R0</find>
+      <find>loc_1e80c</find>
+      <find>loc_1e2f0</find>
+      <find>_mach_task_self__ptr</find>
+      <find>[SP+8-0x8]</find>
+      <find>I</find>
+      <find>Ida</find>
+      <find>Idaou</find>
+      <find>Idaout</find>
+      <find>Idaoutput</find>
+      <find>Idaoutput.</find>
+      <find>#0xC+arg_0]</find>
     </findStrings>
+    <dirStrings>
+      <dir>H:\code\AutoArmCompile</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -181,58 +267,63 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/outlog.txt" />
-        <option value="$PROJECT_DIR$/IdaOutput.py" />
-        <option value="$PROJECT_DIR$/asm/sub_1AAB0" />
-        <option value="$PROJECT_DIR$/StoreAsm.py" />
-        <option value="$PROJECT_DIR$/Compile.py" />
-        <option value="$PROJECT_DIR$/asm/sub_3A1B4.s" />
-        <option value="$PROJECT_DIR$/Config.py" />
-        <option value="$PROJECT_DIR$/IdaStartup.py" />
-        <option value="$PROJECT_DIR$/SpecialCharacterFilter.py" />
-        <option value="$PROJECT_DIR$/JmpLabelFilter.py" />
-        <option value="$PROJECT_DIR$/asm/sub_1AAB0.s" />
-        <option value="$PROJECT_DIR$/asm/sub_247A4.s" />
-        <option value="$PROJECT_DIR$/LowerUpper16Filter.py" />
-        <option value="$PROJECT_DIR$/MlaFilter.py" />
-        <option value="$PROJECT_DIR$/UmullFilter.py" />
-        <option value="$PROJECT_DIR$/TbbFilter.py" />
-        <option value="$PROJECT_DIR$/MulFilter.py" />
-        <option value="$PROJECT_DIR$/BfcFilter.py" />
-        <option value="$PROJECT_DIR$/ArgFilter.py" />
-        <option value="$PROJECT_DIR$/TbhFilter.py" />
-        <option value="$PROJECT_DIR$/JmpAddrModify.py" />
-        <option value="$PROJECT_DIR$/JmpCollect.py" />
-        <option value="$PROJECT_DIR$/asm/sub_2F244.s" />
-        <option value="$PROJECT_DIR$/StackCheckGuardModify.py" />
-        <option value="$PROJECT_DIR$/GlobalCollect.py" />
-        <option value="$PROJECT_DIR$/Analyze.py" />
-        <option value="$PROJECT_DIR$/Instruction.py" />
-        <option value="$PROJECT_DIR$/LdrdFilter.py" />
         <option value="$PROJECT_DIR$/MlsFilter.py" />
-        <option value="$PROJECT_DIR$/MovFilter.py" />
-        <option value="$PROJECT_DIR$/VarFilter.py" />
         <option value="$PROJECT_DIR$/LowerUpper16Modify.py" />
-        <option value="$PROJECT_DIR$/StrFilter.py" />
         <option value="$PROJECT_DIR$/LdrFilter.py" />
-        <option value="$PROJECT_DIR$/DefineDataFilter.py" />
         <option value="$PROJECT_DIR$/asm/sub_2FD0C.s" />
         <option value="$PROJECT_DIR$/asm/sub_3142C.s" />
-        <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/Function.py" />
         <option value="$PROJECT_DIR$/UnCommonModify.py" />
         <option value="$PROJECT_DIR$/plugin/MsgVariableModify.py" />
-        <option value="$PROJECT_DIR$/Init.py" />
         <option value="$PROJECT_DIR$/Plugin.py" />
-        <option value="$PROJECT_DIR$/AsmFile.py" />
-        <option value="$PROJECT_DIR$/log/outlog.txt" />
-        <option value="$PROJECT_DIR$/plugin/MsgVariablePlugin.py" />
+        <option value="$PROJECT_DIR$/asm/sub_16D20.s" />
+        <option value="$PROJECT_DIR$/asm/sub_16E94.s" />
+        <option value="$PROJECT_DIR$/asm/sub_16F74.s" />
+        <option value="$PROJECT_DIR$/asm/sub_172B8.s" />
+        <option value="$PROJECT_DIR$/VarFilter.py" />
+        <option value="$PROJECT_DIR$/Movthi.py" />
+        <option value="$PROJECT_DIR$/DefineDataFilter.py" />
+        <option value="$PROJECT_DIR$/asm/sub_17588.s" />
+        <option value="$PROJECT_DIR$/AdcFilter.py" />
+        <option value="$PROJECT_DIR$/UbfxFilter.py" />
+        <option value="$PROJECT_DIR$/asm/sub_18B04.s" />
+        <option value="$PROJECT_DIR$/asm/sub_18CEC.s" />
+        <option value="$PROJECT_DIR$/UmlalFilter.py" />
+        <option value="$PROJECT_DIR$/asm/sub_18FD0.s" />
+        <option value="$PROJECT_DIR$/asm/sub_195B0.s" />
+        <option value="$PROJECT_DIR$/RsbFilter.py" />
+        <option value="$PROJECT_DIR$/OrnFilter.py" />
+        <option value="$PROJECT_DIR$/asm/sub_196A8.s" />
+        <option value="$PROJECT_DIR$/UdivFilter.py" />
+        <option value="$PROJECT_DIR$/BfiFilter.py" />
+        <option value="$PROJECT_DIR$/asm/sub_1AC74.s" />
+        <option value="$PROJECT_DIR$/GlobalCollect.py" />
+        <option value="$PROJECT_DIR$/asm/sub_1AF2C.s" />
+        <option value="$PROJECT_DIR$/asm/sub_24340.s" />
+        <option value="$PROJECT_DIR$/ExpressionFilter.py" />
+        <option value="$PROJECT_DIR$/asm/sub_24ABC.s" />
+        <option value="$PROJECT_DIR$/UxtabFilter.py" />
         <option value="$PROJECT_DIR$/IdaOperation.py" />
+        <option value="$PROJECT_DIR$/plugin/MsgVariablePlugin.py" />
+        <option value="$PROJECT_DIR$/plugin/NotifyVariablePlugin.py" />
+        <option value="$PROJECT_DIR$/JmpAddrModify.py" />
+        <option value="$PROJECT_DIR$/log/outlog.txt" />
+        <option value="$PROJECT_DIR$/plugin/AlignPlugin.py" />
+        <option value="$PROJECT_DIR$/IdaOutput.py" />
+        <option value="$PROJECT_DIR$/SbcFilter.py" />
+        <option value="$PROJECT_DIR$/AsmFile.py" />
+        <option value="$PROJECT_DIR$/Init.py" />
+        <option value="$PROJECT_DIR$/MovFilter.py" />
+        <option value="$PROJECT_DIR$/StrFilter.py" />
+        <option value="$PROJECT_DIR$/ArgFilter.py" />
+        <option value="$PROJECT_DIR$/plugin/VariablePlugin.py" />
+        <option value="$PROJECT_DIR$/Main.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="239" />
+    <option name="x" value="21" />
+    <option name="y" value="6" />
     <option name="width" value="2790" />
     <option name="height" value="1586" />
   </component>
@@ -289,20 +380,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="log" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoArmCompile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoArmCompile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="asm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -314,7 +391,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="last_opened_file_path" value="C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/Git/mingw32/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -446,19 +523,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="239" y="0" width="2790" height="1586" extended-state="0" />
+    <frame x="21" y="6" width="2790" height="1586" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25253257" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25253257" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32802317" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20202751" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20202751" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3994394" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3994394" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -472,102 +550,89 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TbbFilter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/asm/sub_172B8.s" />
+    <entry file="file://$PROJECT_DIR$/asm/sub_17588.s" />
+    <entry file="file://$PROJECT_DIR$/asm/sub_17F08.s" />
     <entry file="file://$PROJECT_DIR$/TbhFilter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LowerUpper16Filter.py">
+    <entry file="file://$PROJECT_DIR$/TbbFilter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="23" selection-end-column="23" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/asm/sub_3F0B0.s">
+    <entry file="file://$PROJECT_DIR$/asm/sub_18B04.s" />
+    <entry file="file://$PROJECT_DIR$/asm/sub_18CEC.s">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="3" />
+        <state relative-caret-position="333">
+          <caret line="52" column="60" lean-forward="false" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IdaStartup.py">
+    <entry file="file://$PROJECT_DIR$/asm/sub_18FD0.s">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        <state relative-caret-position="333">
+          <caret line="181" column="5" lean-forward="false" selection-start-line="181" selection-start-column="5" selection-end-line="181" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IdaOutput.py">
+    <entry file="file://$PROJECT_DIR$/asm/sub_195B0.s" />
+    <entry file="file://$PROJECT_DIR$/UmlalFilter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="7" column="68" lean-forward="false" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
+        <state relative-caret-position="324">
+          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Config.py">
+    <entry file="file://$PROJECT_DIR$/MulFilter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Compile.py">
+    <entry file="file://$PROJECT_DIR$/UmullFilter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="737">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm/sub_196A8.s" />
+    <entry file="file://$PROJECT_DIR$/UbfxFilter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BfcFilter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="21" selection-end-column="23" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StackCheckGuardModify.py" />
-    <entry file="file://$PROJECT_DIR$/asm/sub_3A248.s">
+    <entry file="file://$PROJECT_DIR$/BfiFilter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-703">
-          <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="40" />
+        <state relative-caret-position="432">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/asm/sub_3A300.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1567">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asm/sub_3EA2C.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2359">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asm/sub_1AAB0.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2196">
-          <caret line="61" column="29" lean-forward="true" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/asm/sub_1AC74.s" />
     <entry file="file://$PROJECT_DIR$/SpecialCharacterFilter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -575,295 +640,248 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GlobalCollect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MulFilter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MlsFilter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LdrdFilter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asm/sub_2F244.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="16" column="110" lean-forward="false" selection-start-line="16" selection-start-column="110" selection-end-line="16" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MovFilter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="71" column="32" lean-forward="false" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VarFilter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asm/sub_247A4.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JmpCollect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="-608">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/asm/sub_3A1B4.s">
+    <entry file="file://$PROJECT_DIR$/GlobalCollect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="8" column="58" lean-forward="false" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
-          <folding />
+        <state relative-caret-position="688">
+          <caret line="38" column="101" lean-forward="false" selection-start-line="38" selection-start-column="101" selection-end-line="38" selection-end-column="101" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MlaFilter.py">
+    <entry file="file://$PROJECT_DIR$/asm/sub_1AF2C.s" />
+    <entry file="file://$PROJECT_DIR$/asm/sub_24340.s">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="21" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="341">
+          <caret line="311" column="2" lean-forward="false" selection-start-line="311" selection-start-column="2" selection-end-line="311" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StrFilter.py">
+    <entry file="file://$PROJECT_DIR$/asm/sub_2468C.s">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-          <folding />
+        <state relative-caret-position="675">
+          <caret line="98" column="112" lean-forward="false" selection-start-line="98" selection-start-column="105" selection-end-line="98" selection-end-column="112" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/asm/sub_16D20.s">
+    <entry file="file://$PROJECT_DIR$/ExpressionFilter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="14" column="110" lean-forward="false" selection-start-line="14" selection-start-column="110" selection-end-line="14" selection-end-column="110" />
-          <folding />
+        <state relative-caret-position="364">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LdrFilter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DefineDataFilter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="15" column="53" lean-forward="false" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asm/sub_2FD0C.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4715">
-          <caret line="325" column="42" lean-forward="false" selection-start-line="325" selection-start-column="42" selection-end-line="325" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asm/sub_3142C.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="106" column="110" lean-forward="false" selection-start-line="106" selection-start-column="110" selection-end-line="106" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asm/sub_16A9C.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3907">
-          <caret line="45" column="35" lean-forward="false" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asm/sub_16E94.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="16" column="110" lean-forward="false" selection-start-line="16" selection-start-column="103" selection-end-line="16" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="868">
-          <caret line="48" column="28" lean-forward="false" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UnCommonModify.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/asm/sub_24ABC.s" />
     <entry file="file://$PROJECT_DIR$/LowerUpper16Modify.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-          <folding />
+        <state relative-caret-position="336">
+          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugin/MsgVariableModify.py">
+    <entry file="file://$PROJECT_DIR$/asm/sub_26998.s">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="336">
+          <caret line="2698" column="0" lean-forward="false" selection-start-line="2698" selection-start-column="0" selection-end-line="2698" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.1/system/python_stubs/-762174762/nt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="209" column="4" lean-forward="false" selection-start-line="209" selection-start-column="4" selection-end-line="209" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.1/system/python_stubs/-762174762/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="568" column="4" lean-forward="false" selection-start-line="568" selection-start-column="4" selection-end-line="568" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Init.py">
+    <entry file="file://$PROJECT_DIR$/UdivFilter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrnFilter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UxtabFilter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm/sub_2A918.s" />
+    <entry file="file://$PROJECT_DIR$/DefineDataFilter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="20" column="43" lean-forward="false" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdaOperation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1116">
+          <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdcFilter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JmpAddrModify.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+        <state relative-caret-position="720">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Instruction.py">
+    <entry file="file://$PROJECT_DIR$/plugin/NotifyVariablePlugin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="15" />
+        <state relative-caret-position="360">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Analyze.py">
+    <entry file="file://$PROJECT_DIR$/log/outlog.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-12096">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-813395">
+          <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugin/AlignPlugin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="55" column="35" lean-forward="false" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="35" />
+        <state relative-caret-position="324">
+          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdaOutput.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RsbFilter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ArgFilter.py">
+    <entry file="file://$PROJECT_DIR$/SbcFilter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
-          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="17" />
+          <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AsmFile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="171" column="47" lean-forward="false" selection-start-line="171" selection-start-column="38" selection-end-line="171" selection-end-column="47" />
+        <state relative-caret-position="360">
+          <caret line="166" column="47" lean-forward="false" selection-start-line="166" selection-start-column="47" selection-end-line="166" selection-end-column="47" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Plugin.py">
+    <entry file="file://$PROJECT_DIR$/MovFilter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="508">
+          <caret line="123" column="28" lean-forward="false" selection-start-line="123" selection-start-column="28" selection-end-line="123" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log/outlog.txt">
+    <entry file="file://$PROJECT_DIR$/StrFilter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="792">
+          <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm/sub_3F3D4.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArgFilter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugin/MsgVariablePlugin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="37" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="20" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IdaOperation.py">
+    <entry file="file://$PROJECT_DIR$/plugin/VariablePlugin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        <state relative-caret-position="360">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Init.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
           <folding />
         </state>
       </provider>

@@ -48,8 +48,8 @@ MOVT            R1, #0xda5                                                      
 MOV             R0, R1                                                                              //;0x2e354
 MOV             R8, R1                                                                              //;0x2e356
 ITT GT                                                                                              //;0x2e358
-MOVGTW          R0, #0xD5E0                                                                         //;0x2e35a
-MOVTGT.W        R0, #0xDA5                                                                          //;0x2e35e
+MOVWGT          R0, #0xD5E0                                                                         //;0x2e35a
+MOVTGT          R0, #0xDA5                                                                          //;0x2e35e
 STR             R0, [SP,#0x3C-0x38]                                                                 //;0x2e362
 B               loc_2E372                                                                           //;0x2e364
 .short 0xEBF1                                                                                       //;0x2e366

@@ -48,9 +48,9 @@ MOVTEQ          R0, #0x3C31                                                     
 STR             R0, [SP,#0x58-0x2C]                                                                 //;0x243c4
 BNE.W           def_2450A//; jumptable 0002450A default case                                        //;0x243c6
 B               def_243E4//; jumptable 000243E4 default case                                        //;0x243ca
-BNE             loc_24470                                                                           //;0x243cc
-STRB            R1, [R0,#0x15]                                                                      //;0x243ce
-BNE.W           def_2450A//; jumptable 0002450A default case                                        //;0x243d0
+.byte 0x50                                                                                          //;0x243cc
+.byte 0x41                                                                                          //;0x243ce
+.byte 0x40                                                                                          //;0x243d0
 LDR             R1, [SP,#0x58-0x2C]//; jumptable 000243E4 default case                              //;0x243d4
 MOVW            R0, #0xa7ca
 MOVT            R0, #0xc3ce                                                                         //;0x243d6
@@ -147,8 +147,8 @@ STR             R3, [R2]                                                        
 MOVW            R2, #0xa7c9
 MOVT            R2, #0xc3ce                                                                         //;0x244bc
 B               loc_245D0                                                                           //;0x244c4
-LSLS            R7, R1, #0x14                                                                       //;0x244c6
-B               loc_24018                                                                           //;0x244c8
+.byte 0xF                                                                                           //;0x244c6
+.byte 0xA6                                                                                          //;0x244c8
 LDR             R0, [SP,#0x58-0x44]//; jumptable 000243E4 case 2                                    //;0x244ca
 LDR             R1, [SP,#0x58-0x58]                                                                 //;0x244cc
 STR             R0, [R1,#4]                                                                         //;0x244ce
@@ -186,7 +186,7 @@ TBB             [PC,R1] //; switch jump                                         
 .byte 0x1F                                                                                          //;0x24512
 .byte 0x65                                                                                          //;0x24513
 .byte 0x7D                                                                                          //;0x24514
-ALIGN 2                                                                                             //;0x24515
+.byte 0                                                                                             //;0x24515
 LDR.W           R1, [R8,#0x10]//; jumptable 0002450A case 0                                         //;0x24516
 MOVS            R2, #1                                                                              //;0x2451a
 MOV             R6, R11                                                                             //;0x2451c
@@ -309,7 +309,7 @@ ADD             R1, R2                                                          
 STR             R1, [R6]                                                                            //;0x24638
 STR             R0, [SP,#0x58-0x2C]                                                                 //;0x2463a
 B               def_2450A//; jumptable 0002450A default case                                        //;0x2463c
-LDR             R0, loc_247D8                                                                       //;0x2463e
+.byte 0x66                                                                                          //;0x2463e
 MOVW            R0, #0x8441
 MOVT            R0, #0x8815                                                                         //;0x24640
 BL              sub_3A1B4                                                                           //;0x24648
@@ -344,3 +344,6 @@ STR             R5, [R1]                                                        
 STR             R6, [SP,#0x58-0x2C]                                                                 //;0x24688
 B               def_243E4//; jumptable 000243E4 default case                                        //;0x2468a
 .section __DATA,__nl_symbol_ptr,non_lazy_symbol_pointers
+.indirect_symbol _mach_task_self__ptr
+_mach_task_self__ptr:
+.long 0

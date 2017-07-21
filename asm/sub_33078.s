@@ -452,7 +452,7 @@ LDR             R1, [SP,#0x2E4-0x240]                                           
 LDR             R2, [SP,#0x2E4-0x238]                                                               //;0x334e8
 ADD.W           R0, R0, R0,LSR#31                                                                   //;0x334ea
 LDR             R3, [SP,#0x2E4-0x244]                                                               //;0x334ee
-MOV.W           R0, R0,ASR#1                                                                        //;0x334f0
+MOV             R0, R0,ASR#1                                                                        //;0x334f0
 STR             R0, [SP,#0x2E4-0x288]                                                               //;0x334f4
 LDR             R0, [SP,#0x2E4-0x248]                                                               //;0x334f6
 ADDS            R6, R0, #1                                                                          //;0x334f8
@@ -829,7 +829,7 @@ LDR             R5, [SP,#0x2E4-0x248]                                           
 LDR             R2, [SP,#0x2E4-0x240]                                                               //;0x33880
 ADD.W           R0, R0, R0,LSR#31                                                                   //;0x33882
 LDR             R3, [SP,#0x2E4-0x244]                                                               //;0x33886
-MOV.W           R1, R0,ASR#1                                                                        //;0x33888
+MOV             R1, R0,ASR#1                                                                        //;0x33888
 STR             R1, [SP,#0x2E4-0x250]                                                               //;0x3388c
 LDR             R1, [SP,#0x2E4-0x264]                                                               //;0x3388e
 AND.W           R0, R1, R0,ASR#1                                                                    //;0x33890

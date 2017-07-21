@@ -79,8 +79,8 @@ MOVW            R0, #0x55c1
 MOVT            R0, #0x36a1                                                                         //;0x1a6c0
 STR             R4, [R1]                                                                            //;0x1a6c8
 ITT HI                                                                                              //;0x1a6ca
-MOVHIW          R0, #0x77F1                                                                         //;0x1a6cc
-MOVTHI.W        R0, #0x5CAA                                                                         //;0x1a6d0
+MOVWHI          R0, #0x77F1                                                                         //;0x1a6cc
+MOVTHI          R0, #0x5CAA                                                                         //;0x1a6d0
 CMP             R2, #0x3F                                                                           //;0x1a6d4
 STR             R0, [SP,#0x88-0x38]                                                                 //;0x1a6d6
 RSB.W           R0, LR, #0                                                                          //;0x1a6d8
@@ -120,7 +120,7 @@ IT HI                                                                           
 MOVHI           R2, #1                                                                              //;0x1a746
 CMP             R4, #0                                                                              //;0x1a748
 MOVW            R4, #0x7FF                                                                          //;0x1a74a
-STRB.W          R2, [SP,#0x88-0x3C]                                                                 //;0x1a74e
+STRB            R2, [SP,#0x88-0x3C]                                                                 //;0x1a74e
 IT EQ                                                                                               //;0x1a752
 MOVEQ           R5, #0x40                                                                           //;0x1a754
 MOVT            R4, #0x6257                                                                         //;0x1a756
@@ -195,7 +195,7 @@ ADD             R1, R3                                                          
 MOVW            R3, #0xAA3F                                                                         //;0x1a808
 CMP             R1, R2                                                                              //;0x1a80c
 MOV.W           R2, #0                                                                              //;0x1a80e
-STRB.W          R4, [SP,#0x88-0x44]                                                                 //;0x1a812
+STRB            R4, [SP,#0x88-0x44]                                                                 //;0x1a812
 IT CC                                                                                               //;0x1a816
 MOVCC           R2, #1                                                                              //;0x1a818
 CMP             R1, R6                                                                              //;0x1a81a
@@ -317,7 +317,7 @@ MOVHI           R1, #1                                                          
 LDR             R2, [SP,#0x88-0x28]                                                                 //;0x1a93e
 STR             R0, [SP,#0x88-0x64]                                                                 //;0x1a940
 LDR             R0, [SP,#0x88-0x80]                                                                 //;0x1a942
-STRB.W          R1, [SP,#0x88-0x4C]                                                                 //;0x1a944
+STRB            R1, [SP,#0x88-0x4C]                                                                 //;0x1a944
 LDR             R1, [SP,#0x88-0x30]                                                                 //;0x1a948
 STR             R0, [SP,#0x88-0x60]                                                                 //;0x1a94a
 LDR             R0, [SP,#0x88-0x38]                                                                 //;0x1a94c

@@ -21,7 +21,7 @@ STR             R3, [SP,#0xC0-0x10]                                             
 LDR             R3, [R0]                                                                            //;0x16c54
 LDR             R0, [R0,#4]                                                                         //;0x16c56
 STR             R0, [SP,#0xC0-0x98]                                                                 //;0x16c58
-ADD             R0, SP, #0xC0+msg                                                                   //;0x16c5a
+ADD             R0, SP, #0xC                                                                        //;0x16c5a
 STR             R3, [SP,#0xC0-0x9C]                                                                 //;0x16c5c
 ADDS            R0, #0x24//; void *                                                                 //;0x16c5e
 STR             R1, [SP,#0xC0-0x94]                                                                 //;0x16c60
@@ -42,7 +42,7 @@ STR             R0, [SP,#0x18]                                                  
 CMP             R6, #0                                                                              //;0x16c88
 STR             R1, [SP,#0x20]                                                                      //;0x16c8a
 BEQ             loc_16C96                                                                           //;0x16c8c
-ADD             R0, SP, #0xC0+msg                                                                   //;0x16c8e
+ADD             R0, SP, #0xC                                                                        //;0x16c8e
 BLX             _voucher_mach_msg_set                                                               //;0x16c90
 LDR             R0, [SP,#0x18]                                                                      //;0x16c94
 loc_16C96:
@@ -53,7 +53,7 @@ STMEA.W         SP, {R0,R1}                                                     
 ADD             R0, SP, #0xC//; msg                                                                 //;0x16c9e
 MOVS            R3, #0x2c
 MOVT            R3, #0x0                                                                            //;0x16ca0
-STR             R1, [SP,#0xC0+notify]//; notify                                                     //;0x16ca2
+STR             R1, [SP,#8]//; notify                                                               //;0x16ca2
 MOVS            R1, #3  //; option                                                                  //;0x16ca4
 BLX             _mach_msg                                                                           //;0x16ca6
 MOV             R4, R0                                                                              //;0x16caa

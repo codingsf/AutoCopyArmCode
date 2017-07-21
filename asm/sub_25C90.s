@@ -24,26 +24,26 @@ EOR.W           R1, R5, R0,LSR#16                                               
 LSL.W           R2, R2,#1                                                                           //;0x25cbc
 SUB.W           R2, R2, R0,LSR#24                                                                   //;0x25cc0
 ADDS            R2, #0x2E                                                                           //;0x25cc4
-STRB.W          R2, [SP,#0x24-0x24]                                                                 //;0x25cc6
+STRB            R2, [SP,#0x24-0x24]                                                                 //;0x25cc6
 MOVS            R2, #0xde
 MOVT            R2, #0x0                                                                            //;0x25cca
 AND.W           R3, R2, R0,LSR#15                                                                   //;0x25ccc
 ADD             R1, R3                                                                              //;0x25cd0
 ADDS            R1, #0x3F                                                                           //;0x25cd2
-STRB.W          R1, [SP,#0x24-0x23]                                                                 //;0x25cd4
+STRB            R1, [SP,#0x24-0x23]                                                                 //;0x25cd4
 AND.W           R1, R2, R0,LSR#7                                                                    //;0x25cd8
 EOR.W           R2, R5, R0,LSR#8                                                                    //;0x25cdc
 ADD             R5, SP, #0x24-0x20                                                                  //;0x25ce0
 ADD             R1, R2                                                                              //;0x25ce2
 ADDS            R1, #0x3F                                                                           //;0x25ce4
-STRB.W          R1, [SP,#0x24-0x22]                                                                 //;0x25ce6
+STRB            R1, [SP,#0x24-0x22]                                                                 //;0x25ce6
 MOVS            R1, #0x7e
 MOVT            R1, #0x0                                                                            //;0x25cea
 AND.W           R1, R1, R0,LSL#1                                                                    //;0x25cec
 EOR.W           R0, R0, #0xBF                                                                       //;0x25cf0
 ADD             R0, R1                                                                              //;0x25cf4
 ADDS            R0, #0x6F                                                                           //;0x25cf6
-STRB.W          R0, [SP,#0x24-0x21]                                                                 //;0x25cf8
+STRB            R0, [SP,#0x24-0x21]                                                                 //;0x25cf8
 MOV             R0, SP                                                                              //;0x25cfc
 STR             R0, [SP,#0x24-0x1C]                                                                 //;0x25cfe
 EOR.W           R0, R5, #4                                                                          //;0x25d00
